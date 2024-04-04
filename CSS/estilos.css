@@ -20,18 +20,17 @@ html {
 .banner-inicio picture {
   display: block;
   width: 100%;
-  height: 200px;
-  margin-bottom: 35px;
+  height: 20vw;
 }
 
 .banner-inicio img {
   width: 100%;
-  height: 200px;
+  height: 95%;
 }
 
 .logo {
-  height: 100px;
-  width: 200px;
+  height: 6.5vw;
+  width: 13vw;
 
 
 }
@@ -140,8 +139,8 @@ ul.nav li.no-hover a:hover {
 }
 
 .nav-search {
-  width: 300px;
-  height: 30px;
+  width: 19.53vw;
+  height: 1.95vw;
   font-family: cursive;
   font-size: 1.2vw;
   font-weight: 800;
@@ -149,8 +148,8 @@ ul.nav li.no-hover a:hover {
 
 
 .boton {
-  width: 19px;
-  height: 19px;
+  width: 1.23vw;
+  height: 1.23vw;
   cursor: pointer;
 }
 
@@ -172,6 +171,11 @@ h1 {
   /* Centra verticalmente los elementos */
   padding: 15px;
   margin-top: 35px;
+}
+
+.botones-fin svg{
+  width: 2.5vw;
+  height: 2.5vw;
 }
 
 
@@ -276,7 +280,7 @@ h1 {
 }
 
 .firstname {
-  width: 200px;
+  width: 90%;
   /* Cambia el valor de acuerdo al tamaño deseado */
   margin: 10px;
   /* Añade margen alrededor del contenedor si es necesario */
@@ -292,8 +296,8 @@ h1 {
 }
 
 .enviar {
-  width: 225px;
-  height: 35px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: white;
   border: solid grey;
@@ -323,13 +327,6 @@ h1 {
   box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
-}
-
-legend {
-  text-align: center;
-  font-size: xx-large;
-  text-decoration: underline;
-  margin: 15px 0px 45px 0px;
 }
 
 .form-6 {
@@ -473,8 +470,8 @@ legend {
 }
 
 .modalDialog>div {
-  width: 1200px;
-  height: 500px;
+  width: 80%;
+  height: 70%;
   position: relative;
   margin: 10% auto;
   padding: 5px 20px 13px 20px;
@@ -497,8 +494,8 @@ legend {
   right: 10px;
   text-align: center;
   top: 10px;
-  width: 30px;
-  height: 30px;
+  width: 1.96vw;
+  height: 1.96vw;
   text-decoration: none;
   font-weight: bold;
   -webkit-border-radius: 12px;
@@ -515,7 +512,7 @@ legend {
 }
 
 .firstname-2 {
-  width: 200px;
+  width: 60%;
   /* Cambia el valor de acuerdo al tamaño deseado */
   margin: 5px;
   /* Añade margen alrededor del contenedor si es necesario */
@@ -565,9 +562,9 @@ legend {
 }
 
 .contac-14 {
-  width: 80px;
-  height: 40px;
-  font-size: large;
+  width: 10%;
+  height: auto;
+  font-size: 1.2vw;
   font-family: cursive;
   margin-right: 20px;
   background-image: linear-gradient(to bottom, #FEF9A7, #F8DE22);
@@ -581,16 +578,18 @@ legend {
 }
 
 .contac-15 button {
-  width: 150px;
+  width: 13%;
+  height: auto;
   font-size: 1vw;
   font-family: cursive;
   border-radius: 50%;
   background-color: #F9F07A;
   cursor: pointer;
+  padding: 1px;
 }
 
 .contac-15 input {
-  width: 220px;
+  width: 18%;
   font-size: 1vw;
   font-family: cursive;
 }
@@ -602,7 +601,7 @@ legend {
 }
 
 .contac-11 {
-  font-size: 30px;
+  font-size: 1.96vw;
   font-family: cursive;
   text-align: center;
   font-weight: bold;
@@ -621,8 +620,8 @@ legend {
 }
 
 .historia-1 {
-  width: 700px;
-  height: 350px;
+  width: 40%;
+  height: 20vw;
   border-radius: 50%;
 }
 
@@ -633,8 +632,8 @@ legend {
 }
 
 .historia-3 {
-  width: 200px;
-  height: 200px;
+  width: 70%;
+  height: 13vw;
   border-radius: 10%;
   transition: transform 0.5s;
 }
@@ -704,7 +703,7 @@ legend {
 }
 
 .t-3 {
-  width: 1000px;
+  width: 75%;
   transition: transform 0.3s;
 }
 
@@ -743,7 +742,7 @@ legend {
 
 /*Formato de la ventana*/
 .modalbox {
-  width: 400px;
+  width: 100%;
   position: relative;
   padding: 5px 20px 13px 20px;
   background: #fff;
@@ -773,8 +772,8 @@ legend {
 }
 
 .modalmask:target .movedown {
-  width: 800px;
-  height: 600px;
+  width: 50%;
+  height: 80%;
   font-family: cursive;
   font-size: 1vw;
   line-height: 32px;
@@ -801,8 +800,8 @@ legend {
 
 
 .modalmask:target .resize {
-  width: 800px;
-  height: 600px;
+  width: 50%;
+  height: 80%;
   font-family: cursive;
   font-size: 1vw;
   line-height: 32px;
@@ -841,7 +840,7 @@ legend {
 
 .historia-modal img {
   width: 100%;
-  height: 200px;
+  height: 40%;
 }
 
 
@@ -856,8 +855,8 @@ legend {
 }
 
 .foto .foto-1 {
-  width: 200px;
-  height: 200px;
+  width: 13.1vw;
+  height: 13.1vw;
   border: solid #606061;
   border-radius: 10%;
   transition: all .5s ease-in-out;
@@ -915,9 +914,9 @@ legend {
 /* carrousel 3d */
 
 .content-all {
-  width: 210px;
+  width: 13.7vw;
   margin: auto;
-  perspective: 1000px;
+  perspective: 65.1vw;
   position: relative;
   margin-top: 60px;
   margin-bottom: 250px;
@@ -937,7 +936,7 @@ legend {
 
 .content-carrousel figure {
   width: 100%;
-  height: 120px;
+  height: 7.8vw;
   overflow: hidden;
   position: absolute;
   box-shadow: 0px 0px 80px 0px black;
@@ -1022,7 +1021,7 @@ legend {
 }
 
 .slider-box-inicio {
-  width: 1000px;
+  width: 65.1vw;
   height: auto;
   margin: 35px auto;
   overflow: hidden;
@@ -1098,8 +1097,8 @@ legend {
 }
 
 .slider-box-pagos {
-  width: 1400px;
-  height: 450px;
+  width: 90%;
+  height: 29.3vw;
   margin: 35px auto;
   overflow: hidden;
   border: #606061;
@@ -1111,9 +1110,9 @@ legend {
 .slider-box-pagos ul {
   display: flex;
   padding: 0;
-  width: 400%;
-  animation: slide 20s infinite ease-in;
-  transition: all .5s ease-in-out;
+  width: 356vw;
+  animation: slide 20s infinite ease;
+  transition: all .5s ease;
 
 }
 
@@ -1166,8 +1165,8 @@ legend {
 /* Preguntas */
 
 section {
-  width: 800px;
-  padding: 40px;
+  width: 50%;
+  padding: 4%;
   background-color: #FFD43B;
   margin: auto;
   margin-top: 20px;
