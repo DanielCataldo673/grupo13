@@ -53,7 +53,7 @@ ul.nav {
   /* Centra verticalmente los elementos */
   padding: 10px;
   /* Espacio interno del menú */
-  font-size: medium;
+  font-size: 1.2vw;
 }
 
 ul.nav li {
@@ -143,7 +143,7 @@ ul.nav li.no-hover a:hover {
   width: 300px;
   height: 30px;
   font-family: cursive;
-  font-size: medium;
+  font-size: 1.2vw;
   font-weight: 800;
 }
 
@@ -158,7 +158,7 @@ ul.nav li.no-hover a:hover {
 h1 {
   text-align: center;
   font-family: cursive;
-  font-size: 50px;
+  font-size: 3.2vw;
   margin: 20px 0px 35px 0px;
 }
 
@@ -188,7 +188,7 @@ h1 {
   display: inline-block;
   padding-left: 100%;
   animation: marquee 25s linear infinite;
-  font-size: larger;
+  font-size: 1.2vw;
 }
 
 @keyframes marquee {
@@ -204,7 +204,7 @@ h1 {
 /* Footer */
 .tel-mail {
   text-align: center;
-  font-size: larger;
+  font-size: 1.2vw;
   margin-top: 15px;
 }
 
@@ -237,7 +237,7 @@ h1 {
   padding: 10px;
   /* Espacio interno del menú */
   margin: 35px;
-  font-size: medium;
+  font-size: 1.1vw;
 }
 
 .footer-fin a {
@@ -271,7 +271,7 @@ h1 {
   border-radius: 20px;
   display: block;
   justify-content: center;
-  font: larger cursive;
+  font: 1.2vw cursive;
   background-color: #F9F07A;
 }
 
@@ -300,7 +300,7 @@ h1 {
   box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
   -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
   -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
-  font: larger cursive;
+  font: 1.5vw cursive;
 }
 
 .form-2 {
@@ -335,7 +335,7 @@ legend {
 .form-6 {
   font-family: cursive;
   font-weight: bold;
-  font-size: x-large;
+  font-size: 1.6vw;
   text-align: center;
   margin-bottom: 35px;
   padding: 10px;
@@ -391,7 +391,7 @@ legend {
 .contac {
   text-align: center;
   font-family: cursive;
-  font-size: 35px;
+  font-size: 2vw;
   margin: 20px 0px 35px 0px;
 }
 
@@ -423,7 +423,7 @@ legend {
 .contac-4 {
   text-decoration: none;
   color: #000;
-  font-size: x-large;
+  font-size: 1.8vw;
   font-family: cursive;
   text-align: center;
   padding: 10px;
@@ -548,7 +548,7 @@ legend {
   display: flex;
   justify-content: center;
   font-family: cursive;
-  font-size: larger;
+  font-size: 1.3vw;
   margin-top: 25px;
 }
 
@@ -582,7 +582,7 @@ legend {
 
 .contac-15 button {
   width: 150px;
-  font-size: medium;
+  font-size: 1vw;
   font-family: cursive;
   border-radius: 50%;
   background-color: #F9F07A;
@@ -591,7 +591,7 @@ legend {
 
 .contac-15 input {
   width: 220px;
-  font-size: medium;
+  font-size: 1vw;
   font-family: cursive;
 }
 
@@ -608,27 +608,13 @@ legend {
   font-weight: bold;
 }
 
-.contac-12 {
-  display: flex;
-  justify-content: center;
-  text-decoration-color: black;
-  font-size: x-large;
-  font-family: cursive;
-  text-align: center;
-  padding: 10px;
-  border: solid #4c4c4c;
-  background-color: #FFD43B;
-  border-radius: 50%;
-  box-shadow: 10px 10px 17px 0px rgba(188, 180, 180, 0.75);
-  -webkit-box-shadow: 10px 10px 17px 0px rgba(188, 180, 180, 0.75);
-  -moz-box-shadow: 10px 10px 17px 0px rgba(188, 180, 180, 0.75);
-}
+
 
 
 /* Historia */
 .historia {
   font-family: cursive;
-  font-size: larger;
+  font-size: 1.4vw;
   text-align: center;
   margin: 0px 70px;
 
@@ -660,7 +646,7 @@ legend {
 .historia-5 {
   text-align: center;
   font-family: cursive;
-  font-size: 35px;
+  font-size: 2vw;
   margin: 40px 35px;
 }
 
@@ -679,7 +665,7 @@ legend {
   display: flex;
   justify-content: center;
   font-family: cursive;
-  font-size: larger;
+  font-size: 1.3vw;
   margin: 0px 170px;
 }
 
@@ -699,7 +685,7 @@ legend {
 .historia-item p {
   margin-top: 10px;
   /* Espacio superior entre la imagen y el párrafo */
-  font-size: larger;
+  font-size: 1.3vw;
   font-family: cursive;
   font-weight: bold;
 }
@@ -708,7 +694,7 @@ legend {
   background-color: black;
   color: white;
   font-family: cursive;
-  font-size: large;
+  font-size: 1.3vw;
 }
 
 .t-2 {
@@ -790,7 +776,7 @@ legend {
   width: 800px;
   height: 600px;
   font-family: cursive;
-  font-size: medium;
+  font-size: 1vw;
   line-height: 32px;
   overflow-y: auto;
   /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
@@ -804,7 +790,7 @@ legend {
   width: 800px;
   height: 600px;
   font-family: cursive;
-  font-size: medium;
+  font-size: 1vw;
   line-height: 32px;
   overflow-y: auto;
   /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
@@ -818,7 +804,7 @@ legend {
   width: 800px;
   height: 600px;
   font-family: cursive;
-  font-size: medium;
+  font-size: 1vw;
   line-height: 32px;
   overflow-y: auto;
   /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
@@ -907,7 +893,7 @@ legend {
   margin-bottom: 20px;
   margin-top: 40px;
   font-family: cursive;
-  font-size: medium;
+  font-size: 1.1vw;
 }
 
 .videos-item iframe {
@@ -916,14 +902,14 @@ legend {
 
 .galeria-2 {
   font-family: cursive;
-  font-size: x-large;
+  font-size: 1.5vw;
   font-weight: lighter;
   text-align: center;
   margin: 45px 45px;
 }
 
 .galeria-3 {
-  font-size: 65px;
+  font-size: 4vw;
 }
 
 /* carrousel 3d */
@@ -1006,12 +992,12 @@ legend {
 
 .content-carrousel img {
   width: 100%;
-  transition: all (360ms);
+  transition: all 360ms;
 }
 
 .content-carrousel img:hover {
   transform: scale(1.3);
-  transition: all (360ms);
+  transition: all 360ms;
 }
 
 @keyframes rotar {
@@ -1031,7 +1017,7 @@ legend {
   display: flex;
   text-align: center;
   font-family: cursive;
-  font-size: larger;
+  font-size: 1.4vw;
   margin: 0px 70px;
 }
 
@@ -1102,7 +1088,7 @@ legend {
   text-align: center;
   font-family: cursive;
   margin: 15px;
-  font-size: large;
+  font-size: 1.3vw;
   padding: 40px;
 }
 
@@ -1201,7 +1187,7 @@ summary {
   padding: 20px;
   cursor: pointer;
   font-family: cursive;
-  font-size: large;
+  font-size: 1.2vw;
 }
 
 .pregunta-4 {
@@ -1213,7 +1199,7 @@ summary {
   padding: 10px;
   background-image: linear-gradient(to bottom, #FEF9A7, #e7df6e);
   font-family: cursive;
-  font-size: large;
+  font-size: 1.2vw;
   border: solid #606061;
 }
 
@@ -1222,7 +1208,7 @@ summary {
   background-image: linear-gradient(to bottom, #e7df6e, #FEF9A7);
   font-family: cursive;
   padding: 10px;
-  font-size: large;
+  font-size: 1.2vw;
   border: solid #606061;
 }
 
