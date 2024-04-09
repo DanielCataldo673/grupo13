@@ -1218,7 +1218,11 @@ summary {
   padding: 10px;
   margin: 20px;
 }
-
+.item9 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  width: 100%;
+}
 .grid-container .item {
   text-align: center;
   padding: 20px;
@@ -1228,6 +1232,7 @@ summary {
   flex-direction: column; /* Cambiamos a dirección de columna */
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .grid-container img {
@@ -1268,6 +1273,7 @@ summary {
 }
 
 
+
 .grid-container h4 {
   padding: 10px;
   font-family: cursive;
@@ -1279,11 +1285,51 @@ summary {
   padding: 10px;
 }
 
-.item9 {
-  grid-column-start: 1;
-  grid-column-end: 5;
+
+.galeriados{
+  display: flex;
+  overflow-x: hidden;
+  padding: 16px;
 }
 
+.card{
+  margin-right: 10px;
+  position: relative;
+}
 
+.card img{
+  width: 190px;
+  object-fit: cover;
+  height: 300px;
+  gap: 20px;
+  animation: rotar 15s infinite linear;
+  transform-style:preserve-3d; 
+}
+
+.card img:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.cuerpo-card {
+  position: relative;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgba(116, 111, 111, 0.4);
+  text-align: center;
+  font-size: 1.1vw;
+  font-family: cursive;
+  width: 100%;
+  margin-bottom: 4px;
+  border-radius: 50%;
+  }
+
+
+.galeriados-2{
+  font-size: 3.5vw;
+  font-family: cursive;
+  margin: 50px 0px 30px 0px;
+  text-align: center;
+}
 
 
