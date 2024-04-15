@@ -11,7 +11,7 @@
 html {
   font-size: 100%;
   /* 1rem = 10px */
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;/* nos permite activar un desplazamiento suave (smooth scroll) al pulsar en un enlace de anclas <a>  */
 }
 
 
@@ -246,6 +246,12 @@ footer {
 }
 
 .footer-fin .links:hover {
+  background-color: #F9F07A;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.dropdown a:hover {
   background-color: #F9F07A;
   border-radius: 10px;
   padding: 5px;
@@ -1330,6 +1336,383 @@ summary {
   font-family: cursive;
   margin: 50px 0px 30px 0px;
   text-align: center;
+}
+
+
+/* INDEX */
+
+.arti1 { grid-area: banner-inicio; }
+.arti2 { grid-area: nav; }
+.arti3 { grid-area: header; }
+.arti4 { grid-area: main; }
+.arti5 { grid-area: botones-fin; }
+.arti6 { grid-area: marquee; }
+.arti7 { grid-area: footer; }
+
+.grid-contenedor {
+  display: grid;
+  grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+                       'nav nav nav'
+                       'header header header'
+                       'main main main'
+                       'botones-fin botones-fin botones-fin'
+                       'marquee marquee marquee'
+                       'footer footer footer';
+  gap: 10px; 
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (100px <= width <= 460px){ /*(min-width: 100px) and (max-width: 460px)*/
+	.grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+                         'nav'
+                         'header'
+                         'main'
+                         'botones-fin'
+                         'marquee'
+                         'footer';
+  }
+ }
+
+/* TABLET */
+@media (461px <= width <= 768px){/*(min-width: 461px) and (max-width: 768px)*/
+	.grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+                         'nav nav'
+                         'header header'
+                         'main main'
+                         'botones-fin botones-fin'
+                         'marquee marquee'
+                         'footer footer';
+  }
+}
+
+/* PC */
+@media (769px <= width){/*(min-width: 769px) and (max-width: .....)*/
+	.grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+                         'nav nav nav'
+                         'header header header'
+                         'main main main'
+                         'botones-fin botones-fin botones-fin'
+                         'marquee marquee marquee'
+                         'footer footer footer';
+  }
+}
+
+/* PRODUCTOS */
+.articulo1 { grid-area: banner-inicio; }
+.articulo2 { grid-area: nav; }
+.articulo3 { grid-area: header; }
+.articulo4 { grid-area: main; }
+.articulo5 { grid-area: botones-fin; }
+.articulo6 { grid-area: marquee; }
+.articulo7 { grid-area: footer; }
+
+
+.grid-contenedor2 {
+  display: grid;
+  grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+                       'nav nav nav'
+                       'header header header'
+                       'main main main'
+                       'botones-fin botones-fin botones-fin'
+                       'marquee marquee marquee'
+                       'footer footer footer';
+  gap: 10px;                     
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (100px <= width <= 460px){ /*(min-width: 100px) and (max-width: 460px)*/
+	.grid-contenedor2 {
+    grid-template-areas: 'banner-inicio'
+                         'nav'
+                         'header'
+                         'main'
+                         'botones-fin'
+                         'marquee'
+                         'footer';
+  }
+
+
+}
+
+/* TABLET */
+@media (461px <= width <= 768px){/*(min-width: 461px) and (max-width: 768px)*/
+	.grid-contenedor2 {
+    grid-template-areas: 'banner-inicio banner-inicio'
+                         'nav nav'
+                         'header header'
+                         'main main'
+                         'botones-fin botones-fin'
+                         'marquee marquee'
+                         'footer footer';
+  }
+}
+
+/* PC */
+@media (769px <= width){/*(min-width: 769px) and (max-width: .....)*/
+	.grid-contenedor2 {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+                         'nav nav nav'
+                         'header header header'
+                         'main main main'
+                         'botones-fin botones-fin botones-fin'
+                         'marquee marquee marquee'
+                         'footer footer footer';
+  }
+}
+
+.container__cartas{
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Cambiado a wrap para permitir envolver las cartas */
+  justify-content: space-between;
+}
+
+.cartas {
+  flex: 0 1 calc(33.33% - 20px); /* Ancho flexible para mostrar 3 cartas por fila con margen */
+  margin: 10px; 
+  padding: 10px;
+  border: #222 solid;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+/* Resto de tus estilos para .cover, .description, etc. */
+
+.cartas .cover {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.cartas .cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  position: relative;
+  filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+  object-fit: cover;
+}
+
+.cartas .description{
+ padding: 5px;
+  text-align: center; /* Centrar el texto */
+}
+
+.cartas .description h2{
+  margin-top: 10px;
+  font-family: cursive;
+}
+
+.cartas .description h4{
+  margin-top: 10px;
+  font-family: cursive;
+}
+
+.cartas .description p{
+  margin-top: 10px;
+  font-family: cursive;
+}
+
+.productos-parra{
+  margin: 0px 40px 40px 40px;
+  font-family: cursive;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.cartas .description input {
+  padding: 10px 40px;
+  margin-top: 20px;
+  border: solid #222; /* Corregí el valor de border */
+  font-weight: bold; /* En lugar de 'font', usa 'font-weight' */
+  font-size: 1vw;
+  font-family: cursive;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+  
+.cartas .description input:hover{
+  transform: scale(1.1);
+  color: #222;
+  background-color: #F9F07A;
+}
+
+
+/* Producto */
+
+.articulos1 { grid-area: banner-inicio; }
+.articulos2 { grid-area: nav; }
+.articulos3 { grid-area: header; }
+.articulos4 { grid-area: main; }
+.articulos5 { grid-area: botones-fin; }
+.articulos6 { grid-area: marquee; }
+.articulos7 { grid-area: footer; }
+
+
+.grid-contenedor3 {
+  display: grid;
+  grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+                       'nav nav nav'
+                       'header header header'
+                       'main main main'
+                       'botones-fin botones-fin botones-fin'
+                       'marquee marquee marquee'
+                       'footer footer footer';
+  gap: 10px;                     
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (100px <= width <= 460px){ /*(min-width: 100px) and (max-width: 460px)*/
+	.grid-contenedor3 {
+    grid-template-areas: 'banner-inicio'
+                         'nav'
+                         'header'
+                         'main'
+                         'botones-fin'
+                         'marquee'
+                         'footer';
+  }
+  
+}
+
+/* TABLET */
+@media (461px <= width <= 768px){/*(min-width: 461px) and (max-width: 768px)*/
+	.grid-contenedor3 {
+    grid-template-areas: 'banner-inicio banner-inicio'
+                         'nav nav'
+                         'header header'
+                         'main main'
+                         'botones-fin botones-fin'
+                         'marquee marquee'
+                         'footer footer';
+  }
+}
+
+/* PC */
+@media (769px <= width){/*(min-width: 769px) and (max-width: .....)*/
+	.grid-contenedor3 {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+                         'nav nav nav'
+                         'header header header'
+                         'main main main'
+                         'botones-fin botones-fin botones-fin'
+                         'marquee marquee marquee'
+                         'footer footer footer';
+  }
+}
+
+.container__cartas2{
+  max-width: 1400px;
+  height: 100%;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Cambiado a wrap para permitir envolver las cartas */
+  justify-content: center;
+}
+
+.cartas2 {
+  margin: 10px; 
+  padding: 10px;
+  border: #222 solid;
+  display: flex;
+  flex-direction: row; /* Cambiado a row para alinear la imagen y el texto en horizontal */
+  justify-content: space-between; /* Alinear la imagen y el texto en los extremos */
+} 
+
+
+/* Resto de tus estilos para .cover, .description, etc. */
+
+.cartas2 .cover2 {
+  width: 50%; /* Ancho de la imagen */
+  height: auto;
+  position: relative;
+  background-color: #222;
+}
+
+
+.cartas2 .cover2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+  object-fit: cover;
+}
+
+.cartas2 .description2 {
+  width: 50%; /* Ancho del texto */
+  padding: 15px;
+  text-align: center; /* Centrar el texto */
+  margin: 10px;
+}
+
+.cartas2 .description2 h2{
+  font-family: cursive;
+  font-size: 2.5vw;
+}
+
+.cartas2 .description2 h3{
+  margin-top: 15px;
+  font-family: cursive;
+  font-size: 2vw;
+}
+
+.cartas2 .description2 h4{
+  margin-top: 15px;
+  font-family: cursive;
+  font-size: 1.2vw;
+}
+
+.cartas2 .description2 p{
+  margin-top: 10px;
+  font-family: cursive;
+  font-size: 1.2vw;
+}
+
+.cartas2 .description2 input {
+  padding: 10px 40px;
+  margin-top: 20px;
+  border: solid #222; /* Corregí el valor de border */
+  font-weight: bold; /* En lugar de 'font', usa 'font-weight' */
+  font-size: 1vw;
+  font-family: cursive;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+  
+.cartas2 .description2 input:hover{
+  transform: scale(1.1);
+  color: #222;
+  background-color: #F9F07A;
+}
+
+.producto{
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column; /* Cambiado a column para alinear la imagen y el texto en vertical */
+  justify-content: space-between; /* Alinear la imagen y el texto en los extremos */
+
 }
 
 
