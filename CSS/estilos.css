@@ -1520,7 +1520,6 @@ summary {
       'footer';
   }
 
-
   .tel-mail,
   .footer-medio,
   .footer-fin {
@@ -1530,6 +1529,12 @@ summary {
     justify-content: start;
   }
 
+  .tel-mail {
+    text-align: start;
+    margin: 0px 0px 0px 12px;
+    width: 100%;
+    padding: 5px;
+  }
 
   .botones-fin {
     display: flex;
@@ -1566,7 +1571,7 @@ summary {
   .nav-3 input {
     width: 65vw;
     height: 15vw;
-    font-size: 3vw;
+    font-size: 5vw;
   }
 
   .container__cartas {
@@ -1658,7 +1663,13 @@ summary {
     height: auto;
   }
 
-  
+  .articulo4>.productos-parra:first-child {
+    text-align: justify;
+    /* Justificar el texto */
+    margin: 0px 0px 0px 10px;
+    width: 27%;
+    font-size: 8vw;
+  }
 
 }
 
@@ -1696,7 +1707,7 @@ summary {
     height: auto;
   }
 
-  
+
 
   .cartas .description a:hover {
     transform: scale(1.3);
@@ -1880,6 +1891,13 @@ summary {
     display: flex;
     flex-direction: column;
     justify-content: start;
+  }
+
+  .tel-mail {
+    text-align: start;
+    margin: 0px 0px 0px 12px;
+    width: 100%;
+    padding: 5px;
   }
 
   .botones-fin {
