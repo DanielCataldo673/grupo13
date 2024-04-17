@@ -1602,6 +1602,64 @@ summary {
     box-sizing: border-box;
     /* Incluir padding en el ancho total */
   }
+
+  h1 {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 7vw;
+  }
+
+  ul.nav {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    flex-direction: column;
+
+    justify-content: start;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: start;
+    /* Centra verticalmente los elementos */
+    gap: 15px;
+    /* Espacio interno del menú */
+    font-size: 5.1vw;
+
+  }
+
+  ul.nav li {
+    background-color: #FFFFFF;
+  }
+
+  .dropdown-content {
+    font-size: 4.5vw;
+    border-radius: 0px;
+    padding: 0px;
+  }
+
+  .nav {
+    margin-left: 27px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  .nav-search {
+    width: 41vw;
+    height: 15vw;
+    font-size: 5vw;
+
+  }
+
+
+  .boton {
+    width: 10vw;
+    height: auto;
+  }
+
+  
+
 }
 
 
@@ -1638,9 +1696,7 @@ summary {
     height: auto;
   }
 
-  .cartas .description {
-    background-color: #e7df6e;
-  }
+  
 
   .cartas .description a:hover {
     transform: scale(1.3);
@@ -1879,6 +1935,62 @@ summary {
     background-color: #4c4c4c;
 
     font-size: 4vw;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 7vw;
+  }
+
+  ul.nav {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    flex-direction: column;
+
+    justify-content: start;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: start;
+    /* Centra verticalmente los elementos */
+    gap: 15px;
+    /* Espacio interno del menú */
+    font-size: 5.1vw;
+
+  }
+
+  ul.nav li {
+    display: block;
+    background-color: #FFFFFF;
+  }
+
+  .dropdown-content {
+    font-size: 4.5vw;
+    border-radius: 0px;
+    padding: 0px;
+  }
+
+  .nav {
+    margin-left: 27px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  .nav-search {
+    width: 41vw;
+    height: 15vw;
+    font-size: 5vw;
+
+  }
+
+
+  .boton {
+    width: 10vw;
+    height: auto;
   }
 
 }
