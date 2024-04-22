@@ -114,6 +114,18 @@
       'footer';
   }
 
+  .productos-parra {
+    display: block;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 7px;
+    margin-bottom: 0;
+    font-size:7vw;
+    max-width: 120px;
+    padding: 2px;
+  }
+
+
   .container__cartas {
     flex-direction: column;
     justify-content: center;
@@ -148,66 +160,45 @@
     /* Incluir padding en el ancho total */
   }
 
-  h1 {
-    display: flex;
-    justify-content: start;
-    margin-left: 20px;
-    margin-bottom: 0;
-    font-size: 7vw;
+}
+
+/* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'marquee marquee'
+      'footer footer';
   }
 
-  ul.nav {
-    display: flex;
-    /* Hace que los elementos se muestren en línea */
-    flex-direction: column;
-
-    justify-content: start;
-    /* Distribuye los elementos a lo largo del contenedor */
-    align-items: start;
-    /* Centra verticalmente los elementos */
-    gap: 15px;
-    /* Espacio interno del menú */
-    font-size: 5.1vw;
-
-  }
-
-  ul.nav li {
-    background-color: #FFFFFF;
-  }
-
-  .dropdown-content {
-    font-size: 4.5vw;
-    border-radius: 0px;
-    padding: 0px;
-  }
-
-  .nav {
-    margin-left: 27px;
-  }
-
-  .logo {
-    width: 70px;
-    height: 60px;
-  }
-
-  .nav-search {
-    width: 41vw;
-    height: 15vw;
-    font-size: 5vw;
-
-  }
-
-  .boton {
-    width: 10vw;
+  .nav input {
     height: auto;
   }
+  
+}
 
-  .articulo4>.productos-parra:first-child {
-    text-align: justify;
-    /* Justificar el texto */
-    margin: 0px 0px 0px 10px;
-    width: 27%;
-    font-size: 8vw;
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'marquee marquee marquee'
+      'footer footer footer';
   }
 
+  .nav input {
+    height: auto;
+  }
+  
 }

@@ -334,10 +334,73 @@ footer {
       'footer';
   }
 
+  h1 {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 7vw;
+  }
+
+  ul.nav {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    flex-direction: column;
+
+    justify-content: start;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: start;
+    /* Centra verticalmente los elementos */
+    gap: 20px;
+    /* Espacio interno del menú */
+    font-size: 4vw;
+
+  }
+
+  ul.nav li,
+  ul.nav-1 li,
+  ul.nav-2 li {
+    display: block;
+    background-color: #FFFFFF;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+
+  
+
+  .dropdown-content {
+    font-size: 4.5vw;
+    border-radius: 0px;
+    padding: 0px;
+    max-width: 110px;
+  }
+
+  .nav {
+    margin-left: 27px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  .nav-search {
+    width: 41vw;
+    height: 15vw;
+    font-size: 5vw;
+
+  }
+
+  .boton {
+    width: 10vw;
+    height: auto;
+  }
+
+
   .tel-mail,
   .footer-medio,
   .footer-fin {
-    font-size: 5vw;
+    font-size: 4vw;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -383,11 +446,12 @@ footer {
   }
 
   .nav-3 input {
-    width: 65vw;
+    width: 69vw;
     height: 15vw;
     font-size: 3vw;
   }
 
+  
 
 }
 
