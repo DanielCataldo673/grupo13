@@ -1,0 +1,232 @@
+/* Historia */
+.historia {
+  font-family: cursive;
+  font-size: 1.4vw;
+  text-align: center;
+  margin: 0px 70px;
+
+}
+
+.historia-1 {
+  width: 40%;
+  height: 20vw;
+  border-radius: 50%;
+}
+
+.historia-2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.historia-3 {
+  width: 70%;
+  height: 13vw;
+  border-radius: 10%;
+  transition: transform 0.5s;
+}
+
+.historia-3:hover {
+  transform: scale(1.3);
+}
+
+.historia-5 {
+  text-align: center;
+  font-family: cursive;
+  font-size: 2vw;
+  margin: 40px 35px;
+}
+
+.historia-4 {
+  grid-template-columns: 1fr;
+  /* Una columna para cada item */
+  gap: 10px;
+  /* Espacio entre items */
+  margin: 0px 55px 65px 55px;
+  display: flex;
+  justify-content: space-around;
+  /* Espacio entre los elementos */
+}
+
+.historia-6 {
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.3vw;
+  margin: 0px 170px;
+}
+
+.historia-item {
+  text-align: center;
+  /* Alineación del texto al centro */
+  margin: 10px;
+  /* Espacio alrededor de cada item */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Alineación horizontal al centro */
+  justify-content: center;
+  /* Alineación vertical al centro */
+}
+
+.historia-item p {
+  margin-top: 10px;
+  /* Espacio superior entre la imagen y el párrafo */
+  font-size: 1.3vw;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.t-1 {
+  background-color: black;
+  color: white;
+  font-family: cursive;
+  font-size: 1.3vw;
+}
+
+.t-2 {
+  background-color: #FFD43B;
+  font-family: cursive;
+  padding: 20px;
+}
+
+.t-3 {
+  width: 75%;
+  transition: transform 0.3s;
+}
+
+.t-3:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.t-4 {
+  display: flex;
+  justify-content: center;
+}
+
+/*Efecto*/
+.modalmask {
+  position: fixed;
+  font-family: Arial, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-out;
+  pointer-events: none;
+}
+
+.modalmask:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox {
+  width: 100%;
+  position: relative;
+  padding: 5px 20px 13px 20px;
+  background: #fff;
+  border-radius: 3px;
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+
+}
+
+/*Movimientos*/
+.movedown {
+  margin: 5% auto;
+}
+
+.rotate {
+  margin: 5% auto;
+  -webkit-transform: scale(-5, -5);
+  transform: scale(-5, -5);
+  transition: all 800ms ease-in-out;
+}
+
+.resize {
+  margin: 5% auto;
+  width: 0;
+  height: 0;
+}
+
+.modalmask:target .movedown {
+  width: 50%;
+  height: 80%;
+  font-family: cursive;
+  font-size: 1vw;
+  line-height: 32px;
+  overflow-y: auto;
+  /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
+  background-color: #FEF9A7;
+  padding: 40px;
+}
+
+.modalmask:target .rotate {
+  transform: rotate(360deg) scale(1, 1);
+  -webkit-transform: rotate(360deg) scale(1, 1);
+  width: 800px;
+  height: 600px;
+  font-family: cursive;
+  font-size: 1vw;
+  line-height: 32px;
+  overflow-y: auto;
+  /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
+  background-color: #FEF9A7;
+  padding: 40px;
+}
+
+
+
+.modalmask:target .resize {
+  width: 50%;
+  height: 80%;
+  font-family: cursive;
+  font-size: 1vw;
+  line-height: 32px;
+  overflow-y: auto;
+  /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
+  background-color: #FEF9A7;
+  padding: 40px;
+  margin-bottom: 35px;
+}
+
+/*Boton de cerrar*/
+.close-historia {
+  background: #111111;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: 1px;
+  text-align: center;
+  top: 1px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+
+}
+
+.close-historia:hover {
+  background: #FFD43B;
+  color: #222;
+}
+
+.historia-modal h2 {
+  text-align: center;
+  margin: 15px;
+}
+
+.historia-modal img {
+  width: 100%;
+  height: 40%;
+}

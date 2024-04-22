@@ -1,0 +1,213 @@
+.container__cartas {
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* Cambiado a wrap para permitir envolver las cartas */
+  justify-content: space-between;
+}
+
+.cartas {
+  flex: 0 1 calc(33.33% - 20px);
+  /* Ancho flexible para mostrar 3 cartas por fila con margen */
+  margin: 10px;
+  padding: 10px;
+  border: #222 solid;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Resto de tus estilos para .cover, .description, etc. */
+
+.cartas .cover {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.cartas .cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  position: relative;
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+  object-fit: cover;
+}
+
+.cartas .description {
+  padding: 5px;
+  text-align: center;
+  /* Centrar el texto */
+}
+
+.cartas .description h2 {
+  margin-top: 10px;
+  font-family: cursive;
+}
+
+.cartas .description h4 {
+  margin-top: 10px;
+  font-family: cursive;
+}
+
+.cartas .description p {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-family: cursive;
+}
+
+.productos-parra {
+  margin: 0px 40px 40px 40px;
+  font-family: cursive;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.cartas .description a {
+  padding: 8px;
+  border: solid #222;
+  /* Corregí el valor de border */
+  font-weight: bold;
+  /* En lugar de 'font', usa 'font-weight' */
+  font-size: 0.9vw;
+  font-family: cursive;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+}
+
+
+.cartas .description a:hover {
+  color: #222;
+  background-color: #F9F07A;
+}
+
+.comprar3 {
+  margin-top: 30px;
+}
+
+
+
+
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (100px <=width <=460px) {
+
+  /*(min-width: 100px) and (max-width: 460px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'header'
+      'main'
+      'botones-fin'
+      'marquee'
+      'footer';
+  }
+
+  .container__cartas {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cartas .description h2,
+  .cartas .description h4,
+  .cartas .description p {
+    margin: 10px 85px;
+    padding: 20px;
+    font-size: 5vw;
+  }
+
+  .cartas {
+    flex: auto;
+    max-width: 30%;
+    height: auto;
+  }
+
+  .cartas .description a {
+    background-color: #606061;
+    overflow: hidden;
+  }
+
+  .cartas .description a:hover {
+    transform: scale(1.1);
+    font-size: 6.5vw;
+    width: 25%;
+    padding: 10px;
+    /* Espacio interno del input */
+    box-sizing: border-box;
+    /* Incluir padding en el ancho total */
+  }
+
+  h1 {
+    display: flex;
+    justify-content: start;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-size: 7vw;
+  }
+
+  ul.nav {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    flex-direction: column;
+
+    justify-content: start;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: start;
+    /* Centra verticalmente los elementos */
+    gap: 15px;
+    /* Espacio interno del menú */
+    font-size: 5.1vw;
+
+  }
+
+  ul.nav li {
+    background-color: #FFFFFF;
+  }
+
+  .dropdown-content {
+    font-size: 4.5vw;
+    border-radius: 0px;
+    padding: 0px;
+  }
+
+  .nav {
+    margin-left: 27px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  .nav-search {
+    width: 41vw;
+    height: 15vw;
+    font-size: 5vw;
+
+  }
+
+  .boton {
+    width: 10vw;
+    height: auto;
+  }
+
+  .articulo4>.productos-parra:first-child {
+    text-align: justify;
+    /* Justificar el texto */
+    margin: 0px 0px 0px 10px;
+    width: 27%;
+    font-size: 8vw;
+  }
+
+}

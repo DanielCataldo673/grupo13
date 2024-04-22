@@ -1,0 +1,250 @@
+/* Contacto */
+.contac {
+  text-align: center;
+  font-family: cursive;
+  font-size: 2vw;
+  margin: 20px 0px 35px 0px;
+}
+
+.contac-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.contac-2:hover {
+  transform: scale(1.1);
+  /* Aumenta el tamaño del iframe al hacer hover */
+}
+
+.contac-2 {
+  border: double gray;
+  border-radius: 5%;
+  box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
+  transition: transform 0.3s
+}
+
+.contac-3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.contac-4:hover {
+  background-color: #606061;
+}
+
+.contac-4 {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.8vw;
+  font-family: cursive;
+  text-align: center;
+  padding: 10px;
+  background-color: #FFD43B;
+  border: solid #4c4c4c;
+  border-radius: 50%;
+  box-shadow: 10px 10px 17px 0px rgba(188, 180, 180, 0.75);
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(188, 180, 180, 0.75);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(188, 180, 180, 0.75);
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-direction: reverse;
+  animation-timing-function: ease;
+}
+
+@keyframes example {
+  0% {
+    background-color: #FDA403;
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    background-color: #E8751A;
+    left: 200px;
+    top: 0px;
+  }
+
+  50% {
+    background-color: #898121;
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    background-color: #E5C287;
+    left: 0px;
+    top: 200px;
+  }
+
+  100% {
+    background-color: #FFD43B;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+
+
+.modalDialog {
+
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog>div {
+  width: 80%;
+  height: 70%;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+.close {
+  padding: 8px;
+  background: #606061;
+  color: white;
+  line-height: 15px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  width: 1.96vw;
+  height: 1.96vw;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+  background: #F9F07A;
+  color: #000;
+}
+
+.firstname-2 {
+  width: 60%;
+  /* Cambia el valor de acuerdo al tamaño deseado */
+  margin: 5px;
+  /* Añade margen alrededor del contenedor si es necesario */
+  padding: 5px;
+  /* Añade relleno al contenedor si es necesario */
+  border-radius: 5%;
+  border: solid grey;
+  box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+}
+
+.contac-6 {
+  flex: 1;
+  text-align: center;
+  font-family: cursive;
+}
+
+.contac-7 {
+  display: flex;
+  flex-direction: row;
+}
+
+.contac-8 {
+  font-family: cursive;
+  margin-bottom: 5px;
+}
+
+.contac-9 {
+  display: flex;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.3vw;
+  margin-top: 25px;
+}
+
+.contac-10 {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.contac-13 {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 25px;
+}
+
+.contac-14 {
+  width: 10%;
+  height: auto;
+  font-size: 1.2vw;
+  font-family: cursive;
+  margin-right: 20px;
+  background-image: linear-gradient(to bottom, #FEF9A7, #F8DE22);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contac-15 {
+  display: flex;
+  justify-content: center;
+}
+
+.contac-15 button {
+  width: 13%;
+  height: auto;
+  font-size: 1vw;
+  font-family: cursive;
+  border-radius: 50%;
+  background-color: #F9F07A;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.contac-15 input {
+  width: 18%;
+  font-size: 1vw;
+  font-family: cursive;
+}
+
+.redes {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 50px;
+}
+
+.contac-11 {
+  font-size: 1.96vw;
+  font-family: cursive;
+  text-align: center;
+  font-weight: bold;
+}
