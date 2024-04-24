@@ -22,7 +22,7 @@
   box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
-  transition: transform 0.3s
+  transition: transform 0.3s;
 }
 
 .contac-3 {
@@ -113,9 +113,8 @@
 
 .modalDialog>div {
   width: 80%;
-  height: 70%;
   position: relative;
-  margin: 10% auto;
+  margin: 2% auto;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: #fff;
@@ -156,7 +155,7 @@
 .firstname-2 {
   width: 60%;
   /* Cambia el valor de acuerdo al tamaño deseado */
-  margin: 5px;
+  margin: 2px;
   /* Añade margen alrededor del contenedor si es necesario */
   padding: 5px;
   /* Añade relleno al contenedor si es necesario */
@@ -195,6 +194,13 @@
   display: flex;
   justify-content: center;
   margin: 5px;
+}
+
+.contac-11 {
+  font-size: 1.96vw;
+  font-family: cursive;
+  text-align: center;
+  font-weight: bold;
 }
 
 .contac-13 {
@@ -236,15 +242,192 @@
   font-family: cursive;
 }
 
+.contac-16 {
+  text-decoration: none;
+  color: #000;
+  border: solid #4c4c4c;
+  text-align: center;
+  width: 10%;
+  height: auto;
+  font-size: 1.2vw;
+  font-family: cursive;
+  margin-right: 20px;
+  background-image: linear-gradient(to bottom, #FEF9A7, #F8DE22);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .redes {
   display: flex;
   justify-content: space-around;
   margin: 50px 50px;
 }
 
-.contac-11 {
-  font-size: 1.96vw;
-  font-family: cursive;
-  text-align: center;
-  font-weight: bold;
+.iconred {
+  color: #000000;
+}
+
+.grid-container-form {
+  display: grid; 
+  grid-template-columns: repeat(3, 2fr);
+}
+
+.grid-item-form10 {
+  margin-top: 20px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+} 
+
+.grid-item-form11 {
+  margin-top: 20px; 
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-item-form12 {
+  margin-top: 20px; 
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'marquee marquee marquee'
+      'footer footer footer';
+  }
+
+  .nav input {
+    height: auto;
+  }
+
+  .grid-item-form11 {
+    width: auto;
+  } 
+}
+
+
+/* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'marquee marquee'
+      'footer footer';
+  }
+ 
+  .nav input {
+    height: auto;
+  }
+  
+  .modalDialog {
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  .contac-7{ 
+    display: grid;
+  }
+
+  .grid-container-form {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+  }
+
+  .grid-item-form10 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .grid-item-form11 {
+    margin-top: 20px;
+    width: auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .grid-item-form12 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  textarea{
+    width: 80em;
+  }
+}
+
+/* CELULARES */
+@media (100px <=width <=460px) {
+
+  /*(min-width: 100px) and (max-width: 460px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'header'
+      'main'
+      'botones-fin'
+      'marquee'
+      'footer';
+  }
+
+  .modalDialog {
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .maps {
+    width: auto;
+  }
+  
+  .contac-7 {
+    display: grid;
+  }
+
+  .redes {
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+  }
+
+  .grid-container-form {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .grid-item-form10 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid-item-form11 {
+    margin-top: 20px;
+    width: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid-item-form12 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;    
+  }
+  
+  textarea{
+    width: 15em;
+  }
 }
