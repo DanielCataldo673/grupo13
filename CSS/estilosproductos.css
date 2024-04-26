@@ -148,6 +148,7 @@
   .cartas .description a {
     background-color: #606061;
     overflow: hidden;
+    font-size: 5vw;
   }
 
   .cartas .description a:hover {
