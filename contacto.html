@@ -84,117 +84,161 @@
 
         <div class="contac-1">
 
-          <iframe class="contac-2"
+          <iframe class="maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.4299038984636!2d-64.50560541922407!3d-31.069966613623112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d836a3706ec4b%3A0x2469a01ce92b57b5!2sRuta%20Nacional%2038%20%26%20Jorge%20Newbery%2C%20Huerta%20Grande%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1710847685442!5m2!1ses-419!2sar"
             width="800" height="400" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="contac-3">
-          <a class="contac-4" href="#openModal">Contactanos</a>
+          <a class="contac-4" href="#openModal">Contáctanos</a>
           <div id="openModal" class="modalDialog">
             <div>
               <a href="#close" title="Close" class="close">X</a>
               <h2 class="contac-8">Te escuchamos.....</h2>
               <br>
-              <div class="contac-7">
-                <div class="contac-6">
-                  <form action="link" method="post">
-                    <label for="firstname">Nombre</label>
-                    <br>
-                    <input class="firstname-2" type="text" id="firstname" name="firstname"
-                      placeholder="Ingrese su nombre aquí....." required>
-                    <br><br>
-                    <label for="city">Lugar de Recidencia</label>
-                    <br>
-                    <select class="firstname-2" name="city" id="city">
-                      <option value="c.a.b.a">C.A.B.A</option>
-                      <option value="a.m.b.a">A.M.B.A</option>
-                      <option value="cordoba">Cordoba</option>
-                      <option value="santa-fe">San Luis</option>
-                      <option value="otro">Otro</option>
-                    </select>
+              <!-- <form action="link" method="post"> -->
+              <form id="myForm" action="">
 
+                <div class="grid-container-form">
+                  <div class="grid-item-form1">
+                    <div class="contac-6">
+                      <label for="firstname">Nombre *</label>
+                      <br>
+                      <input class="firstname-2" type="text" id="firstname" name="firstname"
+                        placeholder="Ingrese su nombre aquí....." required>
+                    </div>
+                  </div>
+                  <div class="grid-item-form2">
+                    <div class="contac-6">
+                      <label for="lastname">Apellido *</label>
+                      <br>
+                      <input class="firstname-2" type="text" id="lastname" name="lastname"
+                        placeholder="Ingrese su apellido aquí....." required> 
+                    </div>
+                  </div>
+                  <div class="grid-item-form3">
+                    <div class="contac-6">
+                      <label for="birthDate">Fecha de Nacimiento</label>
+                      <br>
+                      <input class="firstname-2" type="date" id="birthDate" name="birthDate">
+                    </div>
+                  </div>  
+                  <div class="grid-item-form4">
+                    <div class="contac-6">
+                      <label for="email">Email *</label>
+                      <br>
+                      <input class="firstname-2" type="email" id="email" name="email"
+                        placeholder="Ingrese su email aquí....." required>
+                    </div>
+                  </div>
+                  <div class="grid-item-form5">
+                    <div class="contac-6">
+                      <label for="telefono">Teléfono</label>
+                      <br>
+                      <input class="firstname-2" type="tel" id="telefono" name="telefono"
+                      placeholder="Ingrese su teléfono aquí.....">
+                    </div>
+                  </div>
+                  <div class="grid-item-form6">
+                    <div class="contac-6">
+                      <label for="city">Lugar de Recidencia</label>
+                      <br>
+                      <select class="firstname-2" name="city" id="city">
+                        <option value="c.a.b.a">C.A.B.A</option>
+                        <option value="g.b.a">Gran Buenos Aires</option>
+                        <option value="cordoba">Cordoba</option>
+                        <option value="san-luis">San Luis</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                    </div>
+                  </div>  
+                  <div class="grid-item-form7">
+                    <div class="contac-6">
+                      <p>¿Como conociste "Mío Sole"?
+                        <br>
+                        <input type="checkbox" name="conociste" value="web">Web
+                        <input type="checkbox" name="conociste" value="recomendacion">Recomendación
+                        <input type="checkbox" name="conociste" value="anuncio">Anuncio
+                        <br>
+                        <input type="checkbox" name="conociste" value="otro">Otro
+                      </p>
+                    </div>
+                  </div>
+                  <div class="grid-item-form8">
+                    <div class="contac-6">
+                      <P>Medio de Pago Habitual
+                        <br>
+                        <input type="radio" name="pago" value="debito">Débito
+                        <input type="radio" name="pago" value="credito">Crédito
+                        <input type="radio" name="pago" value="efectivo">Efectivo
+                        <input type="radio" name="pago" value="transferencia">Transferencia
+                        <br>
+                        <input type="radio" name="pago" value="otro">Otro
+                      </P>
+                    </div>
+                  </div>
+                  <div class="grid-item-form9">
+                    <div class="contac-6">
+                    </div>
+                  </div>
+                  <div class="grid-item-form10">
+                    <div class="contac-15">
+                      <input type="file" id="imageInput" accept="image/*">
+                    </div>
+                  </div>
+                  <div class="grid-item-form11">
+                    <div class="contac-6">
+                      <label for="mensaje">Escribe tu consulta *</label>
+                    </div>
+                    <div class="contac-10">
+                      <textarea name="mensaje" id="mensaje" cols="115" rows="5" required></textarea>
+                    </div> 
+                  </div>
+                  <div class="grid-item-form12">
+                    <div class="contac-13">
+                      <input class="contac-14" type="submit" value="Enviar">
+                      <a id="btnEnviar" class="contac-16" href="#openModal2" hidden></a> 
+                      <!-- <a class="contac-16" href="#openModal2" onclick="document.getElementById('myForm').submit();">submit</a> -->
+                      <input class="contac-14" type="reset" value="Borrar"> 
+                    </div>
+                  </div>
                 </div>
-                <br><br>
-                <div class="contac-6">
-                  <label for="lastname">Apellido</label>
-                  <br>
-                  <input class="firstname-2" type="text" id="lastname" name="lastname"
-                    placeholder="Ingrese su apellido aquí....." required>
-                  <br><br>
-                  <label for="birthDate">Fecha de Nacimiento</label>
-                  <br>
-                  <input class="firstname-2" type="date" id="birthDate" name="birthDate" required>
-                </div>
-                <div class="contac-6">
-                  <p>¿Como conociste "Mío Sole"?
-                    <br><br>
-                    <input type="checkbox" name="conociste" value="web">Web
-                    <input type="checkbox" name="conociste" value="recomendacion">Recomendación
-                    <input type="checkbox" name="conociste" value="anuncio">Anuncio
-                    <input type="checkbox" name="conociste" value="otro">Otro
-                  </p>
-                  <br><br>
-                  <P>Medio de Pago Habitual
-                    <br><br>
-                    <input type="radio" name="pago" value="debito">Debito
-                    <input type="radio" name="pago" value="credito">Credito
-                    <input type="radio" name="pago" value="efectivo">Efectivo
-                    <input type="radio" name="pago" value="transferencia">Transferencia
-                    <br>
-                    <input type="radio" name="pago" value="otro">Otro
-
-                  </P>
-                </div>
-              </div>
-
-              <div class="contac-15">
-                <input type="file" id="imageInput" accept="image/*" required>
-                <button type="submit">Subir Imagen</button>
-              </div>
-
-              <div class="contac-9">
-                <label id="consulta">Escribe tu consulta</label>
-              </div>
-
-              <div class="contac-10">
-                <textarea name="mensaje" id="mensaje" cols="115" rows="5"></textarea>
-              </div>
-
-              <div class="contac-13">
-                <input class="contac-14" type="submit" value="Enviar">
-
-                <input class="contac-14" type="reset" value="Borrar">
-              </div>
+              </form>
             </div>
-            </form>
           </div>
         </div>
 
-
+        <div id="openModal2" class="modalDialog">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <div>
+              <h2 class="contac-6">Hemos recibido su consulta...</h2>
+              <h2 class="contac-6">En breve nos estaremos comunicando...</h2>
+              <h2 class="contac-6">Muchas gracias!!!</h2>
+            </div>
+            <br>
+          </div>
+        </div>
+        
         <h2 class="contac">¡¡Siguenos en las redes sociales!!</h2>
 
         <!-- Redes Sociales -->
         <div class="redes">
           <!-- whatsapp -->
-          <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"
-              style="color: #000000;"></i></a>
+          <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl iconred"></i></a>
+          
           <!--facebook-->
-          <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"
-              style="color: #000000;"></i></a>
-
+          <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl iconred"></i></a>
+    
           <!--linkedin  -->
-          <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"
-              style="color: #000000;"></i></a>
-
+          <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl iconred"></i></a>
+    
           <!-- twitter -->
-          <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"
-              style="color: #000000;"></i></a>
-
+          <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl iconred"></i></a>
+    
           <!--instagram  -->
-          <a href="https://www.instagram.com/" target="_blank">
-            <i class="fa-brands fa-instagram fa-2xl" style="color: black;"></i> </a>
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl iconred"></i></a>
         </div>
 
 
@@ -362,8 +406,6 @@
       </footer>
     </div>
   </div>
-
-
+  <script type="text/javascript" src="JS/contacto.js"></script>
 </body>
-
 </html>

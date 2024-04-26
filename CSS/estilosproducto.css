@@ -106,25 +106,60 @@
         gap: 20px;
       }
 
+      .container__cartas2 {
+        display: flex;
+        justify-content: start;
+        margin: 0px 0px 0px 4px;
+        max-width: 145px;
+      }
+      .cartas2 .cover2 {
+        width: 100%;
+      }
+      
+      .cartas2 {
+        width: 80%; /* Ancho de la tarjeta */
+        padding: 0px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex; /* Añadir display flex para alinear elementos horizontalmente */
+        flex-direction: column; /* Cambiar la dirección de los elementos a columna */
+        justify-content: center;
+      }
+      
+      .cartas2 .cover2 img {
+        filter: none;
+      }
+     
+      .cartas2 .description2 .comprar {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 4vw;
+      }
+    
       .tarjetas a {
         display: flex;
-        margin: 40px;
-        text-decoration: none;
-      }
-
-      .telefono p {
-        font-size: 8vw;
+        margin: 40px 4px;
         text-decoration: none;
       }
 
       .cartas2 .description2 .comprar:hover {
-        color: #222;
-        background-color: #4c4c4c;
-        font-size: 4vw;
+        background-color: #F9F07A;
+      }
+      .cartas2 .description2 {
+        padding: 5px;
+        text-align: start;
+        margin: 30px;
       }
 
-      ul.nav li {
-        display: block;
-        background-color: #FFFFFF;
+      .cartas2 .description2 h2,
+      .cartas2 .description2 h3,
+      .cartas2 .description2 h4{
+        font-size: 7vw;
+      }
+      .cartas2 .description2 p {
+      font-size: 5vw;
+      font-weight: 600;
       }
     }
