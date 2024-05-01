@@ -1,0 +1,130 @@
+    .container__cartas2 {
+      max-width: 1400px;
+      height: 100%;
+      margin: auto;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cartas2 {
+      margin: 10px;
+      padding: 10px;
+      border: #222 solid;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .cartas2 .cover2 {
+      width: 50%;
+      height: auto;
+      position: relative;
+      background-color: #222;
+    }
+
+    .cartas2 .cover2 img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.5));
+      object-fit: cover;
+    }
+
+    .cartas2 .description2 {
+      width: 50%;
+      padding: 15px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .cartas2 .description2 h2 {
+      font-family: cursive;
+      font-size: 2.5vw;
+    }
+
+    .cartas2 .description2 h3 {
+      margin-top: 15px;
+      font-family: cursive;
+      font-size: 2vw;
+    }
+
+    .cartas2 .description2 h4 {
+      margin-top: 15px;
+      font-family: cursive;
+      font-size: 1.2vw;
+    }
+
+    .cartas2 .description2 p {
+      margin-top: 10px;
+      font-family: cursive;
+      font-size: 1.2vw;
+    }
+
+    .cartas2 .description2 .comprar {
+      padding: 10px 40px;
+      margin-top: 30px;
+      border: solid #222;
+      font-weight: bold;
+      font-size: 1vw;
+      font-family: cursive;
+      cursor: pointer;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .cartas2 .description2 .comprar:hover {
+      color: #222;
+      background-color: #F9F07A;
+    }
+
+    .comprar1 {
+      margin-top: 30px;
+    }
+
+    .producto {
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* CELULARES */
+    @media (min-width: 100px) and (max-width: 460px) {
+      .grid-contenedor3 {
+        grid-template-areas: 'banner-inicio'
+          'nav'
+          'header'
+          'main'
+          'botones-fin'
+          'marquee'
+          'footer';
+        gap: 20px;
+      }
+
+      .tarjetas a {
+        display: flex;
+        margin: 40px;
+        text-decoration: none;
+      }
+
+      .telefono p {
+        font-size: 8vw;
+        text-decoration: none;
+      }
+
+      .cartas2 .description2 .comprar:hover {
+        color: #222;
+        background-color: #4c4c4c;
+        font-size: 4vw;
+      }
+
+      ul.nav li {
+        display: block;
+        background-color: #FFFFFF;
+      }
+    }

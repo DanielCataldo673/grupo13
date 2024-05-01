@@ -1,0 +1,123 @@
+/* Suscribite Estilos para el formulario de registro */
+
+.suscribite {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid #ccc;
+  border-radius: 20px;
+  display: block;
+  justify-content: center;
+  font: 1.2vw cursive;
+  background-color: #F9F07A;
+}
+
+.firstname {
+  width: 90%;
+  /* Cambia el valor de acuerdo al tamaño deseado */
+  margin: 10px;
+  /* Añade margen alrededor del contenedor si es necesario */
+  padding: 5px;
+  /* Añade relleno al contenedor si es necesario */
+  border-radius: 5%;
+  border: solid grey;
+  box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  margin-bottom: 35px;
+
+}
+
+.enviar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  border: solid grey;
+  box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  font: 1.5vw cursive;
+}
+
+.enviar:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: grey;
+}
+
+.form-2 {
+  flex: 1;
+}
+
+.form-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-5 {
+  border: solid grey;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.form-6 {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.6vw;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+
+.form-7 {
+  text-align: center;
+  font-family: cursive;
+  margin-bottom: 35px;
+}
+
+.form-8 {
+  display: flex;
+  flex-direction: row;
+
+}
+
+/* Agrega esta regla CSS en tu archivo estilos.css */
+.main {
+  padding: 20px;
+  background-image: url("../img/webp/3.webp");
+  /* Ruta relativa a la carpeta img */
+  background-size: cover;
+  /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center;
+  /* Centra la imagen en el contenedor */
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  display: block;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
