@@ -1,10 +1,17 @@
 /* COSTO DE ENVIOS */
 
-
 function mostrarCalculadora() {
     let calculadora = document.getElementById("calculadora");
     calculadora.style.display = "block";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.button2').addEventListener('click', mostrarCalculadora);
+
+    document.getElementById('calcularBtn').addEventListener('click', calcular);
+    document.getElementById('limpiarBtn').addEventListener('click', limpiarCampos);
+    document.getElementById('cerrarBtn').addEventListener('click', cerrarCalculadora);
+});
 
 function calcular() {
     let distancia = parseInt(document.getElementById("km").value);
@@ -46,6 +53,3 @@ function cerrarCalculadora() {
     var calculadora = document.getElementById("calculadora");
     calculadora.style.display = "none";
 }
-
-
-
