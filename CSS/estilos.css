@@ -137,10 +137,10 @@ ul.nav li.no-hover a:hover {
 }
 
 .nav-search {
-  width: 19.53vw;
-  height: 1.95vw;
+  width: 20vw;
+  height: 2.5vw;
   font-family: cursive;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 800;
 }
 
@@ -417,12 +417,12 @@ footer {
   .botones-fin {
     display: flex;
     justify-content: start;
-    gap: 40px;
+    gap: 29vw;
   }
 
   .botones-fin svg {
-    width: 7vw;
-    height: 7vw;
+    width: 6vw;
+    height: 6vw;
   }
 
   .marquee span {
@@ -469,6 +469,12 @@ footer {
       'marquee marquee'
       'footer footer';
   }
+  .nav-search {
+    width: 20vw;
+    height: 4.3vw;
+    font-size: 1.5vw;
+  }
+
 }
 
 /* PC */
@@ -484,4 +490,6 @@ footer {
       'marquee marquee marquee'
       'footer footer footer';
   }
+  
+
 }

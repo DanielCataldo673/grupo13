@@ -33,7 +33,7 @@ function calcular() {
             condicionCumplida = true;
             break;
         default:
-            envio = 'Comunicarse con Mío Sole para coordinar el envio';
+            envio = 'Comunicarse con Mío Sole para coordinar el envío';
     }
 
     if (condicionCumplida) {
