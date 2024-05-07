@@ -156,7 +156,7 @@ h1 {
   display: flex;
   justify-content: center;
   font-family: cursive;
-  font-size: 3.2vw;
+  font-size: 3vw;
   margin: 20px 0px 35px 0px;
 }
 
@@ -337,7 +337,7 @@ footer {
   h1 {
     display: flex;
     justify-content: start;
-    margin-left: 20px;
+    margin-left: 2%;
     margin-bottom: 0;
     font-size: 7vw;
   }
@@ -362,7 +362,7 @@ footer {
   ul.nav-2 li {
     display: block;
     background-color: #FFFFFF;
-    margin-top: 12px;
+    margin-top: 5%;
     font-weight: bold;
   }
 
@@ -373,7 +373,7 @@ footer {
     font-size: 4.5vw;
     border-radius: 0px;
     padding: 0px;
-    max-width: 110px;
+    max-width: 11%;
   }
 
   .nav {
