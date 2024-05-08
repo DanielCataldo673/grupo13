@@ -50,6 +50,6 @@ function limpiarCampos() {
 }
 
 function cerrarCalculadora() {
-    var calculadora = document.getElementById("calculadora");
+    let calculadora = document.getElementById("calculadora");
     calculadora.style.display = "none";
 }
