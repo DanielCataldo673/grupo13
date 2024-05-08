@@ -255,9 +255,10 @@
 
 
 
-/*RESPONSIVE BORRADOR*/
+/*RESPONSIVE*/
+/* PC */
 @media(max-width: 768px){
-
+/*(769px <=width)*/
 .puntos_historicos .flex{
   flex-direction: column;
   border-bottom: dotted;
@@ -267,4 +268,32 @@
 .puntos_historicos{
   text-align: center;
 }
+}
+/* TABLET */
+@media(461px  <=width <=768px){
+/*(min-width: 461px) and (max-width: 768px) */
+
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+    'nav nav'
+    'header header'
+    'main main'
+    'botones-fin botones-fin'
+    'marquee marquee'
+    'footer footer';
+
+}
+
+/* CELULARES */
+@media (min-width: 100px) and (max-width: 460px) {
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'header'
+      'main'
+      'botones-fin'
+      'marquee'
+      'footer';
+    gap: 20px;
+  }
 }
