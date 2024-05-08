@@ -149,6 +149,7 @@
     background-color: #606061;
     overflow: hidden;
     font-size: 5vw;
+    color: #ffffff;
   }
 
   .cartas .description a:hover {
@@ -179,6 +180,18 @@
 
   .nav input {
     height: auto;
+  }
+
+  .cartas .description a {
+    overflow: hidden;
+    font-size: 2vw;
+  }
+
+  .cartas .description a:hover {
+    transform: scale(1.2);
+    font-size: 2.5vw;
+    width: 10%;
+    background-color: #f7f76b;
   }
   
 }

@@ -38,7 +38,7 @@
       width: 50%;
       padding: 15px;
       text-align: center;
-      margin: 10px;
+      margin: 1%;
     }
 
     .cartas2 .description2 h2 {
@@ -61,7 +61,7 @@
     .cartas2 .description2 p {
       margin-top: 10px;
       font-family: cursive;
-      font-size: 1.2vw;
+      font-size: 1.3vw;
     }
 
     .cartas2 .description2 .comprar {
@@ -93,6 +93,7 @@
       justify-content: space-between;
     }
 
+
     /* CELULARES */
     @media (min-width: 100px) and (max-width: 460px) {
       .grid-contenedor3 {
@@ -106,11 +107,12 @@
         gap: 20px;
       }
 
+
       .container__cartas2 {
         display: flex;
         justify-content: start;
         margin: 0px 0px 0px 4px;
-        max-width: 145px;
+        max-width: 50%;
       }
       .cartas2 .cover2 {
         width: 100%;
@@ -131,35 +133,86 @@
         filter: none;
       }
      
-      .cartas2 .description2 .comprar {
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        font-size: 4vw;
-      }
-    
+      
       .tarjetas a {
         display: flex;
         margin: 40px 4px;
         text-decoration: none;
       }
 
+      .cartas2 .description2 .comprar {
+        padding: 10px 13px;
+        font-size: 5vw;
+      }
+
       .cartas2 .description2 .comprar:hover {
-        background-color: #F9F07A;
+        background-color: #676965;
+        color: #ffffff;
       }
       .cartas2 .description2 {
         padding: 5px;
         text-align: start;
-        margin: 30px;
+        margin: 30px 15px;
       }
 
       .cartas2 .description2 h2,
       .cartas2 .description2 h3,
       .cartas2 .description2 h4{
-        font-size: 7vw;
+        font-size: 6vw;
       }
       .cartas2 .description2 p {
       font-size: 5vw;
-      font-weight: 600;
+      font-weight: bold;
+      max-width: 90%;
       }
     }
+
+    /* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'marquee marquee'
+      'footer footer';
+  }
+
+  .cartas2 .description2 h2,
+      .cartas2 .description2 h3,
+      .cartas2 .description2 h4{
+        font-size: 3vw;
+      }
+      .cartas2 .description2 p {
+      font-size: 2vw;
+      }
+
+      .cartas2 .description2 .comprar {
+        padding: 2% 3%;
+        font-size: 3vw;
+      }
+
+      .cartas2 .description2 .comprar:hover {
+        background-color: #f49b0b;
+      }
+
+}
+
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'marquee marquee marquee'
+      'footer footer footer';
+  }
+}
