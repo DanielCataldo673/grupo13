@@ -9,7 +9,7 @@ function funCambioColor() {
 caColoranio.style="color: yellow; background: blue;"
 }
 
-/*  BOTON "VER MAS" muestra el parrafo 'porqué elegirnos'*/ */
+/*  BOTON "VER MAS" muestra el parrafo 'porqué elegirnos'*/ 
 document.querySelector("#ver_mas").addEventListener('click',mostrarMas)
 
 function mostrarMas() {
