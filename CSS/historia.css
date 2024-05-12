@@ -230,6 +230,24 @@
   width: 100%;
   height: 40%;
 }
+/*
+h3:hover{
+color:#ff583b;
+}
+*/
+button{
+   margin 3px;
+   background-color: #FFD43B;
+   border: none;
+   border-radius: 25px;
+   padding: 10px 25px;
+   font-weight: bold;
+   color: white;
+   width: 100%;
+}
+.verMas{
+  margin: 0;
+}
 
 .puntos_historicos{
   padding: 45px;
@@ -245,6 +263,10 @@
 .p_historico{
   border-top: dotted;
   border-color: orange;
+}
+
+h3:hover{
+ color: orange;
 }
 
 .flex{
@@ -269,6 +291,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+#k{
+  display: none;
 }
 
 /*RESPONSIVE*/
@@ -321,8 +347,4 @@
 .contenedor-grid{
   grid-template-columns: 1fr ;
 }
-}
-h3:hover{
-
-
 }
