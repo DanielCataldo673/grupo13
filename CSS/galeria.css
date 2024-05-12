@@ -211,3 +211,26 @@
   
   background-color: #5d5d5d;
 }
+
+/*RESPONSIVE*/
+
+.contenedor-grid{
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  gap: 10px;
+}
+/*  PC  */
+@media (769px <=width){
+/*(min-width: 769px) and (max-width:....)*/
+
+
+
+}
+
+/*  TABLET  */
+@media (461px <=width <=768px){
+.contenedor-grid{
+  grid-template-columns: 1fr;
+}
+
+}
