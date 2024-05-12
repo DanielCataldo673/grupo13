@@ -214,10 +214,14 @@
 
 /*RESPONSIVE*/
 
-.contenedor-grid{
-  display: grid;
-  grid-template-columns: repeat (3, 1fr);
-  gap: 10px;
+.contenedor-videos{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.contenedor-galeria{
+  display: flex;
+  justify-content: space-around;
 }
 /*  PC  */
 @media (769px <=width){
@@ -229,8 +233,16 @@
 
 /*  TABLET  */
 @media (461px <=width <=768px){
-.contenedor-grid{
-  grid-template-columns: 1fr;
+.contenedor-videos .videos{
+  flex-direction: column;
 }
 
+}
+
+
+/*  CELU  */
+@media (min-width: 100px) and (max-width: 460px){
+.contenedor-videos .videos{
+  flex-direction: column;
+}
 }
