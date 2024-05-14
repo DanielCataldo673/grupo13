@@ -98,7 +98,7 @@
               <h2 class="contac-8">Te escuchamos.....</h2>
               <br>
               <!-- <form action="link" method="post"> -->
-              <form id="myForm" action="">
+                <form id="myForm" action="https://formspree.io/your_email_here" method="POST">
 
                 <div class="grid-container-form">
                   <div class="grid-item-form1">
@@ -124,7 +124,7 @@
                     <div class="contac-6">
                       <label for="birthDate">Fecha de Nacimiento</label>
                       <br>
-                      <input class="firstname-2" type="date" id="birthDate" name="birthDate">
+                      <input class="firstname-2" type="date" id="birthDate" name="birthDate" required>
                     </div>
                   </div>  
                   <div class="grid-item-form4">
@@ -142,7 +142,7 @@
                       <label for="telefono">Teléfono</label>
                       <br>
                       <input class="firstname-2" type="tel" id="telefono" name="telefono"
-                      placeholder="Ingrese su teléfono aquí.....">
+                      placeholder="Ingrese su teléfono aquí....." required>
                     </div>
                   </div>
                   <div class="grid-item-form6">
@@ -164,11 +164,11 @@
                     <div class="contac-6">
                       <p>¿Como conociste "Mío Sole"?
                         <br>
-                        <input type="checkbox" name="conociste" value="web">Web
-                        <input type="checkbox" name="conociste" value="recomendacion">Recomendación
-                        <input type="checkbox" name="conociste" value="anuncio">Anuncio
+                        <input type="checkbox" name="conociste" value="web" required>Web
+                        <input type="checkbox" name="conociste" value="recomendacion" required>Recomendación
+                        <input type="checkbox" name="conociste" value="anuncio"required>Anuncio
                         <br>
-                        <input type="checkbox" name="conociste" value="otro">Otro
+                        <input type="checkbox" name="conociste" value="otro" required>Otro
                       </p>
                     </div>
                   </div>
@@ -177,10 +177,10 @@
                     <div class="contac-6">
                       <P>Medio de Pago Habitual
                         <br>
-                        <input type="radio" name="pago" value="debito">Débito
-                        <input type="radio" name="pago" value="credito">Crédito
-                        <input type="radio" name="pago" value="efectivo">Efectivo
-                        <input type="radio" name="pago" value="transferencia">Transferencia
+                        <input type="radio" name="pago" value="debito" required>Débito
+                        <input type="radio" name="pago" value="credito" required>Crédito
+                        <input type="radio" name="pago" value="efectivo" required>Efectivo
+                        <input type="radio" name="pago" value="transferencia" required>Transferencia
                         <br>
                         <input type="radio" name="pago" value="otro">Otro
                       </P>
@@ -207,7 +207,6 @@
                     <div class="contac-13">
                       <input class="contac-14" type="submit" value="Enviar">
                       <a id="btnEnviar" class="contac-16" href="#openModal2" hidden></a> 
-                      <!-- <a class="contac-16" href="#openModal2" onclick="document.getElementById('myForm').submit();">submit</a> -->
                       <input class="contac-14" type="reset" value="Borrar"> 
                     </div>
                   </div>
