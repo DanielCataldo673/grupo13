@@ -98,7 +98,7 @@
               <h2 class="contac-8">Te escuchamos.....</h2>
               <br>
               <!-- <form action="link" method="post"> -->
-                <form id="myForm" action="https://formspree.io/your_email_here" method="POST">
+                <form id="myForm">
 
                 <div class="grid-container-form">
                   <div class="grid-item-form1">
@@ -106,8 +106,8 @@
                     <div class="contac-6">
                       <label for="firstname">Nombre *</label>
                       <br>
-                      <input class="firstname-2" type="text" id="firstname" name="firstname"
-                        placeholder="Ingrese su nombre aquí....." required>
+                      <input class="firstname-2 requerido" type="text" id="firstname" name="firstname"
+                        placeholder="Ingrese su nombre aquí.....">
                     </div>
                   </div>
                   <div class="grid-item-form2">
@@ -115,8 +115,8 @@
                     <div class="contac-6">
                       <label for="lastname">Apellido *</label>
                       <br>
-                      <input class="firstname-2" type="text" id="lastname" name="lastname"
-                        placeholder="Ingrese su apellido aquí....." required> 
+                      <input class="firstname-2 requerido" type="text" id="lastname" name="lastname"
+                        placeholder="Ingrese su apellido aquí....."> 
                     </div>
                   </div>
                   <div class="grid-item-form3">
@@ -124,7 +124,7 @@
                     <div class="contac-6">
                       <label for="birthDate">Fecha de Nacimiento</label>
                       <br>
-                      <input class="firstname-2" type="date" id="birthDate" name="birthDate" required>
+                      <input class="firstname-2 requerido" type="date" id="birthDate" name="birthDate">
                     </div>
                   </div>  
                   <div class="grid-item-form4">
@@ -132,8 +132,8 @@
                     <div class="contac-6">
                       <label for="email">Email *</label>
                       <br>
-                      <input class="firstname-2" type="email" id="email" name="email"
-                        placeholder="Ingrese su email aquí....." required>
+                      <input class="firstname-2 requerido" type="email" id="email" name="email"
+                        placeholder="Ingrese su email aquí.....">
                     </div>
                   </div>
                   <div class="grid-item-form5">
@@ -141,8 +141,8 @@
                     <div class="contac-6">
                       <label for="telefono">Teléfono</label>
                       <br>
-                      <input class="firstname-2" type="tel" id="telefono" name="telefono"
-                      placeholder="Ingrese su teléfono aquí....." required>
+                      <input class="firstname-2 requerido" type="tel" id="telefono" name="telefono"
+                      placeholder="Ingrese su teléfono aquí.....">
                     </div>
                   </div>
                   <div class="grid-item-form6">
@@ -164,26 +164,26 @@
                     <div class="contac-6">
                       <p>¿Como conociste "Mío Sole"?
                         <br>
-                        <input type="checkbox" name="conociste" value="web" required>Web
-                        <input type="checkbox" name="conociste" value="recomendacion" required>Recomendación
-                        <input type="checkbox" name="conociste" value="anuncio"required>Anuncio
+                        <input type="checkbox" name="conociste" value="web">Web
+                        <input type="checkbox" name="conociste" value="recomendacion">Recomendación
+                        <input type="checkbox" name="conociste" value="anuncio">Anuncio
                         <br>
-                        <input type="checkbox" name="conociste" value="otro" required>Otro
+                        <input type="checkbox" name="conociste" value="otro">Otro
                       </p>
                     </div>
                   </div>
                   <div class="grid-item-form8">
                     <br>
                     <div class="contac-6">
-                      <P>Medio de Pago Habitual
+                      <p>Medio de Pago Habitual
                         <br>
-                        <input type="radio" name="pago" value="debito" required>Débito
-                        <input type="radio" name="pago" value="credito" required>Crédito
-                        <input type="radio" name="pago" value="efectivo" required>Efectivo
-                        <input type="radio" name="pago" value="transferencia" required>Transferencia
+                        <input type="radio" name="pago" value="debito">Débito
+                        <input type="radio" name="pago" value="credito">Crédito
+                        <input type="radio" name="pago" value="efectivo">Efectivo
+                        <input type="radio" name="pago" value="transferencia">Transferencia
                         <br>
                         <input type="radio" name="pago" value="otro">Otro
-                      </P>
+                      </p>
                     </div>
                   </div>
                   <div class="grid-item-form9">
@@ -192,7 +192,7 @@
                   </div>
                   <div class="grid-item-form10">
                     <div class="contac-15">
-                      <input type="file" id="imageInput" accept="image/*" required>
+                      <input class="requerido" type="file" id="imageInput" accept="image/*">
                     </div>
                   </div>
                   <div class="grid-item-form11">
@@ -200,12 +200,13 @@
                       <label for="mensaje">Escribe tu consulta *</label>
                     </div>
                     <div class="contac-10">
-                      <textarea name="mensaje" id="mensaje" cols="115" rows="5" required></textarea>
+                      <textarea class="requerido" name="mensaje" id="mensaje" cols="115" rows="5"></textarea>
                     </div> 
                   </div>
                   <div class="grid-item-form12">
                     <div class="contac-13">
-                      <input class="contac-14" type="submit" value="Enviar">
+                      <!-- <input class="contac-14" type="submit" value="Enviar"> -->
+                      <button id="enviarForm" class="contac-14">Enviar</button>
                       <a id="btnEnviar" class="contac-16" href="#openModal2" hidden></a> 
                       <input class="contac-14" type="reset" value="Borrar"> 
                     </div>
