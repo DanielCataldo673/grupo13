@@ -236,7 +236,7 @@ color:#ff583b;
 }
 */
 button{
-   margin 3px;
+   margin: 3px;
    background-color: #FFD43B;
    border: none;
    border-radius: 25px;
@@ -346,5 +346,9 @@ h3:hover{
 */
 .contenedor-grid{
   grid-template-columns: 1fr ;
+}
+.puntos_historicos .p_historico{
+  border-bottom: none;
+  border-left: dotted; 
 }
 }
