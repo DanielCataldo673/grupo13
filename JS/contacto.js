@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-const validarCampos = () => {
-  let campos = document.getElementsByClassName("requerido");
-=======
 const validarCampos = () =>{
 
-  var campos = document.getElementsByClassName("requerido");
->>>>>>> 987137ce75aea614f03fab96bd054e99a807cf97
+  let campos = document.getElementsByClassName("requerido");
+
 
   for (let index = 0; index < campos.length; index++) {
     const campo = campos[index];
@@ -23,8 +19,7 @@ const validarCampos = () =>{
     }
   }
   return true;
-<<<<<<< HEAD
-=======
+
 }
 
 const fnEnviar = (e) => {
@@ -34,7 +29,6 @@ const fnEnviar = (e) => {
     let btnEnviar = document.getElementById("btnEnviar");
     btnEnviar.click();
   }
->>>>>>> 987137ce75aea614f03fab96bd054e99a807cf97
 }
 
 const limpiarCampos = () => {
@@ -52,7 +46,7 @@ const limpiarCampos = () => {
   });
 }
 
-const fnEnviar = (e) => {
+const fnEnviar2 = (e) => {
   e.preventDefault();
   if (validarCampos())
   {
@@ -78,12 +72,8 @@ const fnSubirImagen = (e) => {
   }
 }
 
-<<<<<<< HEAD
-document.getElementById("enviarForm").addEventListener("click", fnEnviar);
-document.getElementById("imageInput").addEventListener("change", fnSubirImagen);
-=======
 //document.getElementById("myForm").addEventListener("submit", fnEnviar);
 document.getElementById("enviarForm").addEventListener("click", fnEnviar);
 
 document.getElementById("imageInput").addEventListener("change", fnSubirImagen);
->>>>>>> 987137ce75aea614f03fab96bd054e99a807cf97
+
