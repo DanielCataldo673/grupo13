@@ -28,6 +28,7 @@ const fnEnviar = (e) => {
   {
     let btnEnviar = document.getElementById("btnEnviar");
     btnEnviar.click();
+    limpiarCampos();
   }
 }
 
@@ -44,16 +45,6 @@ const limpiarCampos = () => {
   camposElegir.forEach(function(campo) {
     campo.checked = false; // Deseleccionar el checkbox o radio
   });
-}
-
-const fnEnviar2 = (e) => {
-  e.preventDefault();
-  if (validarCampos())
-  {
-    let btnEnviar = document.getElementById("btnEnviar");
-    btnEnviar.click();
-    limpiarCampos(); // Llamar a la función para limpiar los campos
-  }
 }
 
 const fnSubirImagen = (e) => {
