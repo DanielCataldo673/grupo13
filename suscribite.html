@@ -79,7 +79,6 @@
       </header>
     </div>
     <div class="articulo4">
-
       <main class="main">
 
         <p class="form-6">¡Oye! ¿Quieres estar al tanto de todas nuestras novedades y promociones exclusivas? ¡Entonces
@@ -87,101 +86,115 @@
           tu
           bandeja de entrada, ¡no te lo pierdas! Suscríbete Ya</p>
 
-        <form id="myForm" class="suscribite">
-          <h2 class="form-7">Formulario de Registro</h2>
-          <div class="form-1">
-            <div class="form-2">
-              <label for="firstname">Nombre</label>
-              <br>
-              <input class="firstname requerido" type="text" id="firstname" name="firstname"
-                placeholder="Ingrese su nombre aquí....." >
-                
-              <br><br>
-              <label for="city">Ciudad</label>
-              <br>
-              <input class="firstname requerido" type="text" id="city" name="city" placeholder="Ingrese su ciudad aquí....."
-                >
-              <br><br>
-              <label for="street">Dirección</label>
-              <br>
-              <input class="firstname requerido" type="text" id="street" name="street"
-                placeholder="Ingrese su dirección aquí.....">
-              <br><br>
-            </div>
-            <div class="form-2">
-              <label for="lastname">Apellido</label>
-              <br>
-              <input class="firstname requerido" type="text" id="lastname" name="lastname"
-                placeholder="Ingrese su apellido aquí.....">
+          <form id="formSuscribite" class="suscribite">
+            <h2 class="form-7">Formulario de Registro</h2>
+            <div class="grid-container-form">
+              <div class="grid-item-form1">
+                <div class="form-2">
+                  <label for="firstname">Nombre *</label>
+                  <br>
+                  <input class="firstname requerido" type="text" id="firstname" name="firstname"
+                    placeholder="Ingrese su nombre aquí.....">
+                </div>
+              </div>
+              <div class="grid-item-form2">
+                <div class="form-2">
+                  <label for="lastname">Apellido *</label>
+                  <br>
+                  <input class="firstname requerido" type="text" id="lastname" name="lastname"
+                    placeholder="Ingrese su apellido aquí....."> 
+                </div>
+              </div>
+              <div class="grid-item-form3">
+                <div class="form-2">
+                  <label for="birthDate">Fecha de Nacimiento</label>
+                  <br>
+                  <input class="firstname" type="date" id="birthDate" name="birthDate">
+                </div>
+              </div>
+              <div class="grid-item-form4">
+                <div class="form-2">
+                  <label for="street">Dirección *</label>
+                  <br>
+                  <input class="firstname requerido" type="email" id="street" name="street"
+                    placeholder="Ingrese su dirección aquí.....">
+                </div>
+              </div>      
+              <div class="grid-item-form5">
+                <div class="form-2">
+                  <label for="city">Ciudad</label>
+                  <br>
+                  <select class="firstname" name="city" id="city">
+                    <option value="c.a.b.a">C.A.B.A</option>
+                    <option value="g.b.a">Gran Buenos Aires</option>
+                    <option value="cordoba">Cordoba</option>
+                    <option value="san-luis">San Luis</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+              </div>  
+              <div class="grid-item-form6">
+                <div class="form-2">
+                  <label for="zipcode">Código Postal *</label>
+                  <br>
+                  <input class="firstname requerido" type="text" size="25" id="zipcode" name="zipcode"
+                    placeholder="Ingrese su código postal aquí....."> 
+                </div>
+              </div>
+              <div class="grid-item-form7">
+                <div class="form-2">
+                  <label for="color">Selecciona un color</label>
+                  <br>
+                  <input class="form-5" type="color" id="color" name="color">
+                </div>
+              </div>
+              <div class="grid-item-form8">
+                <div class="form-2">
+                  <label for="email">Email *</label>
+                  <br>
+                  <input class="firstname requerido" type="email" id="email" name="email"
+                    placeholder="Ingrese su email aquí.....">
+                </div>
+              </div>
 
-              <br><br>
-              <label for="zipcode">Código Postal</label>
-              <br>
-              <input class="firstname requerido" type="text" size="25" id="zipcode" name="zipcode"
-                placeholder="Ingrese su código postal aquí.....">
-              <br><br>
-              <label for="birthDate">Fecha de Nacimiento</label>
-              <br>
-              <input class="firstname requerido" type="date" id="birthDate" name="birthDate" >
-              <br><br>
+              <div class="grid-item-form9">
+                <div class="container">
+                  <div class="input-container">
+                    <h3>Elige tus especias favoritas</h3>
+                    <br>
+                    <label for="spice1">Primera elección *</label>
+                    <input class="firstname requerido" type="text" id="spice1" placeholder="Primera especia favorita">
+                    <br>
+                    <label for="spice2">Segunda elección *</label>
+                    <input class="firstname requerido" type="text" id="spice2" placeholder="Segunda especia favorita">
+                    <br>
+                    <label for="spice3">Tercera elección *</label>
+                    <input class="firstname requerido" type="text" id="spice3" placeholder="Tercera especia favorita">
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item-form10">
+                <div class="form-8">
+                  <button id="enviarForm" class="form-9">Enviar</button>
+                  <a id="btnEnviar" class="form-9" href="#openModal" hidden></a> 
+                  <input class="form-9" type="reset" value="Borrar"> 
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="form-3">
-            <div class="form-2">
-              <label for="color">Selecciona un color</label>
-              <br>
-              <input class="form-5 requerido" type="color" id="color" name="color">
-            </div>
-            <div class="form-2">
-              <label for="email">Email</label>
-              <br>
-              <input class="firstname requerido" type="email" id="email" name="email" placeholder="Ingrese su email aquí....."
-                >
+          </form>
 
-            </div>
-
-          </div>
-
-          <div class="container">
-            <div class="input-container">
-              <h3>Elige tus especias favoritas</h3>
-              <br>
-              <label for="spice1">Primera elección</label>
-              <input class="firstname requerido" type="text" id="spice1" placeholder="Primera especia favorita">
-              <br>
-              <label for="spice2">Segunda elección</label>
-              <input class="firstname requerido" type="text" id="spice2" placeholder="Segunda especia favorita">
-              <br>
-              <label for="spice3">Tercera elección</label>
-              <input class="firstname requerido" type="text" id="spice3" placeholder="Tercera especia favorita">
-            </div>
-          </div>
-
-          <br>
-          <div class="form-8">
-            <div class="form-2">
-              <button id="enviarForm" class="enviar">Enviar</button>
-          <a id="btnEnviar" class="enviar" href="#openModal2" hidden></a>
-            </div>
-            <div class="form-2">
-              <input class="enviar" type="reset" value="Borrar">
-            </div>
-          </div>
-           
-          
-        </form>
-        <div id="openModal2" class="modalDialog">
-          <div>
-            <a href="#close" title="Close" class="close">X</a>
+          <div id="openModal" class="modalDialog">
             <div>
-              <img class="gracias" src="img/webp/muchas-gracias-1.webp" alt="gracias">
-              <h2 class="contac-6">Hemos recibido su consulta...</h2>
-              <h2 class="contac-6">En breve nos estaremos comunicando...</h2>
-              <h2 class="contac-6">Muchas gracias!!!</h2>
+              <a href="#close" title="Close" class="close">X</a>
+              <div>
+                <img class="gracias" src="img/webp/muchas-gracias-1.webp" alt="gracias">
+                <h2 class="contac-6">Hemos recibido su consulta...</h2>
+                <h2 class="contac-6">En breve nos estaremos comunicando...</h2>
+                <h2 class="contac-6">Muchas gracias!!!</h2>
+              </div>
+              <br>
             </div>
-            <br>
           </div>
-        </div>
       </main>
     </div>
 
@@ -342,7 +355,5 @@
     </div>
   </div>
   <script type="text/javascript" src="JS/suscribite.js"></script>
-
 </body>
-
 </html>
