@@ -46,6 +46,6 @@ const validarCampos = () =>{
   //document.getElementById("myForm").addEventListener("submit", fnEnviar);
   document.getElementById("enviarForm").addEventListener("click", fnEnviar);
   
-  document.getElementById("imageInput").addEventListener("change", fnSubirImagen);
+  
   
   
