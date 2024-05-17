@@ -2,7 +2,6 @@ const validarCampos = () =>{
 
     let campos = document.getElementsByClassName("requerido");
   
-  
     for (let index = 0; index < campos.length; index++) {
       const campo = campos[index];
       
@@ -39,11 +38,8 @@ const validarCampos = () =>{
       const campo = campos[index];
       campo.value = ""; // Limpiar el valor del campo
     }
-  
   }
   
-  
-  //document.getElementById("myForm").addEventListener("submit", fnEnviar);
   document.getElementById("enviarForm").addEventListener("click", fnEnviar);
   
   

@@ -215,9 +215,15 @@
   font-size: 1.2vw;
   font-family: cursive;
   margin-right: 20px;
-  background-image: linear-gradient(to bottom, #FEF9A7, #F8DE22);
+  background-color: #FFD43B;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.contac-14:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: grey;
 }
 
 .contac-15 {
