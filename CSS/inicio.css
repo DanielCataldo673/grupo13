@@ -136,7 +136,7 @@
   -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
 }
 
-.grid-container .item5 a ,
+.grid-container .item5 a,
 .grid-container .item6 a,
 .grid-container .item7 a,
 .grid-container .item8 a {
@@ -229,7 +229,7 @@
       'footer';
   }
 
-  
+
 
 }
 
@@ -250,7 +250,7 @@
   .nav input {
     height: auto;
   }
-  
+
 }
 
 
@@ -271,5 +271,5 @@
   .nav input {
     height: auto;
   }
-  
+
 }

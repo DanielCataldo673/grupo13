@@ -134,20 +134,22 @@
 .gradient {
   width: 100%;
   height: 1.5vw;
-  background-image: linear-gradient(to right,  #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+  background-image: linear-gradient(to right, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
   background-size: 200% 100%;
   animation: gradientAnimation 3s ease infinite;
 }
 
 @keyframes gradientAnimation {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
+
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -251,7 +253,7 @@
     justify-content: start;
   }
 
- 
+
 
 }
 

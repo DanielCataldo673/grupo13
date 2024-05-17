@@ -24,25 +24,6 @@
   box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
   -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
   -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
-  margin-bottom: 35px;
-
-}
-
-.enviar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: white;
-  border: solid grey;
-  box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
-  -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
-  -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
-  font: 1.5vw cursive;
-}
-
-.enviar:hover {
-  cursor: pointer;
-  background-color: grey;
 }
 
 .form-2 {
@@ -65,6 +46,7 @@
   box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  margin: 10px;
 }
 
 .form-6 {
@@ -84,8 +66,25 @@
 
 .form-8 {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+  margin: 15px 25px;
+}
 
+.form-9 {
+  width: 25%;
+  height: auto;
+  font-size: 1.2vw;
+  font-family: cursive;
+  margin-right: 20px;
+  background-color: #FFD43B;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-9:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: grey;
 }
 
 /* Agrega esta regla CSS en tu archivo estilos.css */
@@ -122,30 +121,15 @@
   margin: 0 auto;
 }
 
-.gracias{
+.gracias {
   width: 40%;
   height: 40%;
   border-radius: 5%;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-.enviar22 {
-  text-decoration: none;
-  color: #000;
-  border: solid #4c4c4c;
-  text-align: center;
-  width: 10%;
-  height: auto;
-  font-size: 1.2vw;
-  font-family: cursive;
-  margin-right: 20px;
-  background-image: linear-gradient(to bottom, #FEF9A7, #F8DE22);
-  border-radius: 50%;
-  cursor: pointer;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .modalDialog {
- text-align: center;
+  text-align: center;
   position: fixed;
   font-family: cursive;
   font-size: 1.5vw;
@@ -208,4 +192,93 @@
 .close:hover {
   background: #6DC5D1;
   color: #000;
+}
+
+.grid-container-form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.grid-item-form9 {
+  margin-top: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-item-form10 {
+  margin-top: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'marquee marquee marquee'
+      'footer footer footer';
+  }
+
+  .nav input {
+    height: auto;
+  }
+}
+
+
+/* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'marquee marquee'
+      'footer footer';
+  }
+
+  .nav input {
+    height: auto;
+  }
+}
+
+/* CELULARES */
+@media (100px <=width <=460px) {
+
+  /*(min-width: 100px) and (max-width: 460px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'header'
+      'main'
+      'botones-fin'
+      'marquee'
+      'footer';
+  }
+
+  .grid-container-form {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .grid-item-form9 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid-item-form10 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 }

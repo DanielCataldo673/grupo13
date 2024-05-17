@@ -166,20 +166,20 @@
 
 /* toldo */
 
-.cont_toldo{
-  display:flex;
+.cont_toldo {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.toldo_sup{
+.toldo_sup {
   height: 55px;
   width: 132px;
   padding-top: 5px;
 }
 
-.toldo{
-  display:flex;
+.toldo {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0;
@@ -188,16 +188,16 @@
 
 /* FORMAS INDIVIDUALES */
 
-.a1{
-	background-color: #FFD43B;
-	height: 20px;
-	width: 20px;
-	border-bottom-left-radius: 10px ;
-	border-bottom-right-radius: 10px;
-	transition: all 1s 50ms ease;
+.a1 {
+  background-color: #FFD43B;
+  height: 20px;
+  width: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all 1s 50ms ease;
 }
 
-.a2{
+.a2 {
   background-color: #FFD43B;
   height: 30px;
   width: 18px;
@@ -205,9 +205,9 @@
 
 /* TRANSFORMACION DE LAS FORMAS INDIVIDUALES */
 
-.a1:hover{
+.a1:hover {
 
   transform: rotateY(180deg);
-  
+
   background-color: #5d5d5d;
 }

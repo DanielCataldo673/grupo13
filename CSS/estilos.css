@@ -366,7 +366,7 @@ footer {
     font-weight: bold;
   }
 
-  
+
 
   .dropdown-content {
     background-color: #ffffff;
@@ -452,7 +452,7 @@ footer {
     font-size: 3vw;
   }
 
-  
+
 
 }
 
@@ -469,6 +469,7 @@ footer {
       'marquee marquee'
       'footer footer';
   }
+
   .nav-search {
     width: 20vw;
     height: 4.3vw;
@@ -490,6 +491,6 @@ footer {
       'marquee marquee marquee'
       'footer footer footer';
   }
-  
+
 
 }

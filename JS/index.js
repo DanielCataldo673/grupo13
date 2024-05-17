@@ -41,6 +41,7 @@ function calcular() {
     } else {
         alert(envio);
     }
+    limpiarCampos(); // Limpia los campos después de calcular el envío
 }
 
 function limpiarCampos() {
@@ -52,4 +53,6 @@ function limpiarCampos() {
 function cerrarCalculadora() {
     let calculadora = document.getElementById("calculadora");
     calculadora.style.display = "none";
+    limpiarCampos(); // Limpia los campos al cerrar la calculadora
 }
+    
