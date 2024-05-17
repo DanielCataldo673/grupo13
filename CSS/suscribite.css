@@ -126,6 +126,7 @@
   height: 40%;
   border-radius: 5%;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .modalDialog {
@@ -206,7 +207,7 @@
 }
 
 .grid-item-form10 {
-  margin-top: 20px;
+  margin-top: 20px; 
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -245,7 +246,6 @@
       'marquee marquee'
       'footer footer';
   }
-
   .nav input {
     height: auto;
   }
@@ -280,5 +280,5 @@
     margin-top: 20px;
     grid-column-start: 1;
     grid-column-end: 2;
-  }
+}
 }
