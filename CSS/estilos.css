@@ -187,6 +187,9 @@ h1 {
   cursor: pointer;
 }
 
+.ultimo {
+  margin: 0 auto;
+}
 
 /* Marquee */
 .marquee {
