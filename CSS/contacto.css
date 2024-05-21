@@ -11,20 +11,12 @@
   justify-content: center;
 }
 
-.contac-2:hover {
-  transform: scale(1.1);
-  /* Aumenta el tamaño del iframe al hacer hover */
-}
 
-.contac-2 {
-  border: double gray;
-  border-radius: 5%;
-  box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(165, 161, 161, 0.75);
-  transition: transform 0.3s;
+.principal{
+  background-image: linear-gradient(to bottom, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+  border-radius: 2%;
+  border: solid;
 }
-
 .contac-3 {
   display: flex;
   justify-content: center;
@@ -178,8 +170,11 @@
 }
 
 .contac-8 {
+  display: flex;
+  justify-content: center;
   font-family: cursive;
   margin-bottom: 5px;
+  font-size: 2vw;
 }
 
 .contac-9 {
@@ -215,7 +210,7 @@
   font-size: 1.2vw;
   font-family: cursive;
   margin-right: 20px;
-  background-color: #FFD43B;
+  background-color: #D1BB9E;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -223,7 +218,7 @@
 .contac-14:hover {
   transform: scale(1.1);
   cursor: pointer;
-  background-color: grey;
+  background-color: #FFD43B;
 }
 
 .contac-15 {
