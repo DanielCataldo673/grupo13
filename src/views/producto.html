@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listado</title>
+	<style type="text/css">
+		article {
+			display: flex;
+		}
+
+		h4 {
+			width: 200px;
+		}
+
+		#producto {
+			display: contents;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<h2>Listado</h2>
+	<article>
+		<h4>Nombre</h4>
+		<h4>Caracteristicas</h4>
+		<h4>Imagen</h4>
+		<h4>Precio</h4>
+		<h4>Gramaje</h4>
+		<h4>Variedad_id</h4>
+	</article>
+	<article id="producto">
+
+	</article>
+	<form action="/producto" method="POST" enctype="application/x-www-form-urlencoded">
+		<input type="text" id="nombre" name="nombre">
+		<input type="text" id="caracteristicas" name="caracteristicas">
+		<input type="file" id="imagen" name="imagen">
+		<input type="number" id="precio" name="precio" step="0.01" min="0.01" placeholder="0.00">
+		<input type="text" id="gramaje" name="gramaje">
+		<select name="variedad_id" id="variedad">
+			<option value="1">Especias</option>
+			<option value="2">Hierbas Aromáticas</option>
+			<option value="3">Mix</option>
+			<option value="4">Hierbas Medicinales</option>
+		</select>
+		<input type="submit" value="Crear Nuevo Item">
+	</form><br>
+
+	<script type="text/javascript" src="JS/producto.js"></script>
+</body>
+
+</html>
