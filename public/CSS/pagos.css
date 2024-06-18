@@ -1,0 +1,390 @@
+.pagos,
+.pagos-2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: cursive;
+}
+
+.pagos {
+  margin: 15px;
+  font-size: 1.3vw;
+  padding: 40px;
+}
+
+.pagos-fin {
+  display: block;
+  justify-content: center;
+}
+
+
+
+.slider-box-inicio-2 ul {
+  display: flex;
+  flex: auto;
+  width: 400%;
+  animation: slide 20s ease-in infinite;
+  transition: all 0.5s ease-in-out;
+}
+
+.slider-box-inicio-2 li {
+  width: 100%;
+  list-style: none;
+  position: relative;
+}
+
+.slider-box-inicio-2 img {
+  width: 1000px;
+  height: 500px;
+}
+
+@keyframes slide {
+
+  0%,
+  20% {
+    margin-left: 0;
+  }
+
+  25%,
+  45% {
+    margin-left: -100%;
+  }
+
+  50%,
+  70% {
+    margin-left: -200%;
+  }
+
+  75%,
+  100% {
+    margin-left: -300%;
+  }
+}
+
+.input2 {
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1vw;
+  font-family: cursive;
+}
+
+.label2 {
+  font-size: 1.5vw;
+  font-family: cursive;
+  font-weight: bold;
+  margin: 2px;
+  padding: 5px;
+  text-align: center;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 75%;
+  margin: 2% 0% 0% 38%;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px black;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  background-image: linear-gradient(to bottom, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+}
+
+.calculadora3 {
+  height: auto;
+  display: none;
+}
+
+.calculadora4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.button,
+.button2 {
+  font-size: 1.2vw;
+  font-family: cursive;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button {
+  padding: 8px;
+  background-color: #A79277;
+  color: #ffffff;
+}
+
+.button:hover {
+  background-color: #F8DE22;
+  color: #000000;
+}
+
+.button2 {
+  padding: 15px;
+  background-image: linear-gradient(to bottom, #FEF9A7, #F8DE22);
+}
+
+.gradient {
+  width: 100%;
+  height: 1.5vw;
+  background-image: linear-gradient(to right, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+  background-size: 200% 100%;
+  animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* CELULARES */
+/* Medias Querys/Breakpoints/Responsive */
+@media (100px <=width <=460px) {
+
+  /*(min-width: 100px) and (max-width: 460px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'header'
+      'main'
+      'botones-fin'
+      'marquee'
+      'footer';
+  }
+
+  h1 {
+    padding: 15px;
+    margin-left: 8%;
+    display: block;
+    font-size: 7vw;
+  }
+
+  .slider-box-inicio-2 {
+    width: 65%;
+    height: 60%;
+    margin-bottom: 0px;
+    margin-left: 3%;
+    overflow: hidden;
+  }
+
+
+  .slider-box-inicio-2 img {
+    width: 65%;
+    height: 60%;
+    margin-bottom: 20px;
+  }
+
+
+  .calculadora {
+    width: 60%;
+    height: auto;
+    justify-content: start;
+    margin-left: 15%;
+    padding: 15px;
+  }
+
+  .calculadora3 {
+    width: 60%;
+    height: auto;
+    margin-left: 3%;
+    background-image: none;
+  }
+
+  .button,
+  .button2,
+  .input2,
+  .label2 {
+    font-size: 3.5vw;
+  }
+
+  .calculadora4 {
+    justify-content: start;
+    margin-left: 13%;
+  }
+
+  .contac {
+    text-align: center;
+    font-size: 5vw;
+    margin: 5% 0% 5% 2%;
+    max-width: 50%;
+    padding: 5px;
+  }
+
+  .pagos,
+  .pagos-2 {
+    display: block;
+    justify-content: start;
+    text-align: start;
+    padding: 10px;
+  }
+
+  .pagos-2 img {
+    width: 45%;
+    height: 40%;
+    margin-bottom: 20px;
+    margin-left: 1%;
+  }
+
+  .pagos {
+    margin-left: 1%;
+    font-size: 5vw;
+    max-width: 50%;
+  }
+
+  .pagos-fin {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+
+
+}
+
+/* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'marquee marquee'
+      'footer footer';
+  }
+
+  .slider-box-inicio-2 {
+    width: 80%;
+    height: 75%;
+    margin-bottom: 0px;
+    margin-left: 18%;
+    overflow: hidden;
+  }
+
+
+  .slider-box-inicio-2 img {
+    width: 80%;
+    height: 75%;
+    margin-bottom: 20px;
+  }
+
+  .calculadora {
+    width: 50%;
+    height: auto;
+    margin-left: 22%;
+    justify-content: start;
+    padding: 5px;
+  }
+
+  h1 {
+    padding: 15px;
+    margin-left: 25%;
+    display: block;
+    font-size: 5vw;
+  }
+
+  .calculadora3 {
+    width: 100%;
+    height: auto;
+    background-image: none;
+  }
+
+  .button,
+  .button2,
+  .input2,
+  .label2 {
+    font-size: 2.5vw;
+  }
+
+  .calculadora4 {
+    justify-content: start;
+    margin-left: 35%;
+  }
+
+  .contac {
+    text-align: center;
+    font-size: 5vw;
+    margin: 30px 0px 30px 25px;
+    max-width: 87%;
+    padding: 5px;
+  }
+
+  .pagos,
+  .pagos-2 {
+    display: block;
+    justify-content: start;
+    text-align: start;
+    padding: 10px;
+  }
+
+  .pagos-2 img {
+    width: 80%;
+    height: 75%;
+    margin-bottom: 20px;
+    margin-left: 10%;
+  }
+
+  .pagos {
+    margin-left: 15px;
+    font-size: 5vw;
+    max-width: 87%;
+  }
+
+  .pagos-fin {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+}
+
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'marquee marquee marquee'
+      'footer footer footer';
+  }
+
+
+
+  .slider-box-inicio-2 {
+    width: 80%;
+    height: 75%;
+    margin-bottom: 0px;
+    margin-left: 18%;
+    overflow: hidden;
+  }
+
+
+  .slider-box-inicio-2 img {
+    width: 80%;
+    height: 75%;
+    margin-bottom: 20px;
+  }
+}

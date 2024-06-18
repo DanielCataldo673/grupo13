@@ -1,0 +1,284 @@
+/* Suscribite Estilos para el formulario de registro */
+
+.suscribite {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 4px solid #ccc;
+  border-radius: 20px;
+  display: block;
+  justify-content: center;
+  font: 1.2vw cursive;
+  background-color: #F9F07A;
+}
+
+.firstname {
+  width: 90%;
+  /* Cambia el valor de acuerdo al tamaño deseado */
+  margin: 10px;
+  /* Añade margen alrededor del contenedor si es necesario */
+  padding: 5px;
+  /* Añade relleno al contenedor si es necesario */
+  border-radius: 5%;
+  border: solid grey;
+  box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+}
+
+.form-2 {
+  flex: 1;
+  text-align: center;
+}
+
+.form-1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-5 {
+  border: solid grey;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  margin: 10px;
+}
+
+.form-6 {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 1.6vw;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+
+.form-7 {
+  text-align: center;
+  font-family: cursive;
+  margin-bottom: 35px;
+}
+
+.form-8 {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 25px;
+}
+
+.form-9 {
+  width: 25%;
+  height: auto;
+  font-size: 1.2vw;
+  font-family: cursive;
+  margin-right: 20px;
+  background-color: #FFD43B;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.form-9:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: grey;
+}
+
+/* Agrega esta regla CSS en tu archivo estilos.css */
+.main {
+  padding: 20px;
+  background-image: url("../img/webp/3.webp");
+  /* Ruta relativa a la carpeta img */
+  background-size: cover;
+  /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center;
+  /* Centra la imagen en el contenedor */
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  display: block;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+.gracias {
+  width: 40%;
+  height: 40%;
+  border-radius: 5%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.modalDialog {
+  text-align: center;
+  position: fixed;
+  font-family: cursive;
+  font-size: 1.5vw;
+  line-height: 3vw;
+  letter-spacing: .3vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDialog>div {
+  width: 80%;
+  position: relative;
+  margin: 2% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #6DC5D1);
+  background: -webkit-linear-gradient(#fff, #6DC5D1);
+  background: -o-linear-gradient(#fff, #6DC5D1);
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+}
+
+.close {
+  padding: 8px;
+  background: #606061;
+  color: white;
+  line-height: 15px;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  width: 1.96vw;
+  height: 1.96vw;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+  background: #6DC5D1;
+  color: #000;
+}
+
+.grid-container-form {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.grid-item-form9 {
+  margin-top: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.grid-item-form10 {
+  margin-top: 20px; 
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+/* PC */
+@media (769px <=width) {
+
+  /*(min-width: 769px) and (max-width: .....)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
+      'nav nav nav'
+      'header header header'
+      'main main main'
+      'botones-fin botones-fin botones-fin'
+      'marquee marquee marquee'
+      'footer footer footer';
+  }
+
+  .nav input {
+    height: auto;
+  }
+}
+
+
+/* TABLET */
+@media (461px <=width <=768px) {
+
+  /*(min-width: 461px) and (max-width: 768px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio banner-inicio'
+      'nav nav'
+      'header header'
+      'main main'
+      'botones-fin botones-fin'
+      'marquee marquee'
+      'footer footer';
+  }
+  .nav input {
+    height: auto;
+  }
+}
+
+/* CELULARES */
+@media (100px <=width <=460px) {
+
+  /*(min-width: 100px) and (max-width: 460px)*/
+  .grid-contenedor {
+    grid-template-areas: 'banner-inicio'
+      'nav'
+      'header'
+      'main'
+      'botones-fin'
+      'marquee'
+      'footer';
+  }
+
+  .grid-container-form {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .grid-item-form9 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .grid-item-form10 {
+    margin-top: 20px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+}

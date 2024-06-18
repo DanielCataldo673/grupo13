@@ -1,0 +1,28 @@
+<%- include('partials/head') %>
+
+	<body>
+		<h2>Modificar el Item</h2>
+		<article>
+			<h4>Nombre</h4>
+			<h4>Caracteristicas</h4>
+			<h4>Imagen</h4>
+			<h4>Precio</h4>
+			<h4>Gramaje</h4>
+			<h4>Variedad_id</h4>
+		</article>
+		<form action="/modificar?_metodo=PUT" method="POST">
+			<input type="text" id="nombre" name="nombre" value="<%= registro.nombre %>">
+			<input type="text" id="caracteristicas" name="caracteristicas" value="<%= registro.caracteristicas %>">
+			<input type="file" id="imagen" name="imagen" value="<%= registro.imagen %>">
+			<input type="number" id="precio" name="precio" step="0.01" min="0.01" placeholder="0.00" value="<%= registro.precio %>">
+			<input type="text" id="gramaje" name="gramaje" value="<%= registro.nombre %>">
+			<select name="variedad_id" id="variedad_id" value="<%= registro.variedad_id %>">
+				<option value="1">Especias</option>
+				<option value="2">Hierbas Aromáticas</option>
+				<option value="3">Mix</option>
+				<option value="4">Hierbas Medicinales</option>
+			</select>
+			<input type="hidden" name="idMod" value="<%= registro.id %>">
+			<input type="submit" value="Actualizar">
+		</form>
+		<%- include('partials/footer') %>
