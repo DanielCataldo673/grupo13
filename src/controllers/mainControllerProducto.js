@@ -1,4 +1,4 @@
-const { conn } = require('../db/dbconnect')
+const { conn } = require('../db/dbconnect');
 
 module.exports = {
 
@@ -16,7 +16,7 @@ module.exports = {
 	crearRegistro: async (req, res)=>{
 		const sql = `INSERT INTO producto (nombre, caracteristicas, imagen, precio, gramaje, variedad_id) VALUES (?,?,?,?,?,?);`
 		const creado = await conn.query(sql, [req.body.nombre, req.body.descripcion, req.body.imagen, parseFloat(req.body.precio), req.body.gramaje, req.body.variedad_id]);
-		res.redirect('/producto.html')
+		res.redirect('/producto.ejs')
 		},
 
 	getModificar: async (req, res) =>{
@@ -33,12 +33,12 @@ module.exports = {
 		const {idMod, nombre, caracteristicas, imagen, precio, gramaje, variedad_id} = req.body
 		const modificado = await conn.query(sql, [nombre, caracteristicas, imagen, precio, gramaje, variedad_id, idMod])
 		console.log(modificado)
-		res.redirect('/producto.html')
+		res.redirect('/producto.ejs')
 	},
 
 	eliminar: async (req, res)=>{
 		const eliminado = await conn.query(`DELETE FROM producto WHERE id=?`, req.body.idEliminar)
-		res.redirect('/producto.html')
+		res.redirect('/producto.ejs')
 	},
 
 }
