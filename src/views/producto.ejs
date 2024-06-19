@@ -1,34 +1,79 @@
-<body>
-    <article>
-        <h2>Listado</h2>
-        <h4>Nombre</h4>
-        <h4>Caracteristicas</h4>
-        <h4>Imagen</h4>
-        <h4>Precio</h4>
-        <h4>Gramaje</h4>
-        <h4>Variedad_id</h4>
-    </article>
-    <article id="producto">
+<h1>Lista de Productos</h1>
 
-    </article>
-    <form action="/lista" method="POST" enctype="application/x-www-form-urlencoded">
-        <input type="text" id="nombre" name="nombre">
-        <input type="text" id="caracteristicas" name="caracteristicas">
-        <input type="file" id="imagen" name="imagen">
-        <input type="number" id="precio" name="precio" step="0.01" min="0.01" placeholder="0.00">
-        <input type="text" id="gramaje" name="gramaje">
-        <select name="variedad_id" id="variedad">
-            <option value="1">Especias</option>
-            <option value="2">Hierbas Aromáticas</option>
-            <option value="3">Mix</option>
-            <option value="4">Hierbas Medicinales</option>
-        </select>
-        <input type="submit" value="Crear Nuevo Item">
-    </form><br>
+<br>
+<br>
+<h2>Formulario para crear un nuevo producto</h2>
 
-    <button onclick="window.location.href='./modificar.ejs';">Modificar</button>
+<!-- Formulario para crear un nuevo producto -->
+<form action="/crear" method="POST">
+    <h4>Nombre</h4>
+    <input type="text" name="nombre" placeholder="Nombre del producto">
+    
+    <h4>Caracteristicas</h4>
+    <input type="text" name="caracteristicas" placeholder="Descripción del producto">
+    
+    <h4>Imagen</h4>
+    <input type="file" name="imagen">
+    
+    <h4>Precio</h4>
+    <input type="number" name="precio" step="0.01" min="0.01" placeholder="0.00">
+    
+    <h4>Gramaje</h4>
+    <input type="text" name="gramaje" placeholder="Gramaje del producto">
+    
+    <h4>Variedad_id</h4>
+    <select name="variedad_id">
+        <option value="1">Especias</option>
+        <option value="2">Hierbas Aromáticas</option>
+        <option value="3">Mix</option>
+        <option value="4">Hierbas Medicinales</option>
+    </select>
+    
+    <input type="submit" value="Crear Producto">
+</form>
+<br>
+<br>
 
+<h2> Tabla para mostrar los productos existentes</h2>
 
-    <script src="/src/js/producto.js"></script>
-    <%- include('partials/footer') -%>
-</body>
+<!-- Tabla para mostrar los productos existentes -->
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Características</th>
+            <th>Imagen</th>
+            <th>Precio</th>
+            <th>Gramaje</th>
+            <th>Variedad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% productos.forEach(producto => { %>
+        <tr>
+            <td><%= producto.nombre %></td>
+            <td><%= producto.caracteristicas %></td>
+            <td><img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>" style="max-width: 100px;"></td>
+            <td><%= producto.precio %></td>
+            <td><%= producto.gramaje %></td>
+            <% for (let producto of productos) { %>
+                <td><%= locals.variedades[producto.variedad_id] %></td>
+            <% } %>
+            <td>
+                <!-- Formulario Modificar -->
+                <form action="/actualizar" method="POST">
+                    <input type="hidden" name="idMod" value="<%= producto.id %>">
+                    <input type="submit" value="Modificar">
+                </form>
+
+                <!-- Formulario Eliminar -->
+                <form action="/eliminar" method="POST">
+                    <input type="hidden" name="idEliminar" value="<%= producto.id %>">
+                    <input type="submit" value="Eliminar">
+                </form>
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

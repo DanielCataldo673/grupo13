@@ -1,41 +1,42 @@
 const { conn } = require('../db/dbconnect');
 
 module.exports = {
-	getProducto: async (req, res) => {
-		try {
-			const [ registros ] = await conn.query(`SELECT * FROM producto`);
-			res.render('producto', { producto: registros, tituloDePagina: 'Listado de Productos' });
-		} catch (error) {
-			throw error;
-		} finally {
-			conn.releaseConnection();
-		}
-	},
+    getProducto: async (req, res) => {
+        try {
+            const [registros] = await conn.query(`SELECT * FROM producto`);
+            // Aquí cambia `producto` por `productos` para asegurarte de que coincida con el nombre que estás utilizando en la vista
+            res.render('producto', { productos: registros, tituloDePagina: 'Listado de Productos' });
+        } catch (error) {
+            throw error;
+        } finally {
+            conn.releaseConnection();
+        }
+    },
 
-	crearRegistro: async (req, res)=>{
-		const sql = `INSERT INTO producto (nombre, caracteristicas, imagen, precio, gramaje, variedad_id) VALUES (?,?,?,?,?,?);`
-		const creado = await conn.query(sql, [req.body.nombre, req.body.descripcion, req.body.imagen, parseFloat(req.body.precio), req.body.gramaje, req.body.variedad_id]);
-		res.redirect('/producto')
-	},
+    crearRegistro: async (req, res) => {
+        const sql = `INSERT INTO producto (nombre, caracteristicas, imagen, precio, gramaje, variedad_id) VALUES (?,?,?,?,?,?);`
+        const creado = await conn.query(sql, [req.body.nombre, req.body.descripcion, req.body.imagen, parseFloat(req.body.precio), req.body.gramaje, req.body.variedad_id]);
+        res.redirect('/producto');
+    },
 
-	getModificar: async (req, res) =>{
-		const [modificar] = await conn.query(`SELECT * FROM producto WHERE id=?`, req.params.id);
+    getModificar: async (req, res) => {
+        const [modificar] = await conn.query(`SELECT * FROM producto WHERE id=?`, req.params.id);
         // Ya está definido correctamente en tu código.
-		res.render('modificar', {
-			tituloDePagina: 'Página para Modificar Items de la tabla Producto',
-			registro: modificar[0]
-		});
-	},
+        res.render('modificar', {
+            tituloDePagina: 'Página para Modificar Items de la tabla Producto',
+            registro: modificar[0]
+        });
+    },
 
-	actualizar: async (req, res)=>{
-		const sql = `UPDATE producto SET nombre=?, caracteristicas=?, imagen=?, precio=?, gramaje=?, variedad_id=? WHERE id=?`;
-		const {idMod, nombre, caracteristicas, imagen, precio, gramaje, variedad_id} = req.body;
-		const modificado = await conn.query(sql, [nombre, caracteristicas, imagen, precio, gramaje, variedad_id, idMod]);
-		res.redirect('/producto');
-	},
+    actualizar: async (req, res) => {
+        const sql = `UPDATE producto SET nombre=?, caracteristicas=?, imagen=?, precio=?, gramaje=?, variedad_id=? WHERE id=?`;
+        const { idMod, nombre, caracteristicas, imagen, precio, gramaje, variedad_id } = req.body;
+        const modificado = await conn.query(sql, [nombre, caracteristicas, imagen, precio, gramaje, variedad_id, idMod]);
+        res.redirect('/producto');
+    },
 
-	eliminar: async (req, res)=>{
-		const eliminado = await conn.query(`DELETE FROM producto WHERE id=?`, req.body.idEliminar);
-		res.redirect('/producto');
-	},
+    eliminar: async (req, res) => {
+        const eliminado = await conn.query(`DELETE FROM producto WHERE id=?`, req.body.idEliminar);
+        res.redirect('/producto');
+    },
 };

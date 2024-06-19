@@ -7,7 +7,8 @@ const path = require('path')
 const app = express()
 const fs = require('fs');
 const port = 8080 || process.env.PORT || 3000
-
+const variedades = require('./utilidades/variedades');
+app.locals.variedades = variedades;
 app.set('view engine', 'ejs')// Motor de vistas que vamos a utilizar
 app.set('views', (__dirname + '/src/views'))//donde esta la carpeta quee vamos a utilizar
 
