@@ -57,9 +57,7 @@
             <td><img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>" style="max-width: 100px;"></td>
             <td><%= producto.precio %></td>
             <td><%= producto.gramaje %></td>
-            <% for (let producto of productos) { %>
-                <td><%= locals.variedades[producto.variedad_id] %></td>
-            <% } %>
+            <td><%= producto.variedad_id %></td>
             <td>
                 <!-- Formulario Modificar -->
                 <form action="/actualizar" method="POST">
