@@ -1,3 +1,5 @@
+<%- include('partials/head', { tituloDePagina: tituloDePagina }) -%>
+<body>
 <h1>Lista de Productos</h1>
 
 <br>
@@ -29,7 +31,7 @@
         <option value="4">Hierbas Medicinales</option>
     </select>
     
-    <input type="submit" value="Crear Producto">
+    <input class="btn3" type="submit" value="Crear Producto">
 </form>
 <br>
 <br>
@@ -54,24 +56,28 @@
         <tr>
             <td><%= producto.nombre %></td>
             <td><%= producto.caracteristicas %></td>
-            <td><img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>" style="max-width: 100px;"></td>
-            <td><%= producto.precio %></td>
+            <td><img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>" style="width: 100px;" height="100px"></td>
+            <td>$<%= producto.precio %></td>
             <td><%= producto.gramaje %></td>
             <td><%= producto.variedad_id %></td>
             <td>
                 <!-- Formulario Modificar -->
                 <form action="/actualizar" method="POST">
                     <input type="hidden" name="idMod" value="<%= producto.id %>">
-                    <input type="submit" value="Modificar">
+                    <input class="btn1" type="submit" value="Modificar">
                 </form>
-
+<br>
                 <!-- Formulario Eliminar -->
                 <form action="/eliminar" method="POST">
                     <input type="hidden" name="idEliminar" value="<%= producto.id %>">
-                    <input type="submit" value="Eliminar">
+                    <input class="btn2" type="submit" value="Eliminar">
                 </form>
             </td>
         </tr>
         <% }); %>
     </tbody>
 </table>
+<br>
+<br>
+    <%- include('partials/footer') -%>
+    </body>

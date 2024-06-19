@@ -1,0 +1,107 @@
+body {
+    background-image: linear-gradient(to bottom, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+}
+
+h1 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 3.5vw;
+}
+
+h2 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 2.5vw;
+}
+
+h4 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.5vw;
+}
+
+td {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1vw;
+    border: solid;
+    padding: 5px;
+}
+
+table {
+    border: solid;
+}
+
+/* Marquee */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #EAD8C0;
+    padding: 10px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+    font-size: 1.2vw;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.logo {
+    border-radius: 50%;
+    height: 150px;
+    width: 200px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+}
+
+input,
+select {
+    margin-left: 40%;
+    width: 20vw;
+    height: 2.5vw;
+    font-family: cursive;
+    font-size: 1vw;
+    font-weight: 800;
+    box-shadow: 10px 10px 5px -4px rgba(170, 161, 161, 0.75);
+    text-align: center;
+    border: solid;
+}
+
+.btn1 {
+    width: 15vw;
+    height: 2.5vw;
+    margin-left: 0%;
+    background-color: yellow;
+}
+
+.btn2 {
+    width: 15vw;
+    height: 2.5vw;
+    margin-left: 0%;
+    background-color: red;
+}
+
+.btn3 {
+    margin-top: 45px;
+    margin-left: 38%;
+    width: 25vw;
+    height: 2.5vw;
+    text-align: center;
+    background-color: grey;
+    border-radius: 50%;
+}
