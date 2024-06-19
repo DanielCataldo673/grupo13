@@ -2,14 +2,15 @@ const { conn } = require('../db/dbconnect');
 
 module.exports = {
 
+
 	getProducto: async (req, res) => {
-		try{
-			const [ registros ] = await conn.query(`SELECT * FROM producto`)
-			res.json(registros)
+		try {
+			const [ registros ] = await conn.query(`SELECT * FROM producto`);
+			res.render('producto.ejs', { producto: registros });
 		} catch (error) {
-			throw error
-		} finally{
-			conn.releaseConnection()
+			throw error;
+		} finally {
+			conn.releaseConnection();
 		}
 	},
 

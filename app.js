@@ -2,6 +2,7 @@
 const express = require(`express`)
 const override = require('method-override')
 const rutas = require('./src/routes/mainRoutesProducto.js')
+const path = require('path')
 //const rutasAdmin = require('./src/routes/adminRoutes.js')
 const app = express()
 const fs = require('fs');

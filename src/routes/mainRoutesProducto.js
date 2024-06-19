@@ -3,7 +3,7 @@ const router = express.Router()
 const controladores = require(`../controllers/mainControllerProducto`)
 //const path = require('path')
 
-router.get("/producto", controladores.getProducto)
+router.get('/producto', controladores.getProducto)
 router.post('/producto', controladores.crearRegistro)
 router.get('/modificar/:id', controladores.getModificar)
 router.put('/modificar', controladores.actualizar)
