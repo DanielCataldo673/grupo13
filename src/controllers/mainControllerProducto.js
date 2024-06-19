@@ -20,6 +20,7 @@ module.exports = {
 
 	getModificar: async (req, res) =>{
 		const [modificar] = await conn.query(`SELECT * FROM producto WHERE id=?`, req.params.id);
+        // Ya está definido correctamente en tu código.
 		res.render('modificar', {
 			tituloDePagina: 'Página para Modificar Items de la tabla Producto',
 			registro: modificar[0]
