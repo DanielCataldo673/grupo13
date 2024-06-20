@@ -13,8 +13,10 @@
     "crypto.js": "^3.2.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "method": "^2.0.0",
     "method-override": "^3.0.0",
-    "mysql2": "^3.10.1"
+    "mysql2": "^3.10.1",
+    "override": "^0.0.1"
   },
   "description": ""
 }

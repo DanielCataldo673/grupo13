@@ -15,7 +15,7 @@ module.exports = {
 
     crearRegistro: async (req, res) => {
         const sql = `INSERT INTO producto (nombre, caracteristicas, imagen, precio, gramaje, variedad_id) VALUES (?,?,?,?,?,?);`
-        const creado = await conn.query(sql, [req.body.nombre, req.body.descripcion, req.body.imagen, parseFloat(req.body.precio), req.body.gramaje, req.body.variedad_id]);
+        const creado = await conn.query(sql, [req.body.nombre, req.body.caracteristicas, req.body.imagen, parseFloat(req.body.precio), req.body.gramaje, req.body.variedad_id]);
         res.redirect('/producto');
     },
 

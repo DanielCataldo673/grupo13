@@ -1,28 +1,39 @@
 <%- include('partials/head', { tituloDePagina: tituloDePagina }) -%>
 <body>
-<h1>Lista de Productos</h1>
+
+<h1 class="#">Lista de Productos</h1>
 
 <br>
 <br>
 <h2>Formulario para crear un nuevo producto</h2>
 
 <!-- Formulario para crear un nuevo producto -->
-<form action="/crear" method="POST">
+<form class="crear" action="/producto" method="POST">
+    <div>
     <h4>Nombre</h4>
     <input type="text" name="nombre" placeholder="Nombre del producto">
-    
+
+
+
     <h4>Caracteristicas</h4>
     <input type="text" name="caracteristicas" placeholder="Descripción del producto">
-    
+
+
+
     <h4>Imagen</h4>
     <input type="file" name="imagen">
-    
+</div>
+
+<div>
     <h4>Precio</h4>
     <input type="number" name="precio" step="0.01" min="0.01" placeholder="0.00">
-    
+
+
     <h4>Gramaje</h4>
     <input type="text" name="gramaje" placeholder="Gramaje del producto">
-    
+
+
+
     <h4>Variedad_id</h4>
     <select name="variedad_id">
         <option value="1">Especias</option>
@@ -30,9 +41,12 @@
         <option value="3">Mix</option>
         <option value="4">Hierbas Medicinales</option>
     </select>
-    
+
     <input class="btn3" type="submit" value="Crear Producto">
+</div>
+    
 </form>
+
 <br>
 <br>
 
@@ -79,5 +93,7 @@
 </table>
 <br>
 <br>
+
     <%- include('partials/footer') -%>
+    <script src="/src/js/producto.js"></script>
     </body>
