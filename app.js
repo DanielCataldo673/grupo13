@@ -15,8 +15,8 @@ app.use(express.urlencoded({extended: true}))
 app.use('/', rutas)
 //app.use('/admin', rutasAdmin)
 
-app.use((req, res, next) =>{
-  res.status(404).send('<script>window.location.href = "error404.html";</script>');
-})
+app.use((req, res, next) => {
+  res.status(404).redirect('/error404.html');
+});
 
 app.listen(port, () => console.log(`Hola, estoy arriba en el puerto: ${port}`))
