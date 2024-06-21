@@ -9,7 +9,7 @@ const fs = require('fs');
 const port = 8080 || process.env.PORT || 3000
 app.set('view engine', 'ejs')// Motor de vistas que vamos a utilizar
 app.set('views', (__dirname + '/src/views'))//donde esta la carpeta quee vamos a utilizar
-
+app.use(override('_metodo'))
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({extended: true}))
 app.use('/', rutas)
