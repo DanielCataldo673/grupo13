@@ -74,16 +74,26 @@
             <td>$<%= producto.precio %></td>
             <td><%= producto.gramaje %></td>
             <td><%= producto.variedad_id %></td>
-            <td>
-                <!-- Formulario Modificar -->
+            <td><!--
+                 Formulario Modificar 
                 <form action="/actualizar" method="POST">
                     <input type="hidden" name="idMod" value="<%= producto.id %>">
                     <input class="btn1" type="submit" value="Modificar">
                 </form>
 <br>
-                <!-- Formulario Eliminar -->
+                 Formulario Eliminar 
                 <form action="/eliminar" method="POST">
                     <input type="hidden" name="idEliminar" value="<%= producto.id %>">
+                    <input class="btn2" type="submit" value="Eliminar">
+                </form>-->
+
+                <!-- FORM -->
+                 <form action="/modificar?_metodo=UPDATE" method="POST">
+                    <imput type="hidden" name="idMod" value="<%= producto.id%>">
+                    <button class="btn1"><a href="/modificar/<%=producto.id%>">MODIFICAR</a></button>
+                 </form><br>
+                 <form action="/producto?_metodo=DELETE" method="POST">
+                    <input type="hidden" name="idEliminar" value="<%= producto.id%>">
                     <input class="btn2" type="submit" value="Eliminar">
                 </form>
             </td>
