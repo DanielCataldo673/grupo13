@@ -52,7 +52,6 @@
 
 <h2> Tabla para mostrar los productos existentes</h2>
 
-<!-- Tabla para mostrar los productos existentes -->
 <table>
     <thead>
         <tr>
@@ -75,15 +74,17 @@
             <td><%= producto.gramaje %></td>
             <td><%= producto.variedad_id %></td>
             <td>
-                <!-- Formulario Modificar -->
-                <form action="/actualizar" method="POST">
-                    <input type="hidden" name="idMod" value="<%= producto.id %>">
-                    <input class="btn1" type="submit" value="Modificar">
-                </form>
-<br>
-                <!-- Formulario Eliminar -->
-                <form action="/eliminar" method="POST">
-                    <input type="hidden" name="idEliminar" value="<%= producto.id %>">
+
+                <!--  Formulario Modificar  -->
+                 <form action="/modificar?_metodo=UPDATE" method="POST">
+                    <imput type="hidden" name="idMod" value="<%= producto.id%>">
+                    <button class="btn1"><a class="btn1" href="/modificar/<%=producto.id%>">Modificar</a></button>
+                 </form>
+                 <br>
+                 <br>
+                 <!--  Formulario Eliminar  -->
+                 <form action="/producto?_metodo=DELETE" method="POST">
+                    <input type="hidden" name="idEliminar" value="<%= producto.id%>">
                     <input class="btn2" type="submit" value="Eliminar">
                 </form>
             </td>

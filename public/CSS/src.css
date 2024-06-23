@@ -85,17 +85,18 @@ select {
     cursor: pointer;
 }
 
-.btn3:hover,
-.btn2:hover,
-.btn1:hover{
-    background-color: grey;
-}
 
 .btn1 {
     width: 15vw;
     height: 2.5vw;
     margin-left: 0%;
     background-color: yellow;
+    color: #000;
+    font-family: cursive;
+    font-size: 1vw;
+    font-weight: bolder;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn2 {
@@ -110,6 +111,7 @@ select {
     margin-left: -13%;
     width: 25vw;
     height: 2.5vw;
+    font-size: 1.3vw;
     text-align: center;
     background-color: #416D19;
     border-radius: 50%;
