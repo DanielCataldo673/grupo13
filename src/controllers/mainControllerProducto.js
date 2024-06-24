@@ -20,11 +20,12 @@ module.exports = {
     },
 
     getModificar: async (req, res) => {
-        const [modificar] = await conn.query(`SELECT * FROM producto WHERE id=?`, req.params.id, );
+        const [modificar] = await conn.query(`SELECT *, imagen FROM producto WHERE id=?`, [req.params.id]);
         // Ya está definido correctamente en tu código.
         res.render('modificar', {
             tituloDePagina: 'Modificar Items',
-            registro: modificar[0]
+            registro: modificar[0],
+            imagen: modificar[0].imagen // Asegúrate de que la imagen esté definida
         });
     },
 

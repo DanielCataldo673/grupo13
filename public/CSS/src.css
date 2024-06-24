@@ -75,6 +75,15 @@ table {
     cursor: pointer;
 }
 
+.actual{
+    margin-left: 40%;
+    width: 20vw;
+    height: 11vw;
+    border: solid;
+    border-radius: 3%;
+}
+
+textarea,
 input,
 select {
     margin-left: 40%;

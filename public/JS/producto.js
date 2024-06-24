@@ -22,11 +22,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <h4>${registro.precio}</h4>
                 <h4>${registro.gramaje}</h4>
                 <h4>${registro.variedad_id}</h4>
-                <form method="POST" action="/producto?_metodo=DELETE" style="display:flex">
-                    <input type="hidden" name="idEliminar" value="${registro.id}">
-                    <button><a href="/modificar/${registro.id}">Modificar</a></button>
-                    <input type="submit" value="Eliminar">
-                </form>
             </div>`;
         
         listaHTML.innerHTML += productoHTML;

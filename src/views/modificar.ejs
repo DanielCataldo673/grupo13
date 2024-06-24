@@ -15,8 +15,11 @@
 				<h4>Caracteristicas</h4>
 				<input type="text" id="caracteristicas" name="caracteristicas" value="<%= registro.caracteristicas %>">
 
-				<h4>Imagen</h4>
-				<input type="file" id="imagen" name="imagen" value="<%= registro.imagen %>">
+				<h4>Imagen Actual</h4>
+				<img class="actual" src="/img/webp/<%= registro.imagen %>" alt="<%= registro.nombre %>">
+				<input type="hidden" value="<%= registro.imagen %>">
+
+				
 			</div>
 
 			<div>
@@ -26,6 +29,9 @@
 
 				<h4>Gramaje</h4>
 				<input type="text" id="gramaje" name="gramaje" value="<%= registro.nombre %>">
+
+				<h4>Reemplazar Imagen</h4>
+				<input type="file" id="imagen" name="imagen" value="<%= registro.imagen %>">
 
 				<h4>Variedad_id</h4>
 				<select name="variedad_id" id="variedad_id" value="<%= registro.variedad_id %>">
