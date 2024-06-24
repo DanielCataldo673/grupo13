@@ -71,6 +71,10 @@ table {
     justify-content: center;
 }
 
+.modificar{
+    cursor: pointer;
+}
+
 input,
 select {
     margin-left: 40%;
