@@ -15,14 +15,12 @@
 				<h4>Caracteristicas</h4>
 				<input type="text" id="caracteristicas" name="caracteristicas" value="<%= registro.caracteristicas %>">
 
-				<h4>Variedad_id Actual</h4>
-				<input type="text" value="<%= registro.variedad_id %>">
+				<h4></h4>
 				
 				<h4>Imagen Actual</h4>
 				<img class="actual" src="/img/webp/<%= registro.imagen %>" alt="<%= registro.nombre %>">
 				<input type="hidden" value="<%= registro.imagen %>">
-
-				
+	
 			</div>
 
 			<div>
@@ -33,17 +31,22 @@
 				<h4>Gramaje</h4>
 				<input type="text" id="gramaje" name="gramaje" value="<%= registro.nombre %>">
 
-				<h4> Variedad_id Modificar</h4>
+				<h4>Variedad</h4>
 				<select name="variedad_id" id="variedad_id" value="<%= registro.variedad_id %>">
-					<option value="1">Especias</option>
-					<option value="2">Hierbas Aromáticas</option>
-					<option value="3">Mix</option>
-					<option value="4">Hierbas Medicinales</option>
+					<% variedades.forEach(variedad => { %>
+						<% if (variedad.id == registro.variedad_id) { %>
+							<option value="<%= variedad.id %>" selected><%= variedad.nombre %></option>
+						<% } else { %>
+							<option value="<%= variedad.id %>"><%= variedad.nombre %></option>
+					<% } }); %>
 				</select>
 
 				<h4>Reemplazar Imagen</h4>
 				<input type="file" id="imagen" name="imagen" value="<%= registro.imagen %>">
 
+				<!-- se crea este hidden, porque no esta llegando la imagen actual al input
+				     si no elige ninguna foto y ya tenia, queda vacio el campo en la base -->
+				<input type="hidden" name="imagenActual" value="<%= registro.imagen %>">
 				
 				<input type="hidden" name="idMod" value="<%= registro.id %>">
 				<input class="btn3" type="submit" value="Actualizar">
