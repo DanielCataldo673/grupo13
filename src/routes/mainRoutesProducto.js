@@ -16,10 +16,14 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage})
 
+//Esta ruta se usa desde productos.html
+router.get('/listaProductos/:id', controladores.getListaProductos);
+router.get('/detalleProducto/:id', controladores.getDetalleProducto);
+
 router.get('/producto', controladores.getProducto);
 
 router.post('/producto', uploadFile.single('imagen'), controladores.crearRegistro);//ejecuta multer
-
+router.post('suscribir', controladores.suscribir);
 router.post('/producto', controladores.crearRegistro);
 router.get('/modificar/:id', controladores.getModificar);
 router.put('/modificar', controladores.actualizar); // Modifica la ruta y asóciala al método PUT // era /modificar/:id
