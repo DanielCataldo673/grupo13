@@ -85,7 +85,7 @@
           suscríbete a nuestro newsletter y únete a nuestra comunidad! Recibirás contenido interesante directamente en
           tu
           bandeja de entrada, ¡no te lo pierdas! Suscríbete Ya</p>
-        <form id="formSuscribite" class="suscribite">
+        <form id="formulario-suscripcion" class="suscribite" method="post" action="/suscribir">
           <h2 class="form-7">Formulario de Registro</h2>
           <div class="grid-container-form">
             <div class="grid-item-form1">
@@ -115,7 +115,7 @@
               <div class="form-2">
                 <label for="street">Dirección *</label>
                 <br>
-                <input class="firstname requerido" type="email" id="street" name="street"
+                <input class="firstname requerido" type="text" id="street" name="street"
                   placeholder="Ingrese su dirección aquí.....">
               </div>
             </div>
@@ -123,7 +123,7 @@
               <div class="form-2">
                 <label for="city">Ciudad</label>
                 <br>
-                <select class="firstname" name="city" id="city">
+                <select class="firstname requerido" name="city" id="city">
                   <option value="c.a.b.a">C.A.B.A</option>
                   <option value="g.b.a">Gran Buenos Aires</option>
                   <option value="cordoba">Cordoba</option>
@@ -144,7 +144,7 @@
               <div class="form-2">
                 <label for="color">Selecciona un color</label>
                 <br>
-                <input class="form-5" type="color" id="color" name="color">
+                <input class="form-5 requerido" type="color" id="color" name="color">
               </div>
             </div>
             <div class="grid-item-form8">
@@ -162,19 +162,22 @@
                   <h3>Elige tus especias favoritas</h3>
                   <br>
                   <label for="spice1">Primera elección *</label>
-                  <input class="firstname requerido" type="text" id="spice1" placeholder="Primera especia favorita">
+                  <input class="firstname requerido" type="text" id="spice1" name="spice1"
+                    placeholder="Primera especia favorita">
                   <br>
                   <label for="spice2">Segunda elección *</label>
-                  <input class="firstname requerido" type="text" id="spice2" placeholder="Segunda especia favorita">
+                  <input class="firstname requerido" type="text" id="spice2" name="spice2"
+                    placeholder="Segunda especia favorita">
                   <br>
                   <label for="spice3">Tercera elección *</label>
-                  <input class="firstname requerido" type="text" id="spice3" placeholder="Tercera especia favorita">
+                  <input class="firstname requerido" type="text" id="spice3" name="spice3"
+                    placeholder="Tercera especia favorita">
                 </div>
               </div>
             </div>
             <div class="grid-item-form10">
               <div class="form-8">
-                <button id="enviarForm" class="form-9">Enviar</button>
+                <button type="submit" id="enviarForm" class="form-9">Enviar</button>
                 <a id="btnEnviar" class="form-9" href="#openModal" hidden></a>
                 <input class="form-9" type="reset" value="Borrar">
               </div>

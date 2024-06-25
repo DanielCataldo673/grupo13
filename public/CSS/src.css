@@ -121,7 +121,7 @@ select {
 }
 
 .btn3 {
-    margin-top: 180px;
+    margin-top: 80px;
     margin-left: -13%;
     width: 25vw;
     height: 2.5vw;
@@ -130,8 +130,6 @@ select {
     background-color: #416D19;
     border-radius: 50%;
 }
-
- 
 
 .crear{
     display: flex;
