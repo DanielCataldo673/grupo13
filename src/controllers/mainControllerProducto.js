@@ -93,12 +93,6 @@ module.exports = {
             console.error('Error al actualizar el producto:', error);
             res.send('Error al actualizar el producto. Por favor, inténtalo de nuevo.');
         }
-
-        const sql = `UPDATE producto SET nombre=?, caracteristicas=?, imagen=?, precio=?, gramaje=?, variedad_id=? WHERE id=?`;
-        const { idMod, nombre, caracteristicas, imagen, precio, gramaje, variedad_id, imagenActual } = req.body;
-        const img = imagen == "" ? imagenActual : imagen;
-        const modificado = await conn.query(sql, [nombre, caracteristicas, img, precio, gramaje, variedad_id, idMod]);
-        res.redirect('/producto');
     },
 
     eliminar: async (req, res) => {

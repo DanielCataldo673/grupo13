@@ -23,7 +23,7 @@ const listadoProductos = async () =>{
             <div class="description">
               <h2>${producto.nombre_variedad}</h2>
               <h4>${producto.nombre}</h4>
-              <p>${producto.caracteristicas}</p>
+              <p>${producto.descripcion}...</p>
               <a href="/detalleProducto/${producto.id}">Leer Más</a>
             </div>
           </div> `
