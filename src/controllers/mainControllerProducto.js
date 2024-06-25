@@ -1,6 +1,23 @@
 const { conn } = require('../db/dbconnect');
 
 module.exports = {
+    getListaProductos: async (req, res) => {
+        try {
+            const variedad_id = req.params.id
+            
+            const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad FROM producto p 
+                                                    JOIN variedad v ON p.variedad_id = v.id
+                                                   WHERE (p.variedad_id = ${variedad_id} 
+                                                      OR ${variedad_id} = 0) `);
+
+            res.json(registros);
+        } catch (error) {
+            throw error;
+        } finally {
+            conn.releaseConnection();
+        }
+    },
+
     getProducto: async (req, res) => {
         try {
             const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad FROM producto p 
@@ -9,7 +26,6 @@ module.exports = {
             const [variedades] = await conn.query(`SELECT * FROM variedad`);
 
             // Aquí cambia `producto` por `productos` para asegurarse de que coincida con el nombre que estás utilizando en la vista
-
             res.render('producto', { productos: registros, variedades: variedades, tituloDePagina: 'Listado de Productos' });
         } catch (error) {
             throw error;
