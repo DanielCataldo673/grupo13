@@ -5,7 +5,9 @@ module.exports = {
         try {
             const variedad_id = req.params.id
             
-            const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad FROM producto p 
+            const [registros] = await conn.query(`SELECT p.*, SUBSTRING(caracteristicas,1,100) AS descripcion,
+                                                         v.nombre AS nombre_variedad 
+                                                    FROM producto p 
                                                     JOIN variedad v ON p.variedad_id = v.id
                                                    WHERE (p.variedad_id = ${variedad_id} 
                                                       OR ${variedad_id} = 0) `);
@@ -18,9 +20,27 @@ module.exports = {
         }
     },
 
+    getDetalleProducto: async (req, res) => {
+        try {
+            const idProd = req.params.id
+            
+            const [registro] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad 
+                                                   FROM producto p 
+                                                   JOIN variedad v ON p.variedad_id = v.id
+                                                  WHERE p.id = ${idProd} `);
+
+            res.render('detalleproducto', { producto: registro[0], tituloDePagina: 'Detalle de Producto' });
+        } catch (error) {
+            throw error;
+        } finally {
+            conn.releaseConnection();
+        }
+    },
+
     getProducto: async (req, res) => {
         try {
-            const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad FROM producto p 
+            const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad
+                                                    FROM producto p 
                                                     JOIN variedad v ON p.variedad_id = v.id`);
 
             const [variedades] = await conn.query(`SELECT * FROM variedad`);

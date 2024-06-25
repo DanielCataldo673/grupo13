@@ -18,6 +18,7 @@ const uploadFile = multer({storage})
 
 //Esta ruta se usa desde productos.html
 router.get('/listaProductos/:id', controladores.getListaProductos);
+router.get('/detalleProducto/:id', controladores.getDetalleProducto);
 
 router.get('/producto', controladores.getProducto);
 

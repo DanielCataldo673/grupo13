@@ -24,7 +24,7 @@ const listadoProductos = async () =>{
               <h2>${producto.nombre_variedad}</h2>
               <h4>${producto.nombre}</h4>
               <p>${producto.caracteristicas}</p>
-              <a href="producto.html">Leer Más</a>
+              <a href="/detalleProducto/${producto.id}">Leer Más</a>
             </div>
           </div> `
 	})
