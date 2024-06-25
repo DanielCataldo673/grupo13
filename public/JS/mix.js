@@ -1,5 +1,5 @@
 const buscarListado = async () =>{
-    const res = await fetch(`http://localhost:8080/listaProductos/0`);
+    const res = await fetch(`http://localhost:8080/listaProductos/3`);
 	const data = await res.json()
 	return data
 }
