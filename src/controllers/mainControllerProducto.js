@@ -4,7 +4,7 @@ module.exports = {
     getListaProductos: async (req, res) => {
         try {
             const variedad_id = req.params.id
-            
+
             const [registros] = await conn.query(`SELECT p.*, SUBSTRING(caracteristicas,1,100) AS descripcion,
                                                          v.nombre AS nombre_variedad 
                                                     FROM producto p 
@@ -23,7 +23,7 @@ module.exports = {
     getDetalleProducto: async (req, res) => {
         try {
             const idProd = req.params.id
-            
+
             const [registro] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad 
                                                    FROM producto p 
                                                    JOIN variedad v ON p.variedad_id = v.id
@@ -68,7 +68,7 @@ module.exports = {
 
     getModificar: async (req, res) => {
         const [modificar] = await conn.query(`SELECT *, imagen FROM producto WHERE id=?`, [req.params.id]);
-        
+
         const [variedades] = await conn.query(`SELECT * FROM variedad`);
 
 
@@ -108,11 +108,26 @@ module.exports = {
 
     suscribir: async (req, res) => {
         const { firstname, lastname, birthDate, street, city, zipcode, color, email, spice1, spice2, spice3 } = req.body;
-
+        console.log(req.body);
         try {
-            const sql = `INSERT INTO newsletter (nombre, apellido, fecha_nacimiento, direccion, ciudad, codigo_postal, color, email, especia1, especia2, especia3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+            const sql = `INSERT INTO newsletter (firstname, lastname, birthDate, street, city, zipcode, color, email, spice1, spice2, spice3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
             const suscripcion = await conn.query(sql, [firstname, lastname, birthDate, street, city, zipcode, color, email, spice1, spice2, spice3]);
-            
+
+            console.log('Datos registrados con éxito');
+            res.send('Datos registrados con éxito');
+        } catch (error) {
+            console.error('Error al insertar datos en la base de datos:', error);
+            res.send('Error al insertar datos en la base de datos. Por favor, inténtalo de nuevo.');
+        }
+    },
+
+    myform: async (req, res) => {
+        const { firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje } = req.body;
+        console.log(req.body);
+        try {
+            const sql = `INSERT INTO myform (firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+            const myform = await conn.query(sql, [firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje]);
+
             console.log('Datos registrados con éxito');
             res.send('Datos registrados con éxito');
         } catch (error) {

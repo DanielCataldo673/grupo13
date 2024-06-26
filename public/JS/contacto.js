@@ -68,3 +68,52 @@ document.getElementById("enviarForm").addEventListener("click", fnEnviar);
 
 document.getElementById("imageInput").addEventListener("change", fnSubirImagen);
 
+// En este código se define la función de suscripción
+async function myform() {
+  const firstname = document.getElementById('firstname').value;
+  const lastname = document.getElementById('lastname').value;
+  const birthDate = document.getElementById('birthDate').value;
+  const email = document.getElementById('email').value;
+  const telefono = document.getElementById('telefono').value;
+  const city = document.getElementById('city').value;
+  const conociste = document.getElementById('conociste').value;
+  const pago = document.getElementById('pago').value;
+  const imageInput = document.getElementById('imageInput').value;
+  const mensaje = document.getElementById('mensaje').value;
+
+  try {
+
+    const body = JSON.stringify({
+      firstname,
+      lastname,
+      birthDate,
+      email,
+      telefono,
+      city,
+      conociste,
+      pago,
+      imageInput,
+      mensaje});
+
+    console.log(body)
+    const response = await fetch('http://localhost:8080/myform', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: body,
+    });
+
+    //const data = await response.json();
+    //console.log(data);
+
+  } catch (error) {
+      console.error('Error al suscribir:', error);
+  }
+}
+
+// Este código se llama cuando se envía el formulario de suscripción
+// document.getElementById('formulario-suscripcion').addEventListener('submit', (event) => {
+//   event.preventDefault(); // Prevenir el envío del formulario por defecto
+//   suscribir();
+// });

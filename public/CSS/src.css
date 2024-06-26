@@ -1,6 +1,7 @@
-body {
-    background-image: linear-gradient(to bottom, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+html {
+    scroll-behavior: smooth;
 }
+
 
 h1 {
     text-align: center;
@@ -34,12 +35,35 @@ table {
     width: 100%;
 }
 
+/* botones inicio,home, anterior */
+.botones-fin {
+    display: flex;
+    /* Hace que los elementos se muestren en línea */
+    justify-content: space-between;
+    /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 15px;
+    margin-top: 35px;
+}
+
+
+.botones-fin svg {
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+}
+
+.ultimo {
+    margin: 0 auto;
+}
+
 /* Marquee */
 .marquee {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    background-color: #EAD8C0;
+    background-color: #FFD43B;
     padding: 10px;
 }
 
@@ -71,12 +95,12 @@ table {
     justify-content: center;
 }
 
-.modificar{
+.modificar {
     cursor: pointer;
     margin-left: 15px;
 }
 
-.actual{
+.actual {
     margin-left: 40%;
     width: 20vw;
     height: 11vw;
@@ -84,7 +108,6 @@ table {
     border-radius: 3%;
 }
 
-textarea,
 input,
 select {
     margin-left: 40%;
@@ -127,11 +150,11 @@ select {
     height: 2.5vw;
     font-size: 1.3vw;
     text-align: center;
-    background-color: #416D19;
+    background-color: #A1DD70;
     border-radius: 50%;
 }
 
-.crear{
+.crear {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -140,3 +163,23 @@ select {
     margin-left: 20%;
 }
 
+.banner-inicio picture {
+    display: block;
+    width: 100%;
+    height: 20vw;
+}
+
+.banner-inicio img {
+    width: 100%;
+    height: 95%;
+}
+
+.logo {
+    margin-left: 37%;
+}
+
+.final img {
+    height: 5vw;
+    width: 10vw;
+
+}
