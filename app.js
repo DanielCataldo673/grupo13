@@ -12,6 +12,7 @@ app.set('views', (__dirname + '/src/views'))//donde esta la carpeta quee vamos a
 app.use(override('_metodo'))
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({extended: true}))
+app.use(express.json());
 app.use('/', rutas)
 //app.use('/admin', rutasAdmin)
 

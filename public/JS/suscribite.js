@@ -25,6 +25,7 @@ const validarCampos = () =>{
     e.preventDefault();
     if (validarCampos())
     {
+      suscribir();
       let btnEnviar = document.getElementById("btnEnviar");
       btnEnviar.click();
       limpiarCampos();
@@ -58,35 +59,39 @@ async function suscribir() {
   const spice3 = document.getElementById('spice3').value;
 
   try {
-      const response = await fetch('/ruta-para-suscribir', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-              firstname,
-              lastname,
-              birthDate,
-              street,
-              city,
-              zipcode,
-              color,
-              email,
-              spice1,
-              spice2,
-              spice3
-          }),
-      });
 
-      const data = await response.json();
-      console.log(data);
+    const body = JSON.stringify({
+      firstname,
+      lastname,
+      birthDate,
+      street,
+      city,
+      zipcode,
+      color,
+      email,
+      spice1,
+      spice2,
+      spice3});
+
+    console.log(body)
+    const response = await fetch('http://localhost:8080/suscribir', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: body,
+    });
+
+    //const data = await response.json();
+    //console.log(data);
+
   } catch (error) {
       console.error('Error al suscribir:', error);
   }
 }
 
 // Este código se llama cuando se envía el formulario de suscripción
-document.getElementById('formulario-suscripcion').addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevenir el envío del formulario por defecto
-  suscribir();
-});
+// document.getElementById('formulario-suscripcion').addEventListener('submit', (event) => {
+//   event.preventDefault(); // Prevenir el envío del formulario por defecto
+//   suscribir();
+// });
