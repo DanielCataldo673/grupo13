@@ -108,9 +108,9 @@ module.exports = {
 
     suscribir: async (req, res) => {
         const { firstname, lastname, birthDate, street, city, zipcode, color, email, spice1, spice2, spice3 } = req.body;
-
+        console.log(req.body);
         try {
-            const sql = `INSERT INTO newsletter (nombre, apellido, fecha_nacimiento, direccion, ciudad, codigo_postal, color, email, especia1, especia2, especia3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+            const sql = `INSERT INTO newsletter (firstname, lastname, birthDate, street, city, zipcode, color, email, spice1, spice2, spice3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
             const suscripcion = await conn.query(sql, [firstname, lastname, birthDate, street, city, zipcode, color, email, spice1, spice2, spice3]);
             
             console.log('Datos registrados con éxito');
