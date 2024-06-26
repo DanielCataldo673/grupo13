@@ -26,6 +26,7 @@ const fnEnviar = (e) => {
   e.preventDefault();
   if (validarCampos())
   {
+    contactar();
     let btnEnviar = document.getElementById("btnEnviar");
     btnEnviar.click();
     limpiarCampos();
@@ -68,16 +69,21 @@ document.getElementById("enviarForm").addEventListener("click", fnEnviar);
 
 document.getElementById("imageInput").addEventListener("change", fnSubirImagen);
 
-// En este código se define la función de suscripción
-async function myform() {
+// En este código se define la función de guardar contacto
+async function contactar() {
   const firstname = document.getElementById('firstname').value;
   const lastname = document.getElementById('lastname').value;
   const birthDate = document.getElementById('birthDate').value;
   const email = document.getElementById('email').value;
   const telefono = document.getElementById('telefono').value;
   const city = document.getElementById('city').value;
-  const conociste = document.getElementById('conociste').value;
-  const pago = document.getElementById('pago').value;
+
+  const tiposConociste = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
+                .map(item => item.value)
+                .join(', ');
+  const conociste = tiposConociste;
+
+  const pago = document.querySelector('input[type=radio]:checked').value;
   const imageInput = document.getElementById('imageInput').value;
   const mensaje = document.getElementById('mensaje').value;
 
@@ -96,7 +102,7 @@ async function myform() {
       mensaje});
 
     console.log(body)
-    const response = await fetch('http://localhost:8080/myform', {
+    const response = await fetch('http://localhost:8080/contactar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -108,12 +114,6 @@ async function myform() {
     //console.log(data);
 
   } catch (error) {
-      console.error('Error al suscribir:', error);
+      console.error('Error al contactar:', error);
   }
 }
-
-// Este código se llama cuando se envía el formulario de suscripción
-// document.getElementById('formulario-suscripcion').addEventListener('submit', (event) => {
-//   event.preventDefault(); // Prevenir el envío del formulario por defecto
-//   suscribir();
-// });
