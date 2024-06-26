@@ -121,11 +121,11 @@ module.exports = {
         }
     },
 
-    myform: async (req, res) => {
+    contactar: async (req, res) => {
         const { firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje } = req.body;
         console.log(req.body);
         try {
-            const sql = `INSERT INTO myform (firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+            const sql = `INSERT INTO contacto (firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
             const myform = await conn.query(sql, [firstname, lastname, birthDate, email, telefono, city, conociste, pago, imageInput, mensaje]);
 
             console.log('Datos registrados con éxito');
