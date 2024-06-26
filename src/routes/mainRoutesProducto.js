@@ -23,7 +23,7 @@ router.get('/detalleProducto/:id', controladores.getDetalleProducto);
 router.get('/producto', controladores.getProducto);
 
 router.post('/producto', uploadFile.single('imagen'), controladores.crearRegistro);//ejecuta multer
-router.post('/myform', controladores.myform);
+router.post('/contactar', controladores.contactar);
 router.post('/suscribir', controladores.suscribir);
 router.post('/producto', controladores.crearRegistro);
 router.get('/modificar/:id', controladores.getModificar);
