@@ -24,7 +24,8 @@ module.exports = {
         try {
             const variedad_id = req.params.id
 
-            const [variedades] = await conn.query(`SELECT * FROM variedad `);
+            const [variedades] = await conn.query(`SELECT * FROM variedad  
+                                                    WHERE id = ${variedad_id} `);
 
             res.json(variedades);
         } catch (error) {

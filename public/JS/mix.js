@@ -1,35 +1,46 @@
 const buscarListado = async () =>{
-    const res = await fetch(`http://localhost:8080/listaProductos/3`);
-	const data = await res.json()
-	return data
+  const res = await fetch(`http://localhost:8080/listaProductos/3`);
+  const data = await res.json()
+return data
 }
-
-const main = document.querySelector(`#listado`)
 
 const listadoProductos = async () =>{
 
-	const resultados = await buscarListado()
+const resultados = await buscarListado()
 
-    let listaHTML = document.querySelector(`#listado`)
-    listaHTML.innerHTML = ''
+  let listaHTML = document.querySelector(`#listado`)
+  listaHTML.innerHTML = ''
 
-	resultados.forEach((producto, i) => {
+resultados.forEach((producto, i) => {
 
-        listaHTML.innerHTML += ` 
-          <div class="cartas">
-            <div class="cover">
-              <img src="img/webp/${producto.imagen}" alt="${producto.nombre}">
-            </div>
-            <div class="description">
-              <h2>${producto.nombre_variedad}</h2>
-              <h4>${producto.nombre}</h4>
-              <p>${producto.descripcion}...</p>
-              <a href="/detalleProducto/${producto.id}">Leer Más</a>
-            </div>
-          </div> `
-	})
+      listaHTML.innerHTML += ` 
+        <div class="cartas">
+          <div class="cover">
+            <img src="img/webp/${producto.imagen}" alt="${producto.nombre}">
+          </div>
+          <div class="description">
+            <h2>${producto.nombre_variedad}</h2>
+            <h4>${producto.nombre}</h4>
+            <p>${producto.descripcion}...</p>
+            <a href="/detalleProducto/${producto.id}">Leer Más</a>
+          </div>
+        </div> `
+})
+}
+const buscarVariedad = async () =>{
+
+const variedad = await obtenerVariedad(3) //3 corresponde a Mix
+
+let listaHTML = document.querySelector(`#variety`)//id de donde se inyecta el producto
+
+listaHTML.innerHTML += `
+    <header>
+      <h1>${variedad[0].nombre}</h1>
+    </header>
+    <p class="productos-parra">${variedad[0].descripcion}</p> `
 }
 
 listadoProductos()
+buscarVariedad()
 
 const guardarId = (e) => localStorage.setItem(`id`, e.target.id)
