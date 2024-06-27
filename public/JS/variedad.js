@@ -6,7 +6,7 @@ const buscarListado = async () =>{
 
 const main = document.querySelector(`#variety`)
 
-const listadoProductos = async () =>{
+const ListaVariedades = async () =>{
 
 	const resultados = await buscarListado()
 
@@ -25,7 +25,6 @@ const listadoProductos = async () =>{
           `
 	})
 }
-
-listadoProductos()
+ListaVariedades()
 
 const guardarId = (e) => localStorage.setItem(`id`, e.target.id)

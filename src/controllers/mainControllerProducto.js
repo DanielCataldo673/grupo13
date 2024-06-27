@@ -20,6 +20,20 @@ module.exports = {
         }
     },
 
+    getListaVariedades: async (req, res) => {
+        try {
+            const variedad_id = req.params.id
+
+            const [variedades] = await conn.query(`SELECT * FROM variedad `);
+
+            res.json(variedades);
+        } catch (error) {
+            throw error;
+        } finally {
+            conn.releaseConnection();
+        }
+    },
+
     getDetalleProducto: async (req, res) => {
         try {
             const idProd = req.params.id
