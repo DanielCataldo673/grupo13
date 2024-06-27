@@ -1,10 +1,8 @@
 const buscarListado = async () =>{
     const res = await fetch(`http://localhost:8080/listaProductos/2`);
-	const data = await res.json()
+	  const data = await res.json()
 	return data
 }
-
-const main = document.querySelector(`#listado`)
 
 const listadoProductos = async () =>{
 
@@ -29,7 +27,20 @@ const listadoProductos = async () =>{
           </div> `
 	})
 }
+const buscarVariedad = async () =>{
+
+const variedad = await obtenerVariedad(2) //2 corresponde a Aromaticas
+
+  let listaHTML = document.querySelector(`#variety`)//id de donde se inyecta el producto
+
+  listaHTML.innerHTML += `
+      <header>
+        <h1>${variedad[0].nombre}</h1>
+      </header>
+      <p class="productos-parra">${variedad[0].descripcion}</p> `
+}
 
 listadoProductos()
+buscarVariedad()
 
 const guardarId = (e) => localStorage.setItem(`id`, e.target.id)
