@@ -10,7 +10,7 @@ const listadoProductos = async () =>{
 
 	const resultados = await buscarListado()
 
-    let listaHTML = document.querySelector(`#listado`)
+    let listaHTML = document.querySelector(`#listado`)//id de donde se inyecta el producto
     listaHTML.innerHTML = ''
 
 	resultados.forEach((producto, i) => {
