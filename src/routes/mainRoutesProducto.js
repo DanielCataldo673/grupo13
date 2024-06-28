@@ -21,7 +21,6 @@ router.get('/listaProductos/:id', controladores.getListaProductos);
 router.get('/detalleProducto/:id', controladores.getDetalleProducto);
 router.get('/listaVariedades/:id', controladores.getListaVariedades);
 router.get('/producto', controladores.getProducto);
-
 router.post('/producto', uploadFile.single('imagen'), controladores.crearRegistro);//ejecuta multer
 router.post('/contactar', controladores.contactar);
 router.post('/suscribir', controladores.suscribir);
