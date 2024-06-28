@@ -1,0 +1,78 @@
+.principal{
+  background-image: linear-gradient(to bottom, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
+  border-radius: 2%;
+  border: solid;
+  width: 300px;
+}
+
+.contac-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.contac-2 {
+  flex: 1;
+  text-align: center;
+  font-family: cursive;
+}
+
+.contac-3 {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 25px;
+}
+
+.contac-4 {
+  width: 120px;
+  height: auto;
+  font-size: 1.2vw;
+  font-family: cursive;
+  background-color: #D1BB9E;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contac-4:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: #FFD43B;
+}
+
+.contac-5 {
+  text-decoration: none;
+  text-align: center;
+  color:#000000;
+  width: 200px;
+  height: auto;
+  font-size: 1.2vw;
+  font-family: cursive;
+  background-color: #D1BB9E;
+  border-radius: 50%;
+  cursor: pointer;
+  border-style: solid;
+}
+
+.contac-5:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: #FFD43B;
+}
+
+.user-1 {
+  width: 60%;
+  /* Cambia el valor de acuerdo al tamaño deseado */
+  margin: 2px;
+  /* Añade margen alrededor del contenedor si es necesario */
+  padding: 5px;
+  /* Añade relleno al contenedor si es necesario */
+  border-radius: 5%;
+  border: solid grey;
+  box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -webkit-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+  -moz-box-shadow: 6px 9px 0px -2px rgba(118, 111, 111, 0.42);
+}
+
+.grid-contenedor {
+  display: block;
+}
