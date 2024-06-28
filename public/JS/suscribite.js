@@ -59,7 +59,7 @@ async function suscribir() {
   const spice3 = document.getElementById('spice3').value;
 
   try {
-
+    const token = localStorage.getItem('jwt-token')
     const body = JSON.stringify({
       firstname,
       lastname,
@@ -73,11 +73,11 @@ async function suscribir() {
       spice2,
       spice3});
 
-    console.log(body)
     const response = await fetch('http://localhost:8080/suscribir', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            "Authorization": `Bearer ${token}`
         },
         body: body,
     });

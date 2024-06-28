@@ -8,7 +8,7 @@
 <h2>Formulario para crear un nuevo producto</h2>
 
 <!-- Formulario para crear un nuevo producto -->
-<form class="crear" action="/producto" method="POST">
+<form class="crear" action="" method="POST">
     <div>
     <h4>Nombre</h4>
     <input type="text" name="nombre" placeholder="Nombre del producto">
@@ -32,22 +32,14 @@
     <h4>Gramaje</h4>
     <input type="text" name="gramaje" placeholder="Gramaje del producto">
 
-
-
     <h4>Variedad_id</h4>
     <select name="variedad_id">
         <% variedades.forEach(variedad => { %>
             <option value="<%= variedad.id %>"><%= variedad.nombre %></option>
         <% }); %>
     </select>
-    <!-- <select name="variedad_id">
-        <option value="1">Especias</option>
-        <option value="2">Hierbas Aromáticas</option>
-        <option value="3">Mix</option>
-        <option value="4">Hierbas Medicinales</option>
-    </select> -->
 
-    <input class="btn3" type="submit" value="Crear Producto">
+    <button type="button" class="btn3" onclick="crearProducto()">Crear Producto</button>
 </div>
     
 </form>
@@ -88,9 +80,9 @@
                  <br>
                  <br>
                  <!--  Formulario Eliminar  -->
-                 <form action="/producto?_metodo=DELETE" method="POST">
+                 <form action="" method="POST">
                     <input type="hidden" name="idEliminar" value="<%= producto.id%>">
-                    <input class="btn2" type="submit" value="Eliminar">
+                    <button type="button" class="btn2" onclick="eliminarProducto('<%= producto.id %>')")>Eliminar</button>
                 </form>
             </td>
         </tr>
@@ -99,6 +91,8 @@
 </table>
 <br>
 <br>
+    <script src="/JS/helper.js"></script>
+    <script src="/JS/producto.js"></script>
 
     <%- include('partials/footer2') -%>
     

@@ -2,6 +2,7 @@
 const express = require(`express`)
 const override = require('method-override')
 const rutas = require('./src/routes/mainRoutesProducto.js')
+const rutasAuth = require('./src/routes/mainRoutesProductoAuth.js')
 const login = require('./src/routes/loginRoutes.js')
 const path = require('path')
 //const rutasAdmin = require('./src/routes/adminRoutes.js')
@@ -20,7 +21,7 @@ app.use(express.json());
 
 app.use('/login', login)
 app.use('/', rutas)
-//app.use('/', auth, rutas) //para que requira el token
+app.use('/', auth, rutasAuth) //para que requira el token
 //app.use('/admin', rutasAdmin)
 
 app.use((req, res, next) => {

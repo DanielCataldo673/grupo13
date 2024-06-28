@@ -6,7 +6,7 @@
 
 		<h1>Modificar el Item</h1>
 
-		<form class="crear" action="/modificar?_metodo=PUT" method="POST">
+		<form class="crear" action="" method="POST">
 
 			<div>
 				<h4>Nombre</h4>
@@ -42,16 +42,20 @@
 				</select>
 
 				<h4>Reemplazar Imagen</h4>
-				<input type="file" id="imagen" name="imagen" value="<%= registro.imagen %>">
+				<input type="file" id="imagen" name="imagen">
 
 				<!-- se crea este hidden, porque no esta llegando la imagen actual al input
 				     si no elige ninguna foto y ya tenia, queda vacio el campo en la base -->
 				<input type="hidden" name="imagenActual" value="<%= registro.imagen %>">
 				
 				<input type="hidden" name="idMod" value="<%= registro.id %>">
-				<input class="btn3" type="submit" value="Actualizar">
+				<button type="button" class="btn3" onclick="modificarProducto()">Actualizar</button>
 			</div>
 			
 		</form>
-		
+
+		<script src="/JS/helper.js"></script>
+		<script src="/JS/producto.js"></script>
+
 		<%- include('partials/footer2') -%> 
+    </body>

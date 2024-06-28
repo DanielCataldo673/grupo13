@@ -83,12 +83,12 @@ async function contactar() {
                 .join(', ');
   const conociste = tiposConociste;
 
-  const pago = document.querySelector('input[type=radio]:checked').value;
+  const pago = document.querySelector('input[type=radio]:checked') == null ? "" : document.querySelector('input[type=radio]:checked').value;
   const imageInput = document.getElementById('imageInput').value;
   const mensaje = document.getElementById('mensaje').value;
 
   try {
-
+    const token = localStorage.getItem('jwt-token')
     const body = JSON.stringify({
       firstname,
       lastname,
@@ -101,11 +101,11 @@ async function contactar() {
       imageInput,
       mensaje});
 
-    console.log(body)
     const response = await fetch('http://localhost:8080/contactar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            "Authorization": `Bearer ${token}`
         },
         body: body,
     });

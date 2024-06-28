@@ -324,6 +324,10 @@ footer {
   grid-area: footer;
 }
 
+.logout {
+  margin-left: 90%;
+}
+
 .grid-contenedor {
   display: grid;
   grid-template-areas: 'banner-inicio banner-inicio banner-inicio'
