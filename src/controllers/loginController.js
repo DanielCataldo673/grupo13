@@ -28,7 +28,7 @@ module.exports = {
 			res.status(401).send({auth: false, token: null})
 		} else {
 			token = jtoken.sign({id: valido.id}, jwtconfig.secretKey, {expiresIn: jwtconfig.tokenExpiresIn})
-			res.status(201).send({auth: true, token})
+			res.status(201).send({auth: true, token, idRol: valido.id_rol})
 		}
 	},
 
