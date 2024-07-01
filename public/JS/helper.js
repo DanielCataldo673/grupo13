@@ -1,3 +1,4 @@
+
 const verificarToken = async () => {
     const token = localStorage.getItem('jwt-token')
 
@@ -9,12 +10,17 @@ const verificarToken = async () => {
     }
 }
 
+
 verificarToken()
 
 
 const logout = async () => {
     localStorage.removeItem("jwt-token")
+
     window.location.href = "/login.html"
+
+    window.location.href="/login.html"
+
 }
 
 //solo si es admin puede ver el ABM de Productos
@@ -28,7 +34,9 @@ if (idRol == 2 && abmProductos != null) {
 //solo si es admin pueden ir al ABM de Productos o al modificar
 const pathActual = window.location.pathname;
 
+
 if (idRol == 2 && (pathActual == '/producto' || pathActual.includes('/modificar/') || pathActual == '/bienvenido')) {
     window.location.href = "/index.html";
     alert("El usuario no tiene acceso al recurso 🚧🚫");
+
 }

@@ -99,6 +99,7 @@ module.exports = {
         } catch (error) {
             console.error('Error al crear el producto:', error);
             res.status(500).send({ message: "Error al crear el producto. Por favor, inténtalo de nuevo." })
+
             //res.send('Error al crear el producto. Por favor, inténtalo de nuevo.');
         }
     },
@@ -128,6 +129,7 @@ module.exports = {
         } catch (error) {
             console.error('Error al actualizar el producto:', error);
             res.status(500).send({ message: "Error al actualizar el producto. Por favor, inténtalo de nuevo." })
+
             //res.send('Error al actualizar el producto. Por favor, inténtalo de nuevo.');
         }
     },
@@ -141,6 +143,7 @@ module.exports = {
         } catch (error) {
             console.error('Error al eliminar el producto:', error);
             res.status(500).send({ message: "Error al eliminar el producto. Por favor, inténtalo de nuevo." })
+
         }
     },
 

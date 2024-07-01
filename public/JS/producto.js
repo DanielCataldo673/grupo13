@@ -87,12 +87,15 @@ const eliminarProducto = async (idEliminar) => {
 
     var respuesta = confirm("Esta seguro que desea eliminar el producto? 🚨")
 
+
     if (respuesta) {
 
         const token = localStorage.getItem('jwt-token')
         const body = JSON.stringify({
+
             idEliminar
         });
+
 
         const res = await fetch(`http://localhost:8080/producto?_metodo=DELETE`, {
             method: 'POST',
@@ -112,3 +115,4 @@ const eliminarProducto = async (idEliminar) => {
         window.location.href = "http://localhost:8080/producto"
     }
 }
+

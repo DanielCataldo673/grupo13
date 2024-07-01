@@ -8,6 +8,7 @@ module.exports = (req, res, next) => {
 	if (!token) return res.status(403).send({ auth: false, message: 'Token errado' })
 	jwt.verify(token, jwtconfig.secretKey, (err, coded) => {
 		if (err) return res.status(403).send({ auth: false, message: 'Token no autorizado' })
+
 		next()
 	})
 }

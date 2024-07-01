@@ -5,11 +5,13 @@ const jwtconfig = require('./../config/jwtconfig.js')
 
 module.exports = {
 	registro: async (req, res) => {
+
 		const { user, password, nombrecompleto, email, idRol } = req.body
 
 		const [[valido]] = await conn.query(`SELECT * FROM usuarios WHERE username = ?`, user)
 
 		if (valido !== undefined) {
+
 			res.status(404).send('Ya existe Usuario')
 		} else {
 			const passEncriptada = await crypt.hash(password, 5)
@@ -19,6 +21,7 @@ module.exports = {
 	},
 
 	login: async (req, res) => {
+
 		const { user, password } = req.body
 		const [[valido]] = await conn.query(`SELECT * FROM usuarios WHERE username = ?`, user)
 
@@ -29,6 +32,7 @@ module.exports = {
 		} else {
 			token = jtoken.sign({ id: valido.id }, jwtconfig.secretKey, { expiresIn: jwtconfig.tokenExpiresIn })
 			res.status(201).send({ auth: true, token, idRol: valido.id_rol })
+
 		}
 	},
 
@@ -38,6 +42,7 @@ module.exports = {
 
 	verificarToken: async (req, res) => {
 		try {
+
 			const token = req.params.token
 			const valido = jtoken.verify(token, jwtconfig.secretKey)
 
@@ -45,5 +50,6 @@ module.exports = {
 		} catch (error) {
 			res.status(500).send({ auth: false, message: "Token Expirado" })
 		}
+
 	},
 }

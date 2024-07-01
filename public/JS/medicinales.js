@@ -1,3 +1,4 @@
+
 const buscarListado = async () => {
   const token = localStorage.getItem('jwt-token')
 
@@ -16,6 +17,8 @@ const buscarListado = async () => {
 
   const data = await res.json()
 
+
+  
   return data
 }
 

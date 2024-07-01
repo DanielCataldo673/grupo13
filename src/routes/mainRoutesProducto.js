@@ -25,6 +25,7 @@ router.get('/producto', controladores.getProducto);
 router.get('/bienvenido', (req, res) => {
     res.render('bienvenido'); // Renderiza el archivo bienvenido.ejs
 });
+
 //router.post('/producto', uploadFile.single('imagen'), controladores.crearRegistro);//ejecuta multer
 //router.post('/contactar', controladores.contactar);
 //router.post('/suscribir', controladores.suscribir);

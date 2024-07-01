@@ -1,3 +1,4 @@
+
 const buscarListado = async () => {
   const token = localStorage.getItem('jwt-token')
 
@@ -6,11 +7,13 @@ const buscarListado = async () => {
     headers: {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${token}`
+
     }
   })
 
   if (!res.ok) {
     window.location.href = "/login.html"
+
     throw Error("Problemas en login")
   }
 
@@ -21,6 +24,7 @@ const buscarListado = async () => {
 
 const busquedaProductos = async (search) => {
   const token = localStorage.getItem('jwt-token')
+
 
   const res = await fetch(`http://localhost:8080/busquedaProductos?search=${search}`, {
     method: 'GET',
@@ -36,6 +40,7 @@ const busquedaProductos = async (search) => {
   }
 
   const data = await res.json()
+
 
   return data
 }

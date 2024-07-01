@@ -4,6 +4,7 @@ const controladores = require('../controllers/mainControllerProducto');
 
 const multer = require('multer')
 
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, `public/img/`)
@@ -15,6 +16,7 @@ const storage = multer.diskStorage({
 })
 
 const uploadFile = multer({ storage })
+
 
 //Esta ruta se usa desde productos.html
 router.get('/listaProductos/:id', controladores.getListaProductos);
@@ -29,6 +31,7 @@ router.post('/producto', controladores.crearRegistro);
 router.get('/bienvenido', (req, res) => {
     res.render('bienvenido'); // Renderiza el archivo bienvenido.ejs
 });
+
 //router.get('/modificar/:id', controladores.getModificar);
 router.put('/modificar', controladores.actualizar); // Modifica la ruta y asóciala al método PUT // era /modificar/:id
 router.delete('/producto', controladores.eliminar);

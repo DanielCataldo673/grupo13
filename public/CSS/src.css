@@ -211,6 +211,7 @@ select:hover {
     gap: 5px;
 }
 
+
 .home-bienvenido {
     margin-left: 90%;
     font-family: cursive;
@@ -280,4 +281,10 @@ select:hover {
 
 .dropdown:hover {
     display: block;
+
+}
+
+.logout {
+    margin-left: 90%;
+
 }

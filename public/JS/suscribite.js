@@ -73,12 +73,14 @@ async function suscribir() {
     });
 
     const response = await fetch('http://localhost:8080/suscribir', {
+
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         "Authorization": `Bearer ${token}`
       },
       body: body,
+
     });
 
     //const data = await response.json();

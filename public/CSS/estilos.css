@@ -325,6 +325,10 @@ footer {
 }
 
 
+.logout {
+  margin-left: 90%;
+}
+
 
 .grid-contenedor {
   display: grid;
