@@ -52,6 +52,26 @@ module.exports = {
         }
     },
 
+    busquedaProductos: async (req, res) => {
+        try {
+            console.log(req.query.search)
+            const search = req.query.search
+            
+            const [registros] = await conn.query(`SELECT p.*, SUBSTRING(caracteristicas,1,100) AS descripcion,
+                                                         v.nombre AS nombre_variedad 
+                                                    FROM producto p 
+                                                    JOIN variedad v ON p.variedad_id = v.id
+                                                   WHERE p.nombre LIKE '%${search}%' `);
+
+            res.json(registros);
+
+        } catch (error) {
+            throw error;
+        } finally {
+            conn.releaseConnection();
+        }
+    },
+
     getProducto: async (req, res) => {
         try {
             const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad
