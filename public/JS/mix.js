@@ -1,19 +1,34 @@
-const buscarListado = async () =>{
-  const res = await fetch(`http://localhost:8080/listaProductos/3`);
+const buscarListado = async () => {
+  const token = localStorage.getItem('jwt-token')
+
+  const res = await fetch(`http://localhost:8080/listaProductos/3`, {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+    }
+  })
+
+  if (!res.ok) {
+    window.location.href = "/login.html"
+    throw Error("Problemas en login")
+  }
+
   const data = await res.json()
-return data
+
+  return data
 }
 
-const listadoProductos = async () =>{
+const listadoProductos = async () => {
 
-const resultados = await buscarListado()
+  const resultados = await buscarListado()
 
   let listaHTML = document.querySelector(`#listado`)
   listaHTML.innerHTML = ''
 
-resultados.forEach((producto, i) => {
+  resultados.forEach((producto, i) => {
 
-      listaHTML.innerHTML += ` 
+    listaHTML.innerHTML += ` 
         <div class="cartas">
           <div class="cover">
             <img src="img/webp/${producto.imagen}" alt="${producto.nombre}">
@@ -25,15 +40,15 @@ resultados.forEach((producto, i) => {
             <a href="/detalleProducto/${producto.id}">Leer Más</a>
           </div>
         </div> `
-})
+  })
 }
-const buscarVariedad = async () =>{
+const buscarVariedad = async () => {
 
-const variedad = await obtenerVariedad(3) //3 corresponde a Mix
+  const variedad = await obtenerVariedad(3) //3 corresponde a Mix
 
-let listaHTML = document.querySelector(`#variety`)//id de donde se inyecta el producto
+  let listaHTML = document.querySelector(`#variety`)//id de donde se inyecta el producto
 
-listaHTML.innerHTML += `
+  listaHTML.innerHTML += `
     <header>
       <h1>${variedad[0].nombre}</h1>
     </header>

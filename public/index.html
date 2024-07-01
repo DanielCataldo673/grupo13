@@ -33,6 +33,7 @@
       </div>
     </div>
     <div class="articulo2">
+
       <nav>
         <ul class="nav">
           <li class="no-hover"><a href="index.html"><img
@@ -51,13 +52,14 @@
                   <li><a href="aromaticas.html">Hierbas Aromáticas</a></li>
                   <li><a href="medicinales.html">Hierbas Medicinales</a></li>
                   <li><a href="mix.html">Mix</a></li>
-                  <li><a href="/producto">ABM Productos</a></li>
+                  <li><a id="abmProductos" href="/bienvenido">ABM Productos</a></li>
                 </ul>
               </div>
             </div>
           </li>
+          <li><a class="logout" href="" onclick="logout()">LogOut</a></li>
           <li>
-            <form class="search-form" action="#" method="get">
+            <form class="search-form" action="/productos.html" method="GET">
               <input class="nav-search" type="text" name="search" placeholder="Buscar...">
               <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="#FFD43B"
@@ -171,32 +173,32 @@
             <h2 class="galeriados-2">Los más destacados</h2>
             <div class="galeriados">
               <div class="card">
-                <a href="especias.html"><img id="imagen2" src="img/webp/aditya-joshi-RZc6cbHg56U-unsplash.webp"
-                    alt="Imagen 2"></a>
+                <a href="/productos.html?search=canela+en+rama"><img id="imagen2"
+                    src="img/webp/aditya-joshi-RZc6cbHg56U-unsplash.webp" alt="Imagen 2"></a>
                 <div class="cuerpo-card">
                   <h5>Canela en rama</h5>
                 </div>
               </div>
               <div class="card">
-                <a href="especias.html"><img id="imagen3" src="img/webp/christina-rumpf-hX9MwNo39g8-unsplash.webp"
+                <a href="/productos.html?search=aji+molido"><img id="imagen3" src="img/webp/ajimolido-flickr.webp"
                     alt="Imagen 3"></a>
                 <div class="cuerpo-card">
-                  <h5>Anis Estrellado</h5>
+                  <h5>Ají Molido</h5>
                 </div>
 
               </div>
 
               <div class="card">
-                <a href="especias.html"><img id="imagen4" src="img/webp/tamanna-rumee-RoGdv1kk5XM-unsplash.webp"
-                    alt="Imagen 4"></a>
+                <a href="/productos.html?search=curcuma"><img id="imagen4"
+                    src="img/webp/tamanna-rumee-RoGdv1kk5XM-unsplash.webp" alt="Imagen 4"></a>
                 <div class="cuerpo-card">
                   <h5>Cúrcuma</h5>
                 </div>
 
               </div>
               <div class="card">
-                <a href="aromaticas.html"><img id="imagen5" src="img/webp/sebbi-strauch-QwtnjJC0eVM-unsplash.webp"
-                    alt="Imagen 5"></a>
+                <a href="/productos.html?search=tomillo"><img id="imagen5"
+                    src="img/webp/sebbi-strauch-QwtnjJC0eVM-unsplash.webp" alt="Imagen 5"></a>
                 <div class="cuerpo-card">
                   <h5>Tomillo</h5>
                 </div>
@@ -204,15 +206,16 @@
               </div>
 
               <div class="card">
-                <a href="especias.html"><img id="imagen6" src="img/webp/jengibre-flick.webp" alt="Imagen 6"></a>
+                <a href="/productos.html?search=jengibre"><img id="imagen6" src="img/webp/jengibre-flick.webp"
+                    alt="Imagen 6"></a>
                 <div class="cuerpo-card">
                   <h5>Jengibre</h5>
                 </div>
 
               </div>
               <div class="card">
-                <a href="especias.html"><img id="imagen7" src="img/webp/samee-anderson-3tBdYnx_sWA-unsplash.webp"
-                    alt="Imagen 7"></a>
+                <a href="/productos.html?search=oregano"><img id="imagen7"
+                    src="img/webp/samee-anderson-3tBdYnx_sWA-unsplash.webp" alt="Imagen 7"></a>
 
                 <div class="cuerpo-card">
                   <h5>Oregano</h5>
@@ -221,8 +224,8 @@
               </div>
 
               <div class="card">
-                <a href="especias.html"><img id="imagen8" src="img/webp/malinovy-knedlik-Upzvw_mtA0Y-unsplash.webp"
-                    alt="Imagen 8"></a>
+                <a href="/productos.html?search=pimenton"><img id="imagen8"
+                    src="img/webp/malinovy-knedlik-Upzvw_mtA0Y-unsplash.webp" alt="Imagen 8"></a>
                 <div class="cuerpo-card">
                   <h5>Pimentón</h5>
                 </div>
@@ -340,7 +343,7 @@
           </div>
 
           <div class="nav-3">
-            <form class="search-form" action="#" method="get">
+            <form class="search-form" action="/productos.html" method="GET">
               <input class="nav-search" type="text" name="search" placeholder="Buscar...">
               <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="#FFD43B"
@@ -386,8 +389,8 @@
       </footer>
     </div>
   </div>
-
-
+  <script src="js/helper.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

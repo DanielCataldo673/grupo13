@@ -1,58 +1,69 @@
 <%- include('partials/head') -%>
-<body>
+
+  <body>
 
 
-<div class="articulo4">
-    <main>
+    <div class="articulo4">
+      <main>
 
-      <div class="container__cartas2">
+        <div class="container__cartas2">
 
-        <div class="cartas2">
-          <div class="cover2">
-            <img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>">
+          <div class="cartas2">
+            <div class="cover2">
+              <img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>">
 
-          </div>
-          <div class="description2">
-            <h2><%= producto.nombre_variedad %></h2>
-            <h3><%= producto.nombre %></h3>
-            <p><%= producto.caracteristicas %></p>
-            <h4>Gramaje: <%= producto.gramaje %></h4>
-            <h4>Precio: <%= producto.precio %></h4>
-            <div class="comprar1">
-              <a class="comprar" href="/contacto.html">Comprar</a>
             </div>
-            <div class="producto">
-              <!-- Formas de Pago -->
-
-              <div class="tarjetas">
-                <!-- Visa -->
-                <a href="https://www.visa.com.ar/" target="_blank"><i class="fa-brands fa-cc-visa fa-2xl"
-                    style="color: #000000;"></i></a>
-                <!--Mastercard-->
-                <a href="https://www.mastercard.com.ar/" target="_blank"><i class="fa-brands fa-cc-mastercard fa-2xl"
-                    style="color: #000000;"></i></a>
-
-                <!--Paypal  -->
-                <a href="https://www.paypal.com/ar/home" target="_blank"><i class="fa-brands fa-cc-paypal fa-2xl"
-                    style="color: #000000;"></i></a>
-
-                <!-- Tarjeta Naranja -->
-                <a href="https://www.naranjax.com/" target="_blank"><i class="fa-regular fa-credit-card fa-2xl"
-                    style="color: #F57D1F;"></i></a>
+            <div class="description2">
+              <h2>
+                <%= producto.nombre_variedad %>
+              </h2>
+              <h3>
+                <%= producto.nombre %>
+              </h3>
+              <p>
+                <%= producto.caracteristicas %>
+              </p>
+              <h4>Gramaje: <%= producto.gramaje %>
+              </h4>
+              <h4>Precio: <%= producto.precio %>
+              </h4>
+              <div class="comprar1">
+                <a class="comprar" href="/contacto.html">Comprar</a>
               </div>
-              <br>
+              <div class="producto">
+                <!-- Formas de Pago -->
 
+                <div class="tarjetas">
+                  <!-- Visa -->
+                  <a href="https://www.visa.com.ar/" target="_blank"><i class="fa-brands fa-cc-visa fa-2xl"
+                      style="color: #000000;"></i></a>
+                  <!--Mastercard-->
+                  <a href="https://www.mastercard.com.ar/" target="_blank"><i class="fa-brands fa-cc-mastercard fa-2xl"
+                      style="color: #000000;"></i></a>
+
+                  <!--Paypal  -->
+                  <a href="https://www.paypal.com/ar/home" target="_blank"><i class="fa-brands fa-cc-paypal fa-2xl"
+                      style="color: #000000;"></i></a>
+
+                  <!-- Tarjeta Naranja -->
+                  <a href="https://www.naranjax.com/" target="_blank"><i class="fa-regular fa-credit-card fa-2xl"
+                      style="color: #F57D1F;"></i></a>
+                </div>
+                <br>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
 
 
-    </main>
+      </main>
 
-</div>
+    </div>
+
+    <script src="/JS/helper.js"></script>
 
     <%- include('partials/footer') -%>
-    
-    </body>
+
+  </body>

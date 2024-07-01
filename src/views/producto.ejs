@@ -1,105 +1,114 @@
 <%- include('partials/head2', { tituloDePagina: tituloDePagina }) -%>
-<body>
 
-<h1 class="#">Lista de Productos</h1>
+    <body>
 
-<br>
-<br>
-<h2>Formulario para crear un nuevo producto</h2>
+        <h1 class="#">Lista de Productos</h1>
 
-<!-- Formulario para crear un nuevo producto -->
-<form class="crear" action="/producto" method="POST">
-    <div>
-    <h4>Nombre</h4>
-    <input type="text" name="nombre" placeholder="Nombre del producto">
+        <br>
+        <br>
+        <h2>Formulario para crear un nuevo producto</h2>
 
-
-
-    <h4>Caracteristicas</h4>
-    <input type="text" name="caracteristicas" placeholder="Descripción del producto">
+        <!-- Formulario para crear un nuevo producto -->
+        <form class="crear" action="" method="POST">
+            <div>
+                <h4>Nombre</h4>
+                <input type="text" name="nombre" placeholder="Nombre del producto">
 
 
 
-    <h4>Imagen</h4>
-    <input type="file" name="imagen">
-</div>
-
-<div>
-    <h4>Precio</h4>
-    <input type="number" name="precio" step="0.01" min="0.01" placeholder="0.00">
-
-
-    <h4>Gramaje</h4>
-    <input type="text" name="gramaje" placeholder="Gramaje del producto">
+                <h4>Caracteristicas</h4>
+                <input type="text" name="caracteristicas" placeholder="Descripción del producto">
 
 
 
-    <h4>Variedad_id</h4>
-    <select name="variedad_id">
-        <% variedades.forEach(variedad => { %>
-            <option value="<%= variedad.id %>"><%= variedad.nombre %></option>
-        <% }); %>
-    </select>
-    <!-- <select name="variedad_id">
-        <option value="1">Especias</option>
-        <option value="2">Hierbas Aromáticas</option>
-        <option value="3">Mix</option>
-        <option value="4">Hierbas Medicinales</option>
-    </select> -->
+                <h4>Imagen</h4>
+                <input type="file" name="imagen">
+            </div>
 
-    <input class="btn3" type="submit" value="Crear Producto">
-</div>
-    
-</form>
+            <div>
+                <h4>Precio</h4>
+                <input type="number" name="precio" step="0.01" min="0.01" placeholder="0.00">
 
-<br>
-<br>
 
-<h2> Tabla para mostrar los productos existentes</h2>
+                <h4>Gramaje</h4>
+                <input type="text" name="gramaje" placeholder="Gramaje del producto">
 
-<table>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Características</th>
-            <th>Imagen</th>
-            <th>Precio</th>
-            <th>Gramaje</th>
-            <th>Variedad</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% productos.forEach(producto => { %>
-        <tr>
-            <td><%= producto.nombre %></td>
-            <td><%= producto.caracteristicas %></td>
-            <td><img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>" style="width: 100px;" height="100px"></td>
-            <td>$<%= producto.precio %></td>
-            <td><%= producto.gramaje %></td>
-            <td><%= producto.nombre_variedad %></td>
-            <td>
+                <h4>Variedad_id</h4>
+                <select name="variedad_id">
+                    <% variedades.forEach(variedad=> { %>
+                        <option value="<%= variedad.id %>">
+                            <%= variedad.nombre %>
+                        </option>
+                        <% }); %>
+                </select>
 
-                <!--  Formulario Modificar  -->
-                 <form action="/modificar?_metodo=UPDATE" method="POST">
-                    <imput type="hidden" name="idMod" value="<%= producto.id%>">
-                    <button class="btn1"><a class="btn1" href="/modificar/<%=producto.id%>">Modificar</a></button>
-                 </form>
-                 <br>
-                 <br>
-                 <!--  Formulario Eliminar  -->
-                 <form action="/producto?_metodo=DELETE" method="POST">
-                    <input type="hidden" name="idEliminar" value="<%= producto.id%>">
-                    <input class="btn2" type="submit" value="Eliminar">
-                </form>
-            </td>
-        </tr>
-        <% }); %>
-    </tbody>
-</table>
-<br>
-<br>
+                <button type="button" class="btn3" onclick="crearProducto()">Crear Producto</button>
+            </div>
 
-    <%- include('partials/footer2') -%>
-    
+        </form>
+
+        <br>
+        <br>
+
+        <h2> Tabla para mostrar los productos existentes</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Características</th>
+                    <th>Imagen</th>
+                    <th>Precio</th>
+                    <th>Gramaje</th>
+                    <th>Variedad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productos.forEach(producto=> { %>
+                    <tr>
+                        <td>
+                            <%= producto.nombre %>
+                        </td>
+                        <td>
+                            <%= producto.caracteristicas %>
+                        </td>
+                        <td><img src="/img/webp/<%= producto.imagen %>" alt="<%= producto.nombre %>"
+                                style="width: 100px;" height="100px"></td>
+                        <td>$<%= producto.precio %>
+                        </td>
+                        <td>
+                            <%= producto.gramaje %>
+                        </td>
+                        <td>
+                            <%= producto.nombre_variedad %>
+                        </td>
+                        <td>
+
+                            <!--  Formulario Modificar  -->
+                            <form action="/modificar?_metodo=UPDATE" method="POST">
+                                <imput type="hidden" name="idMod" value="<%= producto.id%>">
+                                    <button class="btn1"><a class="btn1"
+                                            href="/modificar/<%=producto.id%>">Modificar</a></button>
+                            </form>
+                            <br>
+                            <br>
+                            <!--  Formulario Eliminar  -->
+                            <form action="" method="POST">
+                                <input type="hidden" name="idEliminar" value="<%= producto.id%>">
+                                <button type="button" class="btn2" onclick="eliminarProducto('<%= producto.id %>')"
+                                    )>Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <script src="/JS/helper.js"></script>
+        <script src="/JS/producto.js"></script>
+
+        <%- include('partials/footer2') -%>
+
     </body>

@@ -33,6 +33,7 @@
       </div>
     </div>
     <div class="articulo2">
+
       <nav>
         <ul class="nav">
           <li class="no-hover"><a href="index.html"><img
@@ -51,13 +52,14 @@
                   <li><a href="aromaticas.html">Hierbas Aromáticas</a></li>
                   <li><a href="medicinales.html">Hierbas Medicinales</a></li>
                   <li><a href="mix.html">Mix</a></li>
-                  <li><a href="/producto">ABM Productos</a></li>
+                  <li><a id="abmProductos" href="/bienvenido">ABM Productos</a></li>
                 </ul>
               </div>
             </div>
           </li>
+          <li><a class="logout" href="" onclick="logout()">LogOut</a></li>
           <li>
-            <form class="search-form" action="#" method="get">
+            <form class="search-form" action="/productos.html" method="GET">
               <input class="nav-search" type="text" name="search" placeholder="Buscar...">
               <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="#FFD43B"
@@ -81,7 +83,7 @@
 
       <main>
 
-       
+
 
         <div class="container__cartas" id="listado">
 
@@ -201,7 +203,7 @@
           </div>
 
           <div class="nav-3">
-            <form class="search-form" action="#" method="get">
+            <form class="search-form" action="/productos.html" method="GET">
               <input class="nav-search" type="text" name="search" placeholder="Buscar...">
               <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="#FFD43B"
@@ -247,6 +249,8 @@
       </footer>
     </div>
   </div>
+
+  <script src="js/helper.js"></script>
   <script src="js/variedad.js"></script>
   <script src="js/especias.js"></script>
 </body>

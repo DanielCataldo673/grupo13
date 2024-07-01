@@ -1,50 +1,48 @@
-const validarCampos = () =>{
+const validarCampos = () => {
 
-    let campos = document.getElementsByClassName("requerido");
-  
-    for (let index = 0; index < campos.length; index++) {
-      const campo = campos[index];
-      
-      if (campo.value == ""){
-        campo.setCustomValidity("El campo es obligatorio");
-        campo.reportValidity();
-  
-        return false;
-      }
-      else
-      {
-        campo.setCustomValidity("");
-        campo.reportValidity();
-      }
-    }
-    return true;
-  
-  }
-  
-  const fnEnviar = (e) => {
-    e.preventDefault();
-    if (validarCampos())
-    {
-      suscribir();
-      let btnEnviar = document.getElementById("btnEnviar");
-      btnEnviar.click();
-      limpiarCampos();
-    }
-  }
-  
-  const limpiarCampos = () => {
-    let campos = document.getElementsByClassName("requerido");
-  
-    for (let index = 0; index < campos.length; index++) {
-      const campo = campos[index];
-      campo.value = ""; // Limpiar el valor del campo
-    }
-  }
-  
-  document.getElementById("enviarForm").addEventListener("click", fnEnviar);
-  
+  let campos = document.getElementsByClassName("requerido");
 
-  // En este código se define la función de suscripción
+  for (let index = 0; index < campos.length; index++) {
+    const campo = campos[index];
+
+    if (campo.value == "") {
+      campo.setCustomValidity("El campo es obligatorio");
+      campo.reportValidity();
+
+      return false;
+    }
+    else {
+      campo.setCustomValidity("");
+      campo.reportValidity();
+    }
+  }
+  return true;
+
+}
+
+const fnEnviar = (e) => {
+  e.preventDefault();
+  if (validarCampos()) {
+    suscribir();
+    let btnEnviar = document.getElementById("btnEnviar");
+    btnEnviar.click();
+    limpiarCampos();
+  }
+}
+
+const limpiarCampos = () => {
+  let campos = document.getElementsByClassName("requerido");
+
+  for (let index = 0; index < campos.length; index++) {
+    const campo = campos[index];
+    campo.value = ""; // Limpiar el valor del campo
+  }
+}
+
+document.getElementById("enviarForm").addEventListener("click", fnEnviar);
+
+
+// En este código se define la función de suscripción
 async function suscribir() {
   const firstname = document.getElementById('firstname').value;
   const lastname = document.getElementById('lastname').value;
@@ -59,7 +57,7 @@ async function suscribir() {
   const spice3 = document.getElementById('spice3').value;
 
   try {
-
+    const token = localStorage.getItem('jwt-token')
     const body = JSON.stringify({
       firstname,
       lastname,
@@ -71,22 +69,23 @@ async function suscribir() {
       email,
       spice1,
       spice2,
-      spice3});
+      spice3
+    });
 
-    console.log(body)
     const response = await fetch('http://localhost:8080/suscribir', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: body,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        "Authorization": `Bearer ${token}`
+      },
+      body: body,
     });
 
     //const data = await response.json();
     //console.log(data);
 
   } catch (error) {
-      console.error('Error al suscribir:', error);
+    console.error('Error al suscribir:', error);
   }
 }
 

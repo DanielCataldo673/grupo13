@@ -1,19 +1,18 @@
-const validarCampos = () =>{
+const validarCampos = () => {
 
   let campos = document.getElementsByClassName("requerido");
 
 
   for (let index = 0; index < campos.length; index++) {
     const campo = campos[index];
-    
-    if (campo.value == ""){
+
+    if (campo.value == "") {
       campo.setCustomValidity("El campo es obligatorio");
       campo.reportValidity();
 
       return false;
     }
-    else
-    {
+    else {
       campo.setCustomValidity("");
       campo.reportValidity();
     }
@@ -24,8 +23,7 @@ const validarCampos = () =>{
 
 const fnEnviar = (e) => {
   e.preventDefault();
-  if (validarCampos())
-  {
+  if (validarCampos()) {
     contactar();
     let btnEnviar = document.getElementById("btnEnviar");
     btnEnviar.click();
@@ -43,7 +41,7 @@ const limpiarCampos = () => {
 
   let camposElegir = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
 
-  camposElegir.forEach(function(campo) {
+  camposElegir.forEach(function (campo) {
     campo.checked = false; // Deseleccionar el checkbox o radio
   });
 }
@@ -58,8 +56,7 @@ const fnSubirImagen = (e) => {
     e.target.setCustomValidity("El archivo debe ser .png o .jpg");
     e.target.reportValidity();
   }
-  else
-  {
+  else {
     e.target.setCustomValidity("");
   }
 }
@@ -79,16 +76,16 @@ async function contactar() {
   const city = document.getElementById('city').value;
 
   const tiposConociste = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
-                .map(item => item.value)
-                .join(', ');
+    .map(item => item.value)
+    .join(', ');
   const conociste = tiposConociste;
 
-  const pago = document.querySelector('input[type=radio]:checked').value;
+  const pago = document.querySelector('input[type=radio]:checked') == null ? "" : document.querySelector('input[type=radio]:checked').value;
   const imageInput = document.getElementById('imageInput').value;
   const mensaje = document.getElementById('mensaje').value;
 
   try {
-
+    const token = localStorage.getItem('jwt-token')
     const body = JSON.stringify({
       firstname,
       lastname,
@@ -99,21 +96,22 @@ async function contactar() {
       conociste,
       pago,
       imageInput,
-      mensaje});
+      mensaje
+    });
 
-    console.log(body)
     const response = await fetch('http://localhost:8080/contactar', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: body,
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        "Authorization": `Bearer ${token}`
+      },
+      body: body,
     });
 
     //const data = await response.json();
     //console.log(data);
 
   } catch (error) {
-      console.error('Error al contactar:', error);
+    console.error('Error al contactar:', error);
   }
 }

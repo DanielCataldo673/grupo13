@@ -30,6 +30,11 @@ td {
     padding: 5px;
 }
 
+td:hover {
+    background-color: #FAFFAF;
+    cursor: pointer;
+}
+
 table {
     border: solid;
     width: 100%;
@@ -85,9 +90,12 @@ table {
 }
 
 .logo {
-    border-radius: 50%;
-    height: 150px;
-    width: 200px;
+    margin-left: 42%;
+}
+
+.final {
+    width: 280px;
+    height: 200px;
 }
 
 .logos {
@@ -122,6 +130,10 @@ select {
     cursor: pointer;
 }
 
+input:hover,
+select:hover {
+    background-color: aquamarine;
+}
 
 .btn1 {
     width: 15vw;
@@ -141,6 +153,10 @@ select {
     height: 2.5vw;
     margin-left: 0%;
     background-color: red;
+    font-family: cursive;
+    font-size: 1vw;
+    font-weight: bolder;
+    cursor: pointer;
 }
 
 .btn3 {
@@ -149,9 +165,18 @@ select {
     width: 25vw;
     height: 2.5vw;
     font-size: 1.3vw;
+    font-weight: bolder;
+    font-family: cursive;
     text-align: center;
     background-color: #A1DD70;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.btn3:hover {
+    background-color: aquamarine;
+    cursor: pointer;
 }
 
 .crear {
@@ -174,12 +199,85 @@ select {
     height: 95%;
 }
 
-.logo {
-    margin-left: 37%;
+.logo2 {
+    margin-left: 34%;
 }
 
-.final img {
-    height: 5vw;
-    width: 10vw;
+.logout {
+    margin-left: 88%;
+    font-family: cursive;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    gap: 5px;
+}
 
+.home-bienvenido {
+    margin-left: 90%;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.home-bienvenido2 {
+    font-size: 1.3vw;
+    color: #000;
+    text-decoration: none;
+}
+
+.home-bienvenido2:hover {
+    background-color: #fff;
+    padding: 3px 13px;
+    border: solid;
+    border-radius: 50%;
+}
+
+.logout2 {
+    font-size: 1.1vw;
+    color: #000;
+    text-decoration: none;
+}
+
+.logout2:hover {
+    background-color: yellow;
+    padding: 7px 13px;
+    border: solid;
+    border-radius: 50%;
+}
+
+.bienvenido {
+    height: 20vw;
+    width: 30vw;
+    border-radius: 50%;
+}
+
+.fondo-bienvenido {
+    background-image: url("/img/jpg/33.jpg");
+}
+
+.dropdown {
+    margin-left: 38%;
+    margin-top: 5%;
+    width: 20%;
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: bolder;
+    border: solid;
+    padding: 10px;
+    border-radius: 3%;
+    transition: transform 0.5s;
+}
+
+.dropdown-item {
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdown:hover {
+    transform: scale(1.3);
+}
+
+
+
+.dropdown:hover {
+    display: block;
 }

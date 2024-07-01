@@ -4,7 +4,7 @@
 let porQueElegir = document.querySelector("#k");
 let isOpen = false;
 
-document.querySelector("#ver_mas").addEventListener('click', function() {
+document.querySelector("#ver_mas").addEventListener('click', function () {
     if (!isOpen) {
         porQueElegir.style.display = "block";
         isOpen = true;

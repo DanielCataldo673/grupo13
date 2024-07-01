@@ -12,11 +12,12 @@
 }
 
 
-.principal{
+.principal {
   background-image: linear-gradient(to bottom, #FFF2E1, #EAD8C0, #D1BB9E, #A79277);
   border-radius: 2%;
   border: solid;
 }
+
 .contac-3 {
   display: flex;
   justify-content: center;

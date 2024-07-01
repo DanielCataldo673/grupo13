@@ -52,6 +52,26 @@ module.exports = {
         }
     },
 
+    busquedaProductos: async (req, res) => {
+        try {
+            console.log(req.query.search)
+            const search = req.query.search
+
+            const [registros] = await conn.query(`SELECT p.*, SUBSTRING(caracteristicas,1,100) AS descripcion,
+                                                         v.nombre AS nombre_variedad 
+                                                    FROM producto p 
+                                                    JOIN variedad v ON p.variedad_id = v.id
+                                                   WHERE p.nombre LIKE '%${search}%' `);
+
+            res.json(registros);
+
+        } catch (error) {
+            throw error;
+        } finally {
+            conn.releaseConnection();
+        }
+    },
+
     getProducto: async (req, res) => {
         try {
             const [registros] = await conn.query(`SELECT p.*, v.nombre AS nombre_variedad
@@ -71,13 +91,15 @@ module.exports = {
 
     crearRegistro: async (req, res) => {
         try {
+            console.log(req.body);
             const sql = `INSERT INTO producto (nombre, caracteristicas, imagen, precio, gramaje, variedad_id) VALUES (?,?,?,?,?,?);`;
             const creado = await conn.query(sql, [req.body.nombre, req.body.caracteristicas, req.body.imagen, parseFloat(req.body.precio), req.body.gramaje, req.body.variedad_id]);
             console.log('Producto creado exitosamente');
             res.redirect('/producto');
         } catch (error) {
             console.error('Error al crear el producto:', error);
-            res.send('Error al crear el producto. Por favor, inténtalo de nuevo.');
+            res.status(500).send({ message: "Error al crear el producto. Por favor, inténtalo de nuevo." })
+            //res.send('Error al crear el producto. Por favor, inténtalo de nuevo.');
         }
     },
 
@@ -86,18 +108,17 @@ module.exports = {
 
         const [variedades] = await conn.query(`SELECT * FROM variedad`);
 
-
         res.render('modificar', {
             tituloDePagina: 'Modificar Items',
             registro: modificar[0],
             variedades: variedades,
             imagen: modificar[0].imagen // Asegúrate de que la imagen esté definida
-
         });
     },
 
     actualizar: async (req, res) => {
         try {
+            console.log(req.body);
             const sql = `UPDATE producto SET nombre=?, caracteristicas=?, imagen=?, precio=?, gramaje=?, variedad_id=? WHERE id=?`;
             const { idMod, nombre, caracteristicas, imagen, precio, gramaje, variedad_id, imagenActual } = req.body;
             const img = imagen == "" ? imagenActual : imagen;
@@ -106,18 +127,20 @@ module.exports = {
             res.redirect('/producto');
         } catch (error) {
             console.error('Error al actualizar el producto:', error);
-            res.send('Error al actualizar el producto. Por favor, inténtalo de nuevo.');
+            res.status(500).send({ message: "Error al actualizar el producto. Por favor, inténtalo de nuevo." })
+            //res.send('Error al actualizar el producto. Por favor, inténtalo de nuevo.');
         }
     },
 
     eliminar: async (req, res) => {
         try {
+            console.log(req.body);
             const eliminado = await conn.query(`DELETE FROM producto WHERE id=?`, req.body.idEliminar);
             console.log('Producto eliminado exitosamente');
             res.redirect('/producto');
         } catch (error) {
             console.error('Error al eliminar el producto:', error);
-            res.send('Error al eliminar el producto. Por favor, inténtalo de nuevo.');
+            res.status(500).send({ message: "Error al eliminar el producto. Por favor, inténtalo de nuevo." })
         }
     },
 

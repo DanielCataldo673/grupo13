@@ -33,6 +33,7 @@
       </div>
     </div>
     <div class="articulo2">
+
       <nav>
         <ul class="nav">
           <li class="no-hover"><a href="index.html"><img
@@ -51,13 +52,14 @@
                   <li><a href="aromaticas.html">Hierbas Aromáticas</a></li>
                   <li><a href="medicinales.html">Hierbas Medicinales</a></li>
                   <li><a href="mix.html">Mix</a></li>
-                  <li><a href="/producto">ABM Productos</a></li>
+                  <li><a id="abmProductos" href="/bienvenido">ABM Productos</a></li>
                 </ul>
               </div>
             </div>
           </li>
+          <li><a class="logout" href="" onclick="logout()">LogOut</a></li>
           <li>
-            <form class="search-form" action="#" method="get">
+            <form class="search-form" action="/productos.html" method="GET">
               <input class="nav-search" type="text" name="search" placeholder="Buscar...">
               <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                   <path fill="#FFD43B"
@@ -92,323 +94,326 @@
         </div>
 
         <div class="contac-3">
-          
-             
-              <br>
-              <!-- <form action="link" method="post"> -->
-              <form class="principal" id="myform" method="POST" action="">
-                <h2 class="contac-8">Te escuchamos.....</h2>
-                <div class="grid-container-form">
-                  <div class="grid-item-form1">
-                    <br>
-                    <div class="contac-6">
-                      <label for="firstname">Nombre *</label>
-                      <br>
-                      <input class="firstname-2 requerido" type="text" id="firstname" name="firstname"
-                        placeholder="Ingrese su nombre aquí.....">
-                    </div>
-                  </div>
-                  <div class="grid-item-form2">
-                    <br>
-                    <div class="contac-6">
-                      <label for="lastname">Apellido *</label>
-                      <br>
-                      <input class="firstname-2 requerido" type="text" id="lastname" name="lastname"
-                        placeholder="Ingrese su apellido aquí.....">
-                    </div>
-                  </div>
-                  <div class="grid-item-form3">
-                    <br>
-                    <div class="contac-6">
-                      <label for="birthDate">Fecha de Nacimiento *</label>
-                      <br>
-                      <input class="firstname-2 requerido" type="date" id="birthDate" name="birthDate">
-                    </div>
-                  </div>
-                  <div class="grid-item-form4">
-                    <br>
-                    <div class="contac-6">
-                      <label for="email">Email *</label>
-                      <br>
-                      <input class="firstname-2 requerido" type="email" id="email" name="email"
-                        placeholder="Ingrese su email aquí.....">
-                    </div>
-                  </div>
-                  <div class="grid-item-form5">
-                    <br>
-                    <div class="contac-6">
-                      <label for="telefono">Teléfono *</label>
-                      <br>
-                      <input class="firstname-2 requerido" type="tel" id="telefono" name="telefono"
-                        placeholder="Ingrese su teléfono aquí.....">
-                    </div>
-                  </div>
-                  <div class="grid-item-form6">
-                    <br>
-                    <div class="contac-6">
-                      <label for="city">Lugar de Residencia</label>
-                      <br>
-                      <select class="firstname-2" name="city" id="city">
-                        <option value="c.a.b.a">C.A.B.A</option>
-                        <option value="g.b.a">Gran Buenos Aires</option>
-                        <option value="cordoba">Cordoba</option>
-                        <option value="san-luis">San Luis</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="grid-item-form7">
-                    <br>
-                    <div class="contac-6">
-                      <p>¿Como conociste "Mío Sole"?
-                        <br>
-                        <input type="checkbox" name="conociste" value="web">Web
-                        <input type="checkbox" name="conociste" value="recomendacion">Recomendación
-                        <input type="checkbox" name="conociste" value="anuncio">Anuncio
-                        <br>
-                        <input type="checkbox" name="conociste" value="otro">Otro
-                      </p>
-                    </div>
-                  </div>
-                  <div class="grid-item-form8">
-                    <br>
-                    <div class="contac-6">
-                      <p>Medio de Pago Habitual
-                        <br>
-                        <input type="radio" name="pago" value="debito">Débito
-                        <input type="radio" name="pago" value="credito">Crédito
-                        <input type="radio" name="pago" value="efectivo">Efectivo
-                        <input type="radio" name="pago" value="transferencia">Transferencia
-                        <br>
-                        <input type="radio" name="pago" value="otro">Otro
-                      </p>
-                    </div>
-                  </div>
 
-                  <div class="grid-item-form10">
-                    <div class="contac-15">
-                      <input class="requerido" type="file" id="imageInput" accept="image/*">
-                    </div>
-                  </div>
-                  <div class="grid-item-form11">
-                    <div class="contac-6">
-                      <label for="mensaje">Escribe tu consulta *</label>
-                    </div>
-                    <div class="contac-10">
-                      <textarea class="requerido" name="mensaje" id="mensaje" cols="115" rows="5"></textarea>
-                    </div>
-                  </div>
-                  <div class="grid-item-form12">
-                    <div class="contac-13">
-                      <!-- <input class="contac-14" type="submit" value="Enviar"> -->
-                      <button type="submit" id="enviarForm" class="contac-14">Enviar</button>
-                      <a id="btnEnviar" class="contac-14" href="#openModal2" hidden></a>
-                      <input class="contac-14" type="reset" value="Borrar">
-                    </div>
-                  </div>
+
+          <br>
+          <!-- <form action="link" method="post"> -->
+          <form class="principal" id="myform" method="POST" action="">
+            <h2 class="contac-8">Te escuchamos.....</h2>
+            <div class="grid-container-form">
+              <div class="grid-item-form1">
+                <br>
+                <div class="contac-6">
+                  <label for="firstname">Nombre *</label>
+                  <br>
+                  <input class="firstname-2 requerido" type="text" id="firstname" name="firstname"
+                    placeholder="Ingrese su nombre aquí.....">
                 </div>
-              </form>
+              </div>
+              <div class="grid-item-form2">
+                <br>
+                <div class="contac-6">
+                  <label for="lastname">Apellido *</label>
+                  <br>
+                  <input class="firstname-2 requerido" type="text" id="lastname" name="lastname"
+                    placeholder="Ingrese su apellido aquí.....">
+                </div>
+              </div>
+              <div class="grid-item-form3">
+                <br>
+                <div class="contac-6">
+                  <label for="birthDate">Fecha de Nacimiento *</label>
+                  <br>
+                  <input class="firstname-2 requerido" type="date" id="birthDate" name="birthDate">
+                </div>
+              </div>
+              <div class="grid-item-form4">
+                <br>
+                <div class="contac-6">
+                  <label for="email">Email *</label>
+                  <br>
+                  <input class="firstname-2 requerido" type="email" id="email" name="email"
+                    placeholder="Ingrese su email aquí.....">
+                </div>
+              </div>
+              <div class="grid-item-form5">
+                <br>
+                <div class="contac-6">
+                  <label for="telefono">Teléfono *</label>
+                  <br>
+                  <input class="firstname-2 requerido" type="tel" id="telefono" name="telefono"
+                    placeholder="Ingrese su teléfono aquí.....">
+                </div>
+              </div>
+              <div class="grid-item-form6">
+                <br>
+                <div class="contac-6">
+                  <label for="city">Lugar de Residencia</label>
+                  <br>
+                  <select class="firstname-2" name="city" id="city">
+                    <option value="c.a.b.a">C.A.B.A</option>
+                    <option value="g.b.a">Gran Buenos Aires</option>
+                    <option value="cordoba">Cordoba</option>
+                    <option value="san-luis">San Luis</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid-item-form7">
+                <br>
+                <div class="contac-6">
+                  <p>¿Como conociste "Mío Sole"?
+                    <br>
+                    <input type="checkbox" name="conociste" value="web">Web
+                    <input type="checkbox" name="conociste" value="recomendacion">Recomendación
+                    <input type="checkbox" name="conociste" value="anuncio">Anuncio
+                    <br>
+                    <input type="checkbox" name="conociste" value="otro">Otro
+                  </p>
+                </div>
+              </div>
+              <div class="grid-item-form8">
+                <br>
+                <div class="contac-6">
+                  <p>Medio de Pago Habitual
+                    <br>
+                    <input type="radio" name="pago" value="debito">Débito
+                    <input type="radio" name="pago" value="credito">Crédito
+                    <input type="radio" name="pago" value="efectivo">Efectivo
+                    <input type="radio" name="pago" value="transferencia">Transferencia
+                    <br>
+                    <input type="radio" name="pago" value="otro">Otro
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid-item-form10">
+                <div class="contac-15">
+                  <input class="requerido" type="file" id="imageInput" accept="image/*">
+                </div>
+              </div>
+              <div class="grid-item-form11">
+                <div class="contac-6">
+                  <label for="mensaje">Escribe tu consulta *</label>
+                </div>
+                <div class="contac-10">
+                  <textarea class="requerido" name="mensaje" id="mensaje" cols="115" rows="5"></textarea>
+                </div>
+              </div>
+              <div class="grid-item-form12">
+                <div class="contac-13">
+                  <!-- <input class="contac-14" type="submit" value="Enviar"> -->
+                  <button type="submit" id="enviarForm" class="contac-14">Enviar</button>
+                  <a id="btnEnviar" class="contac-14" href="#openModal2" hidden></a>
+                  <input class="contac-14" type="reset" value="Borrar">
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div id="openModal2" class="modalDialog">
-          <div>
-            <a href="#close" title="Close" class="close">X</a>
-            <div>
-              <h2 class="contac-6">Hemos recibido su consulta...</h2>
-              <h2 class="contac-6">En breve nos estaremos comunicando...</h2>
-              <h2 class="contac-6">Muchas gracias!!!</h2>
-            </div>
-            <br>
-          </div>
-        </div>
-
-        <h2 class="contac">¡¡Siguenos en las redes sociales!!</h2>
-
-        <!-- Redes Sociales -->
-        <div class="redes">
-          <!-- whatsapp -->
-          <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl iconred"></i></a>
-
-          <!--facebook-->
-          <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl iconred"></i></a>
-
-          <!--linkedin  -->
-          <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl iconred"></i></a>
-
-          <!-- twitter -->
-          <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl iconred"></i></a>
-
-          <!--instagram  -->
-          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl iconred"></i></a>
-        </div>
-
-
-
-        <p class="contac-11">Quieres suscribirte a nuestro Newsletter, ¡¡ No te lo pierdas !!</p>
-        <div class="contac-3">
-          <a class="contac-4" href="suscribite.html">Newsletter</a>
+          </form>
         </div>
       </main>
     </div>
+  
 
-    <div class="articulo5">
-      <div class="botones-fin">
-        <!-- Inicio de Pagina -->
-
-        <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-            <path fill="#FFD43B"
-              d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM385 231c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-71-71V376c0 13.3-10.7 24-24 24s-24-10.7-24-24V193.9l-71 71c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 119c9.4-9.4 24.6-9.4 33.9 0L385 231z" />
-          </svg></a>
-        <!--Home -->
-        <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-            <path fill="#FFD43B"
-              d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
-          </svg></a>
-
-        <!-- Pagina anterior -->
-        <a onClick="history.go(-1)"><svg xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-            <path fill="#FFD43B"
-              d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
-          </svg></a>
+  <div id="openModal2" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <div>
+        <h2 class="contac-6">Hemos recibido su consulta...</h2>
+        <h2 class="contac-6">En breve nos estaremos comunicando...</h2>
+        <h2 class="contac-6">Muchas gracias!!!</h2>
       </div>
-    </div>
-
-    <div class="articulo6">
-      <div class="marquee">
-        <span>Todos los derechos reservados - Mío Sole - Copyright &copy; -2024 - Huerta Grande, Córdoba -
-          Argentina</span>
-      </div>
-    </div>
-
-    <div class="articulo7">
-      <footer>
-        <!-- ICONOS -->
-        <!-- Telefono y e-mail -->
-
-        <p class="tel-mail">
-          Para consultas, por favor contactarse al
-          <br>
-          +54-9-2624563212 o <a href="https://outlook.live.com/owa/" target="_blank">especias@miosole.netlify.app/ <i
-              class="fa-solid fa-envelope fa-lg" style="color: #000000;"></i></a>
-        </p>
-
-        <!-- Formas de Pago -->
-        <div class="footer-medio">
-          <div>
-            <!-- Visa -->
-            <a href="https://www.visa.com.ar/" target="_blank"><i class="fa-brands fa-cc-visa fa-2xl"
-                style="color: #000000;"></i></a>
-            <!--Mastercard-->
-            <a href="https://www.mastercard.com.ar/" target="_blank"><i class="fa-brands fa-cc-mastercard fa-2xl"
-                style="color: #000000;"></i></a>
-
-            <!--Paypal  -->
-            <a href="https://www.paypal.com/ar/home" target="_blank"><i class="fa-brands fa-cc-paypal fa-2xl"
-                style="color: #000000;"></i></a>
-
-            <!-- Tarjeta Naranja -->
-            <a href="https://www.naranjax.com/" target="_blank"><i class="fa-regular fa-credit-card fa-2xl"
-                style="color: #F57D1F;"></i></a>
-          </div>
-
-          <!-- Logo -->
-          <div>
-            <a href="index.html"><img class="logo" src="img/webp/Mío3.webp" alt="logo"></a>
-          </div>
-
-          <!-- Redes Sociales -->
-          <div>
-            <!-- whatsapp -->
-            <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"
-                style="color: #000000;"></i></a>
-            <!--facebook-->
-            <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"
-                style="color: #000000;"></i></a>
-
-            <!--linkedin  -->
-            <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"
-                style="color: #000000;"></i></a>
-
-            <!-- twitter -->
-            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"
-                style="color: #000000;"></i></a>
-
-            <!--instagram  -->
-            <a href="https://www.instagram.com/" target="_blank">
-              <i class="fa-brands fa-instagram fa-2xl" style="color: #fdfcfc;"></i> </a>
-          </div>
-        </div>
-
-        <div class="footer-fin">
-          <div>
-            <ul class="nav-1">
-              <li>
-                <a class="links" href="pagos.html" target="_self"> Pagos y Envíos</a>
-              </li>
-              <li>
-                <a class="links" href="preguntas.html" target="_self"> Preguntas Frecuentes</a>
-              </li>
-              <li>
-                <a class="links" href="contacto.html" target="_self"> Contacto</a>
-              </li>
-              <li>
-                <a class="links" href="pdf/Listadeprecios.pdf" target="_blank" download=""> Lista de Precios</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="nav-3">
-            <form class="search-form" action="#" method="get">
-              <input class="nav-search" type="text" name="search" placeholder="Buscar...">
-              <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path fill="#FFD43B"
-                    d="M443.219 68.781c-63.726-63.726-167.046-63.726-230.771 0c-58.318 58.318-63.255 149.79-14.834 213.736l-25.117 25.117l31.87 31.87l25.117-25.117c63.946 48.421 155.418 43.484 213.736-14.834c63.725-63.727 63.725-167.046-.001-230.772" />
-                  <circle cx="327.833" cy="184.167" r="133.074" fill="#ffffff" />
-                  <path fill="#FFD43B"
-                    d="M237.851 105.901c51.969-51.969 136.227-51.969 188.195 0c14.373 14.373 24.752 31.222 31.174 49.168c-5.25-24.028-17.178-46.889-35.86-65.571c-51.969-51.969-136.227-51.969-188.196 0c-37.596 37.596-47.974 92.085-31.174 139.028c-9.354-42.812 2.574-89.339 35.861-122.625" />
-                  <path fill="#000000"
-                    d="M37.651 474.349c-15.283-15.283-21.129-34.444-12.993-42.581l142.057-130.425c8.137-8.137 21.482-8.106 36.764 7.177c15.283 15.283 15.313 28.628 7.177 36.764L80.232 487.342c-8.137 8.136-27.298 2.29-42.581-12.993" />
-                  <path fill="#FFD43B" d="m53.165 405.596l53.239 53.239l64.225-69.953l-47.511-47.511z" />
-                </svg></button>
-            </form>
-          </div>
-
-          <div>
-            <ul class="nav-2">
-              <li>
-                <div class="dropdown">
-                  <a class="dropdown-item" href="productos.html">Productos</a>
-                  <div class="dropdown-content">
-                    <ul>
-                      <li><a href="especias.html">Especias</a></li>
-                      <li><a href="aromaticas.html">Hierbas Aromáticas</a></li>
-                      <li><a href="medicinales.html">Hierbas Medicinales</a></li>
-                      <li><a href="mix.html">Mix</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <a class="links" href="historia.html" target="_self"> Historia</a>
-              </li>
-              <li>
-                <a class="links" href="galeria.html" target="_self"> Galeria</a>
-              </li>
-              <li>
-                <a class="links" href="suscribite.html" target="_self"> Suscribite a nuestro newsletter </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <br>
     </div>
   </div>
+
+  <h2 class="contac">¡¡Siguenos en las redes sociales!!</h2>
+
+  <!-- Redes Sociales -->
+  <div class="redes">
+    <!-- whatsapp -->
+    <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl iconred"></i></a>
+
+    <!--facebook-->
+    <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl iconred"></i></a>
+
+    <!--linkedin  -->
+    <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl iconred"></i></a>
+
+    <!-- twitter -->
+    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl iconred"></i></a>
+
+    <!--instagram  -->
+    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl iconred"></i></a>
+  </div>
+
+
+
+  <p class="contac-11">Quieres suscribirte a nuestro Newsletter, ¡¡ No te lo pierdas !!</p>
+  <div class="contac-3">
+    <a class="contac-4" href="suscribite.html">Newsletter</a>
+  </div>
+ 
+ 
+</div>
+  <div class="articulo5">
+    <div class="botones-fin">
+      <!-- Inicio de Pagina -->
+
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#FFD43B"
+            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM385 231c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-71-71V376c0 13.3-10.7 24-24 24s-24-10.7-24-24V193.9l-71 71c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 119c9.4-9.4 24.6-9.4 33.9 0L385 231z" />
+        </svg></a>
+      <!--Home -->
+      <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#FFD43B"
+            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+        </svg></a>
+
+      <!-- Pagina anterior -->
+      <a onClick="history.go(-1)"><svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#FFD43B"
+            d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+        </svg></a>
+    </div>
+  </div>
+
+  <div class="articulo6">
+    <div class="marquee">
+      <span>Todos los derechos reservados - Mío Sole - Copyright &copy; -2024 - Huerta Grande, Córdoba -
+        Argentina</span>
+    </div>
+  </div>
+
+  <div class="articulo7">
+    <footer>
+      <!-- ICONOS -->
+      <!-- Telefono y e-mail -->
+
+      <p class="tel-mail">
+        Para consultas, por favor contactarse al
+        <br>
+        +54-9-2624563212 o <a href="https://outlook.live.com/owa/" target="_blank">especias@miosole.netlify.app/ <i
+            class="fa-solid fa-envelope fa-lg" style="color: #000000;"></i></a>
+      </p>
+
+      <!-- Formas de Pago -->
+      <div class="footer-medio">
+        <div>
+          <!-- Visa -->
+          <a href="https://www.visa.com.ar/" target="_blank"><i class="fa-brands fa-cc-visa fa-2xl"
+              style="color: #000000;"></i></a>
+          <!--Mastercard-->
+          <a href="https://www.mastercard.com.ar/" target="_blank"><i class="fa-brands fa-cc-mastercard fa-2xl"
+              style="color: #000000;"></i></a>
+
+          <!--Paypal  -->
+          <a href="https://www.paypal.com/ar/home" target="_blank"><i class="fa-brands fa-cc-paypal fa-2xl"
+              style="color: #000000;"></i></a>
+
+          <!-- Tarjeta Naranja -->
+          <a href="https://www.naranjax.com/" target="_blank"><i class="fa-regular fa-credit-card fa-2xl"
+              style="color: #F57D1F;"></i></a>
+        </div>
+
+        <!-- Logo -->
+        <div>
+          <a href="index.html"><img class="logo" src="img/webp/Mío3.webp" alt="logo"></a>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div>
+          <!-- whatsapp -->
+          <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"
+              style="color: #000000;"></i></a>
+          <!--facebook-->
+          <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"
+              style="color: #000000;"></i></a>
+
+          <!--linkedin  -->
+          <a href="https://ar.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"
+              style="color: #000000;"></i></a>
+
+          <!-- twitter -->
+          <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"
+              style="color: #000000;"></i></a>
+
+          <!--instagram  -->
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2xl" style="color: #fdfcfc;"></i> </a>
+        </div>
+      </div>
+
+      <div class="footer-fin">
+        <div>
+          <ul class="nav-1">
+            <li>
+              <a class="links" href="pagos.html" target="_self"> Pagos y Envíos</a>
+            </li>
+            <li>
+              <a class="links" href="preguntas.html" target="_self"> Preguntas Frecuentes</a>
+            </li>
+            <li>
+              <a class="links" href="contacto.html" target="_self"> Contacto</a>
+            </li>
+            <li>
+              <a class="links" href="pdf/Listadeprecios.pdf" target="_blank" download=""> Lista de Precios</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-3">
+          <form class="search-form" action="/productos.html" method="GET">
+            <input class="nav-search" type="text" name="search" placeholder="Buscar...">
+            <button type="submit"><svg class="boton" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path fill="#FFD43B"
+                  d="M443.219 68.781c-63.726-63.726-167.046-63.726-230.771 0c-58.318 58.318-63.255 149.79-14.834 213.736l-25.117 25.117l31.87 31.87l25.117-25.117c63.946 48.421 155.418 43.484 213.736-14.834c63.725-63.727 63.725-167.046-.001-230.772" />
+                <circle cx="327.833" cy="184.167" r="133.074" fill="#ffffff" />
+                <path fill="#FFD43B"
+                  d="M237.851 105.901c51.969-51.969 136.227-51.969 188.195 0c14.373 14.373 24.752 31.222 31.174 49.168c-5.25-24.028-17.178-46.889-35.86-65.571c-51.969-51.969-136.227-51.969-188.196 0c-37.596 37.596-47.974 92.085-31.174 139.028c-9.354-42.812 2.574-89.339 35.861-122.625" />
+                <path fill="#000000"
+                  d="M37.651 474.349c-15.283-15.283-21.129-34.444-12.993-42.581l142.057-130.425c8.137-8.137 21.482-8.106 36.764 7.177c15.283 15.283 15.313 28.628 7.177 36.764L80.232 487.342c-8.137 8.136-27.298 2.29-42.581-12.993" />
+                <path fill="#FFD43B" d="m53.165 405.596l53.239 53.239l64.225-69.953l-47.511-47.511z" />
+              </svg></button>
+          </form>
+        </div>
+
+        <div>
+          <ul class="nav-2">
+            <li>
+              <div class="dropdown">
+                <a class="dropdown-item" href="productos.html">Productos</a>
+                <div class="dropdown-content">
+                  <ul>
+                    <li><a href="especias.html">Especias</a></li>
+                    <li><a href="aromaticas.html">Hierbas Aromáticas</a></li>
+                    <li><a href="medicinales.html">Hierbas Medicinales</a></li>
+                    <li><a href="mix.html">Mix</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a class="links" href="historia.html" target="_self"> Historia</a>
+            </li>
+            <li>
+              <a class="links" href="galeria.html" target="_self"> Galeria</a>
+            </li>
+            <li>
+              <a class="links" href="suscribite.html" target="_self"> Suscribite a nuestro newsletter </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+
+  <script src="js/helper.js"></script>
   <script src="JS/contacto.js"></script>
 </body>
 
