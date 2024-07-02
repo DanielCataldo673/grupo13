@@ -31,9 +31,11 @@
 }
 
 .slider-box-inicio img {
-  width: 1000px;
+  width: 900px;
   height: auto;
 }
+
+
 
 @keyframes slide {
   0% {
