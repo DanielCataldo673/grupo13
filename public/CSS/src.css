@@ -117,7 +117,8 @@ table {
 }
 
 input,
-select {
+select,
+option {
     margin-left: 40%;
     width: 20vw;
     height: 2.5vw;
