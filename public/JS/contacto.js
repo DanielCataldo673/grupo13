@@ -99,7 +99,7 @@ async function contactar() {
       mensaje
     });
 
-    const response = await fetch('http://localhost:8080/contactar', {
+    const response = await fetch('/contactar', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

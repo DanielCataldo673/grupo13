@@ -72,7 +72,7 @@ async function suscribir() {
       spice3
     });
 
-    const response = await fetch('http://localhost:8080/suscribir', {
+    const response = await fetch('/suscribir', {
 
       method: 'POST',
       headers: {

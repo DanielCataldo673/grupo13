@@ -3,7 +3,7 @@ const obtenerVariedad = async (idVariedad) => {
 	const token = localStorage.getItem('jwt-token')
 
 
-	const res = await fetch(`http://localhost:8080/listaVariedades/${idVariedad}`,
+	const res = await fetch(`/listaVariedades/${idVariedad}`,
 		{
 			method: 'GET',
 			headers: {
