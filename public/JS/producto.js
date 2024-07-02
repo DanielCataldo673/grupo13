@@ -20,7 +20,7 @@ const crearProducto = async () => {
         variedad_id
     });
 
-    const res = await fetch(`http://localhost:8080/producto`, {
+    const res = await fetch(`/producto`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const crearProducto = async () => {
     }
 
     alert("Producto creado exitosamente 👏")
-    window.location.href = "http://localhost:8080/producto"
+    window.location.href = "/producto"
 }
 
 const modificarProducto = async () => {
@@ -66,7 +66,7 @@ const modificarProducto = async () => {
         imagenActual
     });
 
-    const res = await fetch(`http://localhost:8080/modificar?_metodo=PUT`, {
+    const res = await fetch(`/modificar?_metodo=PUT`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const modificarProducto = async () => {
     }
 
     alert("Producto actualizado exitosamente 🙌")
-    window.location.href = "http://localhost:8080/producto"
+    window.location.href = "/producto"
 }
 
 const eliminarProducto = async (idEliminar) => {
@@ -97,7 +97,7 @@ const eliminarProducto = async (idEliminar) => {
         });
 
 
-        const res = await fetch(`http://localhost:8080/producto?_metodo=DELETE`, {
+        const res = await fetch(`/producto?_metodo=DELETE`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const eliminarProducto = async (idEliminar) => {
         }
 
         alert("Producto eliminado exitosamente 👍🗑️")
-        window.location.href = "http://localhost:8080/producto"
+        window.location.href = "/producto"
     }
 }
 

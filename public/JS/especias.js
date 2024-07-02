@@ -1,7 +1,7 @@
 const buscarListado = async () =>{
   const token = localStorage.getItem('jwt-token')
   
-  const res = await fetch(`http://localhost:8080/listaProductos/1`, {
+  const res = await fetch(`/listaProductos/1`, {
 		method: 'GET',
 		headers: {
 			"Content-Type": "application/json",

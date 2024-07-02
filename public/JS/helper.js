@@ -2,7 +2,7 @@
 const verificarToken = async () => {
     const token = localStorage.getItem('jwt-token')
 
-    const res = await fetch(`http://localhost:8080/login/verificarToken/${token}`)
+    const res = await fetch(`/login/verificarToken/${token}`)
 
     if (!res.ok) {
         window.location.href = "/login.html"
